@@ -1,0 +1,15 @@
+/* 科技成果转化平台 · Web端 - 共享自定义样式（仅Tailwind无法覆盖的部分） */
+* { -webkit-tap-highlight-color: transparent; }
+body { font-family: "PingFang SC", "HarmonyOS Sans SC", "Microsoft YaHei", system-ui, sans-serif; }
+
+/* 隐藏横向滚动条（保持可滚动） */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* 渐变主视觉 */
+.hero-gradient { background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 55%, #0891B2 100%); }
+.card-glow { box-shadow: 0 12px 32px -12px rgba(37,99,235,.28); }
+
+/* 悬浮过渡 */
+.hover-lift { transition: all .2s ease; }
+.hover-lift:hover { transform: translateY(-2px); box-shadow: 0 12px 28px -10px rgba(15,23,42,.14); }

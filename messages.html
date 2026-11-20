@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>消息洽谈 · 科技成果转化平台</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/custom.css">
+<script>tailwind.config={theme:{extend:{colors:{primary:{50:'#EFF6FF',100:'#DBEAFE',500:'#3B82F6',600:'#2563EB',700:'#1D4ED8'}},fontFamily:{sans:['PingFang SC','Microsoft YaHei','system-ui','sans-serif']}}}}</script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+<!-- 顶部导航 -->
+<header class="glass sticky top-0 z-40 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center gap-10">
+    <a href="home.html" class="flex items-center gap-2.5 shrink-0"><div class="w-9 h-9 rounded-xl hero-gradient flex items-center justify-center text-white"><i class="fa-solid fa-atom"></i></div><span class="text-lg font-bold">科技成果转化平台</span></a>
+    <nav class="flex items-center gap-8 text-sm">
+      <a href="home.html" class="text-gray-600 hover:text-primary-600">首页</a>
+      <a href="achievements.html" class="text-gray-600 hover:text-primary-600">科技成果</a>
+      <a href="demands.html" class="text-gray-600 hover:text-primary-600">技术需求</a>
+      <a href="services.html" class="text-gray-600 hover:text-primary-600">服务大厅</a>
+</nav>
+    <div class="ml-auto flex items-center gap-5">
+      <a href="messages.html" class="relative text-primary-600"><i class="fa-regular fa-bell text-lg"></i><span class="absolute -top-0.5 -right-1 w-2 h-2 bg-red-500 rounded-full"></span></a>
+      <a href="publish.html" class="bg-primary-600 hover:bg-primary-700 text-white text-sm px-4 py-2 rounded-full font-medium transition"><i class="fa-solid fa-plus mr-1 text-xs"></i>发布</a>
+      <a href="profile.html" class="flex items-center gap-2"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80" class="w-8 h-8 rounded-full object-cover" alt=""><span class="text-sm text-gray-700 hidden lg:block">陈工</span></a>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-6">
+  <h1 class="text-xl font-bold mb-4">消息洽谈中心</h1>
+
+  <div class="grid grid-cols-12 gap-5 h-[640px]">
+    <!-- 左侧会话列表 -->
+    <aside class="col-span-4 bg-white rounded-2xl flex flex-col overflow-hidden">
+      <!-- 系统通知入口 -->
+      <div class="grid grid-cols-4 py-4 border-b border-gray-50 text-center shrink-0">
+        <a href="#" class="flex flex-col items-center gap-1.5 relative">
+          <div class="w-10 h-10 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <span class="text-[11px] text-gray-600">智能匹配</span><span class="absolute top-0 right-5 w-4 h-4 bg-red-500 text-white text-[9px] rounded-full flex items-center justify-center">8</span>
+        </a>
+        <a href="#" class="flex flex-col items-center gap-1.5">
+          <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center"><i class="fa-solid fa-file-signature"></i></div>
+          <span class="text-[11px] text-gray-600">合同进度</span>
+        </a>
+        <a href="#" class="flex flex-col items-center gap-1.5 relative">
+          <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center"><i class="fa-solid fa-bullhorn"></i></div>
+          <span class="text-[11px] text-gray-600">平台公告</span><span class="absolute top-0 right-5 w-4 h-4 bg-red-500 text-white text-[9px] rounded-full flex items-center justify-center">2</span>
+        </a>
+        <a href="#" class="flex flex-col items-center gap-1.5">
+          <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center"><i class="fa-solid fa-user-check"></i></div>
+          <span class="text-[11px] text-gray-600">审核通知</span>
+        </a>
+      </div>
+      <!-- 会话列表 -->
+      <div class="flex-1 overflow-y-auto divide-y divide-gray-50">
+        <!-- 系统通知：新委托请求（给经理人看） -->
+        <a href="#" class="flex items-center gap-3 px-4 py-4 bg-orange-50/60 border-l-2 border-orange-400">
+          <div class="w-11 h-11 rounded-full bg-orange-100 text-orange-500 flex items-center justify-center"><i class="fa-solid fa-handshake-angle text-lg"></i></div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-1.5"><p class="text-sm font-semibold">新委托请求</p><span class="text-[10px] bg-orange-100 text-orange-600 px-1 rounded">系统通知</span></div>
+            <p class="text-xs text-gray-500 mt-1 truncate">西北工业大学委托您运营「车规级传感器封装可靠性测试方法」，请在 48 小时内确认</p>
+          </div>
+          <div class="text-right shrink-0"><p class="text-[11px] text-gray-400">09:30</p><span class="inline-block mt-1 text-[10px] bg-orange-100 text-orange-600 px-1.5 rounded-full">待确认</span></div>
+        </a>
+        <a href="messages.html" class="flex items-center gap-3 px-4 py-4 bg-primary-50/60 border-l-2 border-primary-600">
+          <div class="relative"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&q=80" class="w-11 h-11 rounded-full object-cover" alt=""><span class="absolute top-0 right-0 w-4 h-4 bg-red-500 text-white text-[9px] rounded-full flex items-center justify-center border-2 border-white">2</span></div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-1.5"><p class="text-sm font-semibold">李明</p><span class="text-[10px] bg-amber-50 text-amber-600 border border-amber-200 px-1 rounded">技术经理人</span></div>
+            <p class="text-xs text-gray-400 mt-1 truncate">您好，关于钛合金3D打印项目，企业方希望本周约一次…</p>
+          </div>
+          <div class="text-right shrink-0"><p class="text-[11px] text-gray-400">10:24</p><span class="inline-block mt-1 text-[10px] bg-primary-100 text-primary-600 px-1.5 rounded-full">对接中</span></div>
+        </a>
+        <a href="messages.html" class="flex items-center gap-3 px-4 py-4 hover:bg-gray-50/60 border-l-2 border-transparent">
+          <div class="relative"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" class="w-11 h-11 rounded-full object-cover" alt=""><span class="absolute top-0 right-0 w-4 h-4 bg-red-500 text-white text-[9px] rounded-full flex items-center justify-center border-2 border-white">1</span></div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-1.5"><p class="text-sm font-semibold">张卫东 教授</p><span class="text-[10px] bg-primary-50 text-primary-600 border border-primary-100 px-1 rounded">成果方</span></div>
+            <p class="text-xs text-gray-400 mt-1 truncate">检测报告已上传，麻烦查收一下</p>
+          </div>
+          <div class="text-right shrink-0"><p class="text-[11px] text-gray-400">09:12</p></div>
+        </a>
+        <a href="messages.html" class="flex items-center gap-3 px-4 py-4 hover:bg-gray-50/60 border-l-2 border-transparent">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=100&q=80" class="w-11 h-11 rounded-xl object-cover" alt="">
+          <div class="flex-1 min-w-0">
+            <p class="text-sm font-semibold">中航工业某研究院</p>
+            <p class="text-xs text-gray-400 mt-1 truncate">【需求方】对贵校成果发起对接邀请</p>
+          </div>
+          <div class="text-right shrink-0"><p class="text-[11px] text-gray-400">昨天</p><span class="inline-block mt-1 text-[10px] bg-emerald-50 text-emerald-600 px-1.5 rounded-full">已接受</span></div>
+        </a>
+        <a href="messages.html" class="flex items-center gap-3 px-4 py-4 opacity-70 hover:bg-gray-50/60 border-l-2 border-transparent">
+          <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=100&q=80" class="w-11 h-11 rounded-xl object-cover" alt="">
+          <div class="flex-1 min-w-0">
+            <p class="text-sm font-semibold">稳健医疗 · 采购部</p>
+            <p class="text-xs text-gray-400 mt-1 truncate">感谢回复，我们内部评估后再联系您</p>
+          </div>
+          <div class="text-right shrink-0"><p class="text-[11px] text-gray-400">09-12</p><span class="inline-block mt-1 text-[10px] bg-gray-100 text-gray-400 px-1.5 rounded-full">已结束</span></div>
+        </a>
+      </div>
+    </aside>
+
+    <!-- 右侧聊天窗 -->
+    <section class="col-span-8 bg-white rounded-2xl flex flex-col overflow-hidden">
+      <!-- 对话头部 -->
+      <div class="flex items-center gap-3 px-6 py-4 border-b border-gray-100 shrink-0">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&q=80" class="w-10 h-10 rounded-full object-cover" alt="">
+        <div class="flex-1">
+          <div class="flex items-center gap-2"><p class="text-sm font-bold">李明</p><span class="text-[11px] bg-amber-50 text-amber-600 border border-amber-200 px-1.5 rounded">技术经理人</span></div>
+          <p class="text-xs text-emerald-500 mt-0.5"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full inline-block mr-1"></span>在线 · 平均 3 分钟回复</p>
+        </div>
+        <button class="text-gray-400 hover:text-primary-600"><i class="fa-solid fa-phone"></i></button>
+        <button class="text-gray-400 hover:text-primary-600"><i class="fa-solid fa-video"></i></button>
+        <button class="text-gray-400 hover:text-primary-600"><i class="fa-solid fa-ellipsis"></i></button>
+      </div>
+      <!-- 消息流 -->
+      <div class="flex-1 overflow-y-auto px-6 py-5 space-y-4 bg-gray-50/60">
+        <p class="text-center text-[11px] text-gray-300">今天 09:30</p>
+        <div class="flex items-end gap-2.5">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&q=80" class="w-8 h-8 rounded-full object-cover" alt="">
+          <div class="max-w-[65%] bg-white bubble-l px-4 py-2.5 text-sm text-gray-800 leading-relaxed">您好！我是平台专属技术经理人李明，已接到贵司关于「钛合金3D打印技术」的对接委托，目前双方初步意向都很积极。</div>
+        </div>
+        <div class="flex items-end gap-2.5">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&q=80" class="w-8 h-8 rounded-full object-cover" alt="">
+          <a href="demand-detail.html" class="max-w-[70%] bg-white bubble-l p-4 block hover:shadow-md transition">
+            <div class="flex items-center gap-1.5 text-xs text-cyan-600 mb-2"><i class="fa-solid fa-bullseye"></i><span>需求名片</span></div>
+            <p class="text-sm font-semibold leading-snug">耐高温特种密封材料国产替代方案</p>
+            <div class="flex items-center justify-between mt-2.5 text-xs"><span class="text-gray-400">中航工业某研究院</span><span class="text-orange-500 font-bold">预算 ¥300万</span></div>
+            <div class="mt-2.5 pt-2.5 border-t border-gray-50 flex items-center justify-between text-xs"><span class="text-primary-600 font-medium">匹配度 92%</span><span class="text-gray-400">查看详情 <i class="fa-solid fa-chevron-right"></i></span></div>
+          </a>
+        </div>
+        <div class="flex items-end gap-2.5 justify-end">
+          <div class="max-w-[65%] hero-gradient text-white bubble-r px-4 py-2.5 text-sm leading-relaxed">好的，张教授团队这边很有兴趣。这周三下午 3 点线上路演可以吗？需要我先准备哪些材料？</div>
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80" class="w-8 h-8 rounded-full object-cover" alt="">
+        </div>
+        <p class="text-center text-[11px] text-gray-300">今天 10:24</p>
+        <div class="flex items-end gap-2.5">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&q=80" class="w-8 h-8 rounded-full object-cover" alt="">
+          <div class="max-w-[65%] bg-white bubble-l px-4 py-2.5 text-sm text-gray-800 leading-relaxed">已为您创建路演日程，请准备：技术指标摘要、TRL证明材料、合作模式建议。</div>
+        </div>
+        <div class="mx-auto max-w-[80%] bg-primary-50 border border-primary-100 rounded-xl p-4">
+          <div class="flex items-center gap-2 mb-1.5"><i class="fa-solid fa-calendar-check text-primary-600"></i><p class="text-sm font-semibold text-primary-700">线上路演日程已确认</p></div>
+          <p class="text-xs text-gray-600">9月18日（周三）15:00 · 平台视频会议室</p>
+          <button class="mt-3 bg-primary-600 text-white text-xs font-semibold rounded-lg px-4 py-2 hover:bg-primary-700">查看日程</button>
+        </div>
+        <!-- 合作意向确认卡片（双方确认机制） -->
+        <div id="intent-card" class="mx-auto max-w-[80%] bg-amber-50 border border-amber-200 rounded-xl p-4">
+          <div class="flex items-center gap-2 mb-2"><i class="fa-solid fa-handshake text-amber-600"></i><p class="text-sm font-semibold text-amber-700">合作意向确认</p></div>
+          <p class="text-xs text-gray-600 leading-relaxed mb-3">若双方已就合作方向达成初步一致，可发起确认。需成果方与需求方<b>共同确认</b>后，正式进入转化流程。</p>
+          <!-- 双方确认状态 -->
+          <div class="grid grid-cols-2 gap-3 mb-3">
+            <div id="side-achievement" class="bg-white rounded-lg p-3 border border-gray-100">
+              <div class="flex items-center gap-2">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&q=80" class="w-6 h-6 rounded-full object-cover" alt="">
+                <div><p class="text-xs font-semibold">张卫东 教授</p><p class="text-[10px] text-gray-400">成果方 · 西北工业大学</p></div>
+              </div>
+              <p id="status-a" class="text-[11px] text-amber-600 mt-2 flex items-center gap-1"><i class="fa-regular fa-clock"></i>待确认</p>
+            </div>
+            <div id="side-demand" class="bg-white rounded-lg p-3 border border-amber-300 ring-1 ring-amber-300">
+              <div class="flex items-center gap-2">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80" class="w-6 h-6 rounded-full object-cover" alt="">
+                <div><p class="text-xs font-semibold">陈工</p><p class="text-[10px] text-gray-400">需求方 · 中航工业</p></div>
+              </div>
+              <p id="status-d" class="text-[11px] text-amber-600 mt-2 flex items-center gap-1"><i class="fa-regular fa-clock"></i>待确认</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <button id="btn-confirm" onclick="confirmIntent()" class="bg-amber-500 hover:bg-amber-600 text-white text-xs font-semibold rounded-lg px-5 py-2 transition"><i class="fa-solid fa-check mr-1"></i>确认合作意向</button>
+            <button class="text-xs text-gray-500 hover:text-gray-700 px-3 py-2">暂不确认</button>
+          </div>
+          <p class="text-[11px] text-gray-400 mt-2.5"><i class="fa-solid fa-info-circle mr-1"></i>双方均确认后，意向达成并进入成果评价环节</p>
+        </div>
+        <div id="intent-confirmed" class="mx-auto max-w-[80%] bg-emerald-50 border border-emerald-200 rounded-xl p-4 hidden">
+          <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600"></i><p class="text-sm font-semibold text-emerald-700">合作意向已达成</p></div>
+          <p class="text-xs text-gray-600 mt-1.5">成果方与需求方均已确认，转化流程正式启动，下一步：成果评价。</p>
+          <a href="profile.html" class="inline-block mt-2 text-xs text-emerald-600 font-medium hover:underline">查看转化进度 →</a>
+        </div>
+      </div>
+      <!-- 输入区 -->
+      <div class="border-t border-gray-100 px-6 py-4 shrink-0">
+        <div class="flex items-center gap-4 text-gray-400 text-base mb-3">
+          <button class="hover:text-primary-600"><i class="fa-regular fa-face-smile"></i></button>
+          <button class="hover:text-primary-600"><i class="fa-solid fa-paperclip"></i></button>
+          <button class="hover:text-primary-600"><i class="fa-regular fa-image"></i></button>
+          <button class="hover:text-primary-600"><i class="fa-regular fa-file-lines"></i></button>
+          <span class="ml-auto text-xs">洽谈内容平台留痕，保障双方权益</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <input type="text" placeholder="输入消息，按 Enter 发送…" class="flex-1 bg-gray-50 rounded-full px-5 py-3 text-sm outline-none placeholder-gray-400 focus:ring-2 focus:ring-primary-500">
+          <button class="hero-gradient text-white text-sm font-medium rounded-full px-8 py-3 shadow-lg shadow-blue-200"><i class="fa-solid fa-paper-plane mr-1"></i>发送</button>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- 页脚 -->
+<footer class="bg-slate-900 text-slate-400 mt-8">
+  <div class="max-w-7xl mx-auto px-6 py-10 flex items-center justify-between">
+    <div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg hero-gradient flex items-center justify-center text-white"><i class="fa-solid fa-atom"></i></div><span class="text-white font-bold">科技成果转化平台</span><span class="text-xs ml-2">让每一项科技成果实现其产业价值</span></div>
+    <div class="text-xs">© 2026 科技成果转化平台 · 科技成果转化平台 ｜ 陕ICP备00000000号</div>
+  </div>
+</footer>
+<script>
+function confirmIntent() {
+  // 1. 需求方（当前用户）确认
+  const statusD = document.getElementById('status-d');
+  statusD.className = 'text-[11px] text-emerald-600 mt-2 flex items-center gap-1';
+  statusD.innerHTML = '<i class="fa-solid fa-circle-check"></i>已确认';
+  document.getElementById('side-demand').className = 'bg-white rounded-lg p-3 border border-emerald-200';
+
+  // 2. 按钮变灰，等待对方
+  const btn = document.getElementById('btn-confirm');
+  btn.disabled = true;
+  btn.className = 'bg-gray-200 text-gray-400 text-xs font-semibold rounded-lg px-5 py-2 cursor-not-allowed';
+  btn.innerHTML = '<i class="fa-regular fa-clock mr-1"></i>等待成果方确认';
+
+  // 3. 模拟成果方确认（2秒后）
+  setTimeout(() => {
+    const statusA = document.getElementById('status-a');
+    statusA.className = 'text-[11px] text-emerald-600 mt-2 flex items-center gap-1';
+    statusA.innerHTML = '<i class="fa-solid fa-circle-check"></i>已确认';
+    document.getElementById('side-achievement').className = 'bg-white rounded-lg p-3 border border-emerald-200';
+
+    // 4. 双方均确认，隐藏卡片，显示达成
+    setTimeout(() => {
+      document.getElementById('intent-card').style.display = 'none';
+      document.getElementById('intent-confirmed').classList.remove('hidden');
+    }, 800);
+  }, 2000);
+}
+</script>
+</body>
+</html>

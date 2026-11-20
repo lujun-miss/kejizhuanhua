@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>转化项目管理 · 科技成果转化平台管理端</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/custom.css">
+<link rel="stylesheet" href="../assets/css/admin.css">
+<script>tailwind.config={theme:{extend:{colors:{primary:{50:'#EFF6FF',100:'#DBEAFE',500:'#3B82F6',600:'#2563EB',700:'#1D4ED8'}},fontFamily:{sans:['PingFang SC','Microsoft YaHei','system-ui','sans-serif']}}}}</script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+<header class="bg-white border-b border-gray-200 h-14 flex items-center px-6 sticky top-0 z-40">
+  <a href="../index.html" class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg bg-red-600 flex items-center justify-center text-white"><i class="fa-solid fa-shield-halved text-sm"></i></div><span class="font-bold">科技成果转化平台 · 管理端</span></a>
+  <div class="ml-auto flex items-center gap-5 text-sm"><a href="../home.html" class="text-gray-500 hover:text-primary-600"><i class="fa-solid fa-external-link mr-1"></i>访问前台</a><div class="flex items-center gap-2"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80" class="w-8 h-8 rounded-full object-cover" alt=""><span class="text-gray-700">超级管理员</span></div></div>
+</header>
+
+<div class="flex">
+  <aside class="sidebar bg-white border-r border-gray-200 shrink-0 py-4">
+    <p class="text-[11px] text-gray-400 px-5 pt-2 pb-1.5 font-semibold uppercase">运营管理</p>
+    <a href="dashboard.html" class="menu-item flex items-center gap-3 px-5 py-2.5 text-sm text-gray-600"><i class="fa-solid fa-chart-line w-4"></i>数据概览</a>
+    <a href="users.html" class="menu-item flex items-center gap-3 px-5 py-2.5 text-sm text-gray-600"><i class="fa-solid fa-users-rectangle w-4"></i>用户与机构</a>
+    <a href="achievements.html" class="menu-item flex items-center gap-3 px-5 py-2.5 text-sm text-gray-600"><i class="fa-solid fa-flask-vial w-4"></i>成果审核</a>
+    <a href="demands.html" class="menu-item flex items-center gap-3 px-5 py-2.5 text-sm text-gray-600"><i class="fa-solid fa-clipboard-list w-4"></i>需求审核</a>
+    <a href="services.html" class="menu-item flex items-center gap-3 px-5 py-2.5 text-sm text-gray-600"><i class="fa-solid fa-briefcase w-4"></i>服务内容</a>
+    <a href="projects.html" class="menu-item active flex items-center gap-3 px-5 py-2.5 text-sm"><i class="fa-solid fa-diagram-project w-4"></i>转化项目</a>
+    <p class="text-[11px] text-gray-400 px-5 pt-4 pb-1.5 font-semibold uppercase">系统</p>
+    <a href="settings.html" class="menu-item flex items-center gap-3 px-5 py-2.5 text-sm text-gray-600"><i class="fa-solid fa-gears w-4"></i>系统设置</a>
+    <a href="login.html" class="menu-item flex items-center gap-3 px-5 py-2.5 text-sm text-gray-600"><i class="fa-solid fa-right-from-bracket w-4"></i>退出登录</a>
+  </aside>
+
+  <main class="flex-1 p-6 overflow-y-auto">
+    <div class="flex items-center justify-between mb-5">
+      <div><h1 class="text-xl font-bold">转化项目管理</h1><p class="text-sm text-gray-400 mt-1">对应前台「个人中心·进行中的转化」· 全流程跟踪与合同存证</p></div>
+      <button class="text-sm bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700"><i class="fa-solid fa-file-export mr-1 text-xs"></i>导出报表</button>
+    </div>
+
+    <!-- 阶段统计 -->
+    <div class="grid grid-cols-5 gap-4 mb-6">
+      <div class="bg-white rounded-2xl p-4 text-center"><p class="text-lg font-bold text-gray-400">18</p><p class="text-[11px] text-gray-400 mt-1">达成意向</p></div>
+      <div class="bg-white rounded-2xl p-4 text-center"><p class="text-lg font-bold text-primary-600">12</p><p class="text-[11px] text-gray-400 mt-1">成果评价</p></div>
+      <div class="bg-white rounded-2xl p-4 text-center"><p class="text-lg font-bold text-amber-500">8</p><p class="text-[11px] text-gray-400 mt-1">合同签约</p></div>
+      <div class="bg-white rounded-2xl p-4 text-center"><p class="text-lg font-bold text-emerald-600">5</p><p class="text-[11px] text-gray-400 mt-1">交易存证</p></div>
+      <div class="bg-white rounded-2xl p-4 text-center"><p class="text-lg font-bold text-purple-600">3</p><p class="text-[11px] text-gray-400 mt-1">跟踪服务</p></div>
+    </div>
+
+    <div class="flex gap-1 bg-white rounded-xl p-1 mb-4 w-fit">
+      <button class="text-sm font-medium bg-red-600 text-white px-4 py-2 rounded-lg">全部项目</button>
+      <button class="text-sm text-gray-500 px-4 py-2 rounded-lg hover:bg-gray-50">进行中</button>
+      <button class="text-sm text-gray-500 px-4 py-2 rounded-lg hover:bg-gray-50">已完成</button>
+      <button class="text-sm text-gray-500 px-4 py-2 rounded-lg hover:bg-gray-50">异常/预警</button>
+    </div>
+
+    <div class="bg-white rounded-2xl overflow-hidden">
+      <table class="w-full text-sm">
+        <thead class="bg-gray-50 text-gray-500 text-xs"><tr><th class="text-left px-5 py-3 font-medium">项目名称</th><th class="text-left px-5 py-3 font-medium">成果方</th><th class="text-left px-5 py-3 font-medium">需求方</th><th class="text-left px-5 py-3 font-medium">经理人</th><th class="text-left px-5 py-3 font-medium">当前阶段</th><th class="text-left px-5 py-3 font-medium">成交额</th><th class="text-left px-5 py-3 font-medium">进度</th><th class="text-right px-5 py-3 font-medium">操作</th></tr></thead>
+        <tbody class="divide-y divide-gray-50">
+          <tr class="tr-hover"><td class="px-5 py-4 font-medium">钛合金3D打印 × 中航研究院</td><td class="px-5 py-4 text-gray-600">西北工业大学</td><td class="px-5 py-4 text-gray-600">中航工业某研究院</td><td class="px-5 py-4 text-gray-600">李明</td><td class="px-5 py-4"><span class="text-xs bg-primary-50 text-primary-600 px-2 py-1 rounded">3·合同签约</span></td><td class="px-5 py-4 font-bold text-orange-500">面议</td><td class="px-5 py-4"><div class="flex items-center gap-2"><div class="w-20 h-1.5 bg-gray-100 rounded-full"><div class="h-1.5 bg-primary-500 rounded-full" style="width:60%"></div></div><span class="text-[11px] text-gray-400">3/5</span></div></td><td class="px-5 py-4 text-right"><a href="../messages.html" class="text-xs text-primary-600 hover:underline">查看洽谈</a><button class="text-xs text-gray-500 ml-3 hover:text-primary-600">详情</button></td></tr>
+          <tr class="tr-hover"><td class="px-5 py-4 font-medium">纳米酶检测试剂盒 × 稳健医疗</td><td class="px-5 py-4 text-gray-600">浙江大学</td><td class="px-5 py-4 text-gray-600">稳健医疗</td><td class="px-5 py-4 text-gray-600">王雪</td><td class="px-5 py-4"><span class="text-xs bg-emerald-50 text-emerald-600 px-2 py-1 rounded">4·交易存证</span></td><td class="px-5 py-4 font-bold text-orange-500">¥800万</td><td class="px-5 py-4"><div class="flex items-center gap-2"><div class="w-20 h-1.5 bg-gray-100 rounded-full"><div class="h-1.5 bg-emerald-500 rounded-full" style="width:80%"></div></div><span class="text-[11px] text-gray-400">4/5</span></div></td><td class="px-5 py-4 text-right"><a href="../messages.html" class="text-xs text-primary-600 hover:underline">查看洽谈</a><button class="text-xs text-gray-500 ml-3 hover:text-primary-600">详情</button></td></tr>
+          <tr class="tr-hover"><td class="px-5 py-4 font-medium">视觉大模型 × 隆基绿能</td><td class="px-5 py-4 text-gray-600">上海交通大学</td><td class="px-5 py-4 text-gray-600">隆基绿能</td><td class="px-5 py-4 text-gray-600">李明</td><td class="px-5 py-4"><span class="text-xs bg-purple-50 text-purple-600 px-2 py-1 rounded">5·跟踪服务</span></td><td class="px-5 py-4 font-bold text-orange-500">¥1,200万</td><td class="px-5 py-4"><div class="flex items-center gap-2"><div class="w-20 h-1.5 bg-gray-100 rounded-full"><div class="h-1.5 bg-purple-500 rounded-full" style="width:100%"></div></div><span class="text-[11px] text-gray-400">5/5</span></div></td><td class="px-5 py-4 text-right"><a href="../messages.html" class="text-xs text-primary-600 hover:underline">查看洽谈</a><button class="text-xs text-gray-500 ml-3 hover:text-primary-600">详情</button></td></tr>
+          <tr class="tr-hover"><td class="px-5 py-4 font-medium">钙钛矿电池工艺 × 隆基绿能</td><td class="px-5 py-4 text-gray-600">清华大学</td><td class="px-5 py-4 text-gray-600">隆基绿能</td><td class="px-5 py-4 text-gray-600">赵启航</td><td class="px-5 py-4"><span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">2·成果评价</span></td><td class="px-5 py-4 font-bold text-orange-500">面议</td><td class="px-5 py-4"><div class="flex items-center gap-2"><div class="w-20 h-1.5 bg-gray-100 rounded-full"><div class="h-1.5 bg-amber-500 rounded-full" style="width:40%"></div></div><span class="text-[11px] text-gray-400">2/5</span></div></td><td class="px-5 py-4 text-right"><a href="../messages.html" class="text-xs text-primary-600 hover:underline">查看洽谈</a><button class="text-xs text-gray-500 ml-3 hover:text-primary-600">详情</button></td></tr>
+        </tbody>
+      </table>
+      <div class="flex items-center justify-between px-5 py-3 border-t border-gray-50 text-xs text-gray-400"><span>共 46 个转化项目 · 累计成交额 ¥18.6亿</span><div class="flex gap-2"><button class="px-3 py-1.5 border border-gray-200 rounded">上一页</button><button class="px-3 py-1.5 bg-red-600 text-white rounded">1</button><button class="px-3 py-1.5 border border-gray-200 rounded">2</button><button class="px-3 py-1.5 border border-gray-200 rounded">下一页</button></div></div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

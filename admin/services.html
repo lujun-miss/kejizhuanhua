@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>服务内容管理 · 科技成果转化平台管理端</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/custom.css">
+<link rel="stylesheet" href="../assets/css/admin.css">
+<script>tailwind.config={theme:{extend:{colors:{primary:{50:'#EFF6FF',100:'#DBEAFE',500:'#3B82F6',600:'#2563EB',700:'#1D4ED8'}},fontFamily:{sans:['PingFang SC','Microsoft YaHei','system-ui','sans-serif']}}}}</script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+<header class="bg-white border-b border-gray-200 h-14 flex items-center px-6 sticky top-0 z-40">
+  <a href="../index.html" class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg bg-red-600 flex items-center justify-center text-white"><i class="fa-solid fa-shield-halved text-sm"></i></div><span class="font-bold">科技成果转化平台 · 管理端</span></a>
+  <div class="ml-auto flex items-center gap-5 text-sm"><a href="../home.html" class="text-gray-500 hover:text-primary-600"><i class="fa-solid fa-external-link mr-1"></i>访问前台</a><div class="flex items-center gap-2"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80" class="w-8 h-8 rounded-full object-cover" alt=""><span class="text-gray-700">超级管理员</span></div></div>
+</header>
+
+<div class="flex">
+  <aside class="sidebar bg-white border-r border-gray-200 shrink-0 py-4">
+    <p class="text-[11px] text-gray-400 px-5 pt-2 pb-1.5 font-semibold uppercase">运营管理</p>
+    <a href="dashboard.html" class="menu-item flex items-center gap-3 px-5 py-2.5 text-sm text-gray-600"><i class="fa-solid fa-chart-line w-4"></i>数据概览</a>
+    <a href="users.html" class="menu-item flex items-center gap-3 px-5 py-2.5 text-sm text-gray-600"><i class="fa-solid fa-users-rectangle w-4"></i>用户与机构</a>
+    <a href="achievements.html" class="menu-item flex items-center gap-3 px-5 py-2.5 text-sm text-gray-600"><i class="fa-solid fa-flask-vial w-4"></i>成果审核</a>
+    <a href="demands.html" class="menu-item flex items-center gap-3 px-5 py-2.5 text-sm text-gray-600"><i class="fa-solid fa-clipboard-list w-4"></i>需求审核</a>
+    <a href="services.html" class="menu-item active flex items-center gap-3 px-5 py-2.5 text-sm"><i class="fa-solid fa-briefcase w-4"></i>服务内容</a>
+    <a href="projects.html" class="menu-item flex items-center gap-3 px-5 py-2.5 text-sm text-gray-600"><i class="fa-solid fa-diagram-project w-4"></i>转化项目</a>
+    <p class="text-[11px] text-gray-400 px-5 pt-4 pb-1.5 font-semibold uppercase">系统</p>
+    <a href="settings.html" class="menu-item flex items-center gap-3 px-5 py-2.5 text-sm text-gray-600"><i class="fa-solid fa-gears w-4"></i>系统设置</a>
+    <a href="login.html" class="menu-item flex items-center gap-3 px-5 py-2.5 text-sm text-gray-600"><i class="fa-solid fa-right-from-bracket w-4"></i>退出登录</a>
+  </aside>
+
+  <main class="flex-1 p-6 overflow-y-auto">
+    <div class="flex items-center justify-between mb-5">
+      <div><h1 class="text-xl font-bold">服务内容管理</h1><p class="text-sm text-gray-400 mt-1">对应前台「服务大厅」· 服务包/技术经理人/政策资讯 统一维护</p></div>
+      <button class="text-sm bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700"><i class="fa-solid fa-plus mr-1 text-xs"></i>新增内容</button>
+    </div>
+
+    <!-- 子Tab -->
+    <div class="flex gap-1 bg-white rounded-xl p-1 mb-4 w-fit">
+      <button class="text-sm font-medium bg-red-600 text-white px-4 py-2 rounded-lg">服务包 <span class="text-[11px] bg-white/20 px-1.5 rounded-full">6</span></button>
+      <button class="text-sm text-gray-500 px-4 py-2 rounded-lg hover:bg-gray-50">技术经理人</button>
+      <button class="text-sm text-gray-500 px-4 py-2 rounded-lg hover:bg-gray-50">政策资讯</button>
+      <button class="text-sm text-gray-500 px-4 py-2 rounded-lg hover:bg-gray-50">活动路演</button>
+    </div>
+
+    <!-- 服务包表格 -->
+    <div class="bg-white rounded-2xl overflow-hidden">
+      <table class="w-full text-sm">
+        <thead class="bg-gray-50 text-gray-500 text-xs"><tr><th class="text-left px-5 py-3 font-medium">服务名称</th><th class="text-left px-5 py-3 font-medium">分类</th><th class="text-left px-5 py-3 font-medium">价格</th><th class="text-left px-5 py-3 font-medium">服务次数</th><th class="text-left px-5 py-3 font-medium">状态</th><th class="text-left px-5 py-3 font-medium">排序</th><th class="text-right px-5 py-3 font-medium">操作</th></tr></thead>
+        <tbody class="divide-y divide-gray-50">
+          <tr class="tr-hover"><td class="px-5 py-4"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 text-white flex items-center justify-center text-sm"><i class="fa-solid fa-gauge-high"></i></div><span class="font-medium">科技成果评价报告</span></div></td><td class="px-5 py-4"><span class="text-xs bg-primary-50 text-primary-600 px-2 py-1 rounded">成果评价</span></td><td class="px-5 py-4 font-medium text-orange-500">¥8,800起</td><td class="px-5 py-4 text-gray-600">1,204</td><td class="px-5 py-4"><span class="text-xs bg-emerald-50 text-emerald-600 px-2 py-1 rounded">上架中</span></td><td class="px-5 py-4 text-gray-400">1</td><td class="px-5 py-4 text-right"><button class="text-xs text-gray-500 hover:text-primary-600">编辑</button><button class="text-xs text-gray-500 ml-3 hover:text-red-500">下架</button></td></tr>
+          <tr class="tr-hover"><td class="px-5 py-4"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-lg bg-gradient-to-br from-amber-500 to-orange-500 text-white flex items-center justify-center text-sm"><i class="fa-solid fa-file-contract"></i></div><span class="font-medium">转化全流程合规套餐</span></div></td><td class="px-5 py-4"><span class="text-xs bg-rose-50 text-rose-600 px-2 py-1 rounded">法律咨询</span></td><td class="px-5 py-4 font-medium text-orange-500">¥25,000起</td><td class="px-5 py-4 text-gray-600">316</td><td class="px-5 py-4"><span class="text-xs bg-emerald-50 text-emerald-600 px-2 py-1 rounded">上架中</span></td><td class="px-5 py-4 text-gray-400">2</td><td class="px-5 py-4 text-right"><button class="text-xs text-gray-500 hover:text-primary-600">编辑</button><button class="text-xs text-gray-500 ml-3 hover:text-red-500">下架</button></td></tr>
+          <tr class="tr-hover"><td class="px-5 py-4"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-500 text-white flex items-center justify-center text-sm"><i class="fa-solid fa-hand-holding-dollar"></i></div><span class="font-medium">科技融资对接</span></div></td><td class="px-5 py-4"><span class="text-xs bg-emerald-50 text-emerald-600 px-2 py-1 rounded">融资对接</span></td><td class="px-5 py-4 font-medium text-orange-500">费率3%起</td><td class="px-5 py-4 text-gray-600">89</td><td class="px-5 py-4"><span class="text-xs bg-emerald-50 text-emerald-600 px-2 py-1 rounded">上架中</span></td><td class="px-5 py-4 text-gray-400">3</td><td class="px-5 py-4 text-right"><button class="text-xs text-gray-500 hover:text-primary-600">编辑</button><button class="text-xs text-gray-500 ml-3 hover:text-red-500">下架</button></td></tr>
+          <tr class="tr-hover"><td class="px-5 py-4"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-lg bg-gray-100 text-gray-400 flex items-center justify-center text-sm"><i class="fa-solid fa-lightbulb"></i></div><span class="font-medium">专利布局与申请</span></div></td><td class="px-5 py-4"><span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">专利服务</span></td><td class="px-5 py-4 font-medium text-orange-500">¥3,000起</td><td class="px-5 py-4 text-gray-600">2,041</td><td class="px-5 py-4"><span class="text-xs bg-gray-100 text-gray-400 px-2 py-1 rounded">已下架</span></td><td class="px-5 py-4 text-gray-400">—</td><td class="px-5 py-4 text-right"><button class="text-xs text-gray-500 hover:text-primary-600">编辑</button><button class="text-xs text-emerald-500 ml-3">上架</button></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-xs text-gray-400 mt-4">提示：切换上方「技术经理人」「政策资讯」Tab 可管理对应内容，前台服务大厅将实时同步展示。</p>
+  </main>
+</div>
+</body>
+</html>

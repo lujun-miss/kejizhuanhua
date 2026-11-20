@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>活动路演 · 科技成果转化平台</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/custom.css">
+<script>tailwind.config={theme:{extend:{colors:{primary:{50:'#EFF6FF',100:'#DBEAFE',500:'#3B82F6',600:'#2563EB',700:'#1D4ED8'}},fontFamily:{sans:['PingFang SC','Microsoft YaHei','system-ui','sans-serif']}}}}</script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+<!-- 顶部导航 -->
+<header class="glass sticky top-0 z-40 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center gap-10">
+    <a href="home.html" class="flex items-center gap-2.5 shrink-0"><div class="w-9 h-9 rounded-xl hero-gradient flex items-center justify-center text-white"><i class="fa-solid fa-atom"></i></div><div class="leading-tight"><div class="text-base font-bold">科技成果转化平台</div><div class="text-[10px] text-gray-400 font-medium tracking-wider">TECH TRANSFER PLATFORM</div></div></a>
+    <nav class="flex items-center gap-8 text-sm">
+      <a href="home.html" class="text-gray-600 hover:text-primary-600">首页</a>
+      <a href="achievements.html" class="text-gray-600 hover:text-primary-600">科技成果</a>
+      <a href="demands.html" class="text-gray-600 hover:text-primary-600">技术需求</a>
+      <a href="services.html" class="text-gray-600 hover:text-primary-600">服务大厅</a>
+    </nav>
+    <div class="ml-auto flex items-center gap-5">
+      <a href="messages.html" class="relative text-gray-600 hover:text-primary-600"><i class="fa-regular fa-bell text-lg"></i><span class="absolute -top-0.5 -right-1 w-2 h-2 bg-red-500 rounded-full"></span></a>
+      <a href="publish.html" class="bg-primary-600 hover:bg-primary-700 text-white text-sm px-4 py-2 rounded-full font-medium transition"><i class="fa-solid fa-plus mr-1 text-xs"></i>发布</a>
+      <a href="profile.html" class="flex items-center gap-2"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80" class="w-8 h-8 rounded-full object-cover" alt=""><span class="text-sm text-gray-700 hidden lg:block">陈工</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- 页头 -->
+<section class="hero-gradient text-white">
+  <div class="max-w-7xl mx-auto px-6 py-10">
+    <h1 class="text-2xl font-bold">活动路演</h1>
+    <p class="text-white/70 text-sm mt-2">成果发布、项目路演、政策宣讲、技术培训——线上线下同步对接</p>
+  </div>
+</section>
+
+<main class="max-w-7xl mx-auto px-6 py-8">
+  <!-- 筛选标签 -->
+  <div class="flex items-center gap-2 mb-6 flex-wrap">
+    <button class="text-sm bg-primary-600 text-white px-4 py-1.5 rounded-full">全部活动</button>
+    <button class="text-sm text-gray-600 bg-white px-4 py-1.5 rounded-full hover:bg-gray-100">项目路演</button>
+    <button class="text-sm text-gray-600 bg-white px-4 py-1.5 rounded-full hover:bg-gray-100">成果发布</button>
+    <button class="text-sm text-gray-600 bg-white px-4 py-1.5 rounded-full hover:bg-gray-100">政策宣讲</button>
+    <button class="text-sm text-gray-600 bg-white px-4 py-1.5 rounded-full hover:bg-gray-100">技术培训</button>
+    <div class="w-px h-5 bg-gray-300 mx-2"></div>
+    <button class="text-sm text-gray-600 bg-white px-4 py-1.5 rounded-full hover:bg-gray-100"><i class="fa-solid fa-laptop mr-1"></i>线上</button>
+    <button class="text-sm text-gray-600 bg-white px-4 py-1.5 rounded-full hover:bg-gray-100"><i class="fa-solid fa-location-dot mr-1"></i>线下</button>
+    <div class="ml-auto flex items-center gap-2">
+      <select class="text-sm text-gray-600 bg-white border border-gray-200 rounded-lg px-3 py-1.5 outline-none">
+        <option>最新发布</option>
+        <option>即将开始</option>
+        <option>报名人数</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- 活动列表 -->
+  <div class="grid grid-cols-3 gap-5">
+
+    <!-- 活动1：即将开始 -->
+    <div class="bg-white rounded-2xl overflow-hidden hover-lift flex flex-col">
+      <div class="relative">
+        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80" class="w-full h-44 object-cover" alt="">
+        <div class="absolute top-3 left-3 bg-green-500 text-white text-xs px-2.5 py-1 rounded-full font-medium"><i class="fa-solid fa-circle text-[8px] mr-1 animate-pulse"></i>即将开始</div>
+        <div class="absolute top-3 right-3 bg-white/90 text-primary-600 text-xs px-2.5 py-1 rounded-full font-medium"><i class="fa-solid fa-laptop mr-1"></i>线上</div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col">
+        <h3 class="text-sm font-semibold leading-snug line-clamp-2">新材料领域科技成果线上路演会（第12期）</h3>
+        <div class="mt-3 space-y-1.5 text-xs text-gray-500">
+          <p><i class="fa-regular fa-calendar mr-2 text-gray-400"></i>2026-09-20 14:00 - 16:30</p>
+          <p><i class="fa-solid fa-users mr-2 text-gray-400"></i>已报名 128 人</p>
+          <p><i class="fa-solid fa-building-columns mr-2 text-gray-400"></i>主办：平台运营中心</p>
+        </div>
+        <div class="mt-4 flex items-center gap-2">
+          <span class="text-[11px] bg-purple-50 text-purple-600 px-2 py-0.5 rounded">项目路演</span>
+          <span class="text-[11px] bg-blue-50 text-blue-600 px-2 py-0.5 rounded">新材料</span>
+        </div>
+        <button class="mt-4 w-full bg-primary-600 hover:bg-primary-700 text-white text-sm py-2 rounded-xl font-medium transition">立即报名</button>
+      </div>
+    </div>
+
+    <!-- 活动2：报名中 -->
+    <div class="bg-white rounded-2xl overflow-hidden hover-lift flex flex-col">
+      <div class="relative">
+        <img src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=500&q=80" class="w-full h-44 object-cover" alt="">
+        <div class="absolute top-3 left-3 bg-primary-600 text-white text-xs px-2.5 py-1 rounded-full font-medium">报名中</div>
+        <div class="absolute top-3 right-3 bg-white/90 text-orange-500 text-xs px-2.5 py-1 rounded-full font-medium"><i class="fa-solid fa-location-dot mr-1"></i>西安</div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col">
+        <h3 class="text-sm font-semibold leading-snug line-clamp-2">2026 高校科技成果转化政策宣讲暨校企对接会</h3>
+        <div class="mt-3 space-y-1.5 text-xs text-gray-500">
+          <p><i class="fa-regular fa-calendar mr-2 text-gray-400"></i>2026-09-25 09:00 - 17:00</p>
+          <p><i class="fa-solid fa-users mr-2 text-gray-400"></i>已报名 86 人 / 限 150 人</p>
+          <p><i class="fa-solid fa-location-dot mr-2 text-gray-400"></i>西安高新区科创大厦 3 楼会议厅</p>
+        </div>
+        <div class="mt-4 flex items-center gap-2">
+          <span class="text-[11px] bg-amber-50 text-amber-600 px-2 py-0.5 rounded">政策宣讲</span>
+          <span class="text-[11px] bg-emerald-50 text-emerald-600 px-2 py-0.5 rounded">校企对接</span>
+        </div>
+        <button class="mt-4 w-full bg-primary-600 hover:bg-primary-700 text-white text-sm py-2 rounded-xl font-medium transition">立即报名</button>
+      </div>
+    </div>
+
+    <!-- 活动3：报名中 -->
+    <div class="bg-white rounded-2xl overflow-hidden hover-lift flex flex-col">
+      <div class="relative">
+        <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=500&q=80" class="w-full h-44 object-cover" alt="">
+        <div class="absolute top-3 left-3 bg-primary-600 text-white text-xs px-2.5 py-1 rounded-full font-medium">报名中</div>
+        <div class="absolute top-3 right-3 bg-white/90 text-primary-600 text-xs px-2.5 py-1 rounded-full font-medium"><i class="fa-solid fa-laptop mr-1"></i>线上</div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col">
+        <h3 class="text-sm font-semibold leading-snug line-clamp-2">人工智能大模型产业应用成果发布会</h3>
+        <div class="mt-3 space-y-1.5 text-xs text-gray-500">
+          <p><i class="fa-regular fa-calendar mr-2 text-gray-400"></i>2026-09-28 15:00 - 17:00</p>
+          <p><i class="fa-solid fa-users mr-2 text-gray-400"></i>已报名 215 人</p>
+          <p><i class="fa-solid fa-building-columns mr-2 text-gray-400"></i>主办：西安交通大学 · 平台联合</p>
+        </div>
+        <div class="mt-4 flex items-center gap-2">
+          <span class="text-[11px] bg-violet-50 text-violet-600 px-2 py-0.5 rounded">成果发布</span>
+          <span class="text-[11px] bg-blue-50 text-blue-600 px-2 py-0.5 rounded">人工智能</span>
+        </div>
+        <button class="mt-4 w-full bg-primary-600 hover:bg-primary-700 text-white text-sm py-2 rounded-xl font-medium transition">立即报名</button>
+      </div>
+    </div>
+
+    <!-- 活动4：报名中 -->
+    <div class="bg-white rounded-2xl overflow-hidden hover-lift flex flex-col">
+      <div class="relative">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&q=80" class="w-full h-44 object-cover" alt="">
+        <div class="absolute top-3 left-3 bg-primary-600 text-white text-xs px-2.5 py-1 rounded-full font-medium">报名中</div>
+        <div class="absolute top-3 right-3 bg-white/90 text-orange-500 text-xs px-2.5 py-1 rounded-full font-medium"><i class="fa-solid fa-location-dot mr-1"></i>北京</div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col">
+        <h3 class="text-sm font-semibold leading-snug line-clamp-2">技术经理人实操培训班（中级认证）第三期</h3>
+        <div class="mt-3 space-y-1.5 text-xs text-gray-500">
+          <p><i class="fa-regular fa-calendar mr-2 text-gray-400"></i>2026-10-08 至 10-12</p>
+          <p><i class="fa-solid fa-users mr-2 text-gray-400"></i>已报名 42 人 / 限 60 人</p>
+          <p><i class="fa-solid fa-location-dot mr-2 text-gray-400"></i>北京中关村国家技术转移人才培养基地</p>
+        </div>
+        <div class="mt-4 flex items-center gap-2">
+          <span class="text-[11px] bg-cyan-50 text-cyan-600 px-2 py-0.5 rounded">技术培训</span>
+          <span class="text-[11px] bg-amber-50 text-amber-600 px-2 py-0.5 rounded">经理人认证</span>
+        </div>
+        <button class="mt-4 w-full bg-primary-600 hover:bg-primary-700 text-white text-sm py-2 rounded-xl font-medium transition">立即报名</button>
+      </div>
+    </div>
+
+    <!-- 活动5：即将开始 -->
+    <div class="bg-white rounded-2xl overflow-hidden hover-lift flex flex-col">
+      <div class="relative">
+        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=500&q=80" class="w-full h-44 object-cover" alt="">
+        <div class="absolute top-3 left-3 bg-green-500 text-white text-xs px-2.5 py-1 rounded-full font-medium"><i class="fa-solid fa-circle text-[8px] mr-1 animate-pulse"></i>即将开始</div>
+        <div class="absolute top-3 right-3 bg-white/90 text-primary-600 text-xs px-2.5 py-1 rounded-full font-medium"><i class="fa-solid fa-laptop mr-1"></i>线上</div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col">
+        <h3 class="text-sm font-semibold leading-snug line-clamp-2">生物医药专场路演：创新药与医疗器械成果对接</h3>
+        <div class="mt-3 space-y-1.5 text-xs text-gray-500">
+          <p><i class="fa-regular fa-calendar mr-2 text-gray-400"></i>2026-09-19 10:00 - 12:00</p>
+          <p><i class="fa-solid fa-users mr-2 text-gray-400"></i>已报名 96 人</p>
+          <p><i class="fa-solid fa-building-columns mr-2 text-gray-400"></i>主办：平台运营中心</p>
+        </div>
+        <div class="mt-4 flex items-center gap-2">
+          <span class="text-[11px] bg-purple-50 text-purple-600 px-2 py-0.5 rounded">项目路演</span>
+          <span class="text-[11px] bg-pink-50 text-pink-600 px-2 py-0.5 rounded">生物医药</span>
+        </div>
+        <button class="mt-4 w-full bg-primary-600 hover:bg-primary-700 text-white text-sm py-2 rounded-xl font-medium transition">立即报名</button>
+      </div>
+    </div>
+
+    <!-- 活动6：已结束 -->
+    <div class="bg-white rounded-2xl overflow-hidden hover-lift flex flex-col opacity-75">
+      <div class="relative">
+        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=500&q=80" class="w-full h-44 object-cover" alt="">
+        <div class="absolute top-3 left-3 bg-gray-400 text-white text-xs px-2.5 py-1 rounded-full font-medium">已结束</div>
+        <div class="absolute top-3 right-3 bg-white/90 text-primary-600 text-xs px-2.5 py-1 rounded-full font-medium"><i class="fa-solid fa-laptop mr-1"></i>线上</div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col">
+        <h3 class="text-sm font-semibold leading-snug line-clamp-2">新能源与节能技术线上成果路演会（第8期）</h3>
+        <div class="mt-3 space-y-1.5 text-xs text-gray-500">
+          <p><i class="fa-regular fa-calendar mr-2 text-gray-400"></i>2026-09-10 14:00 - 16:00</p>
+          <p><i class="fa-solid fa-users mr-2 text-gray-400"></i>参与 156 人</p>
+          <p><i class="fa-solid fa-building-columns mr-2 text-gray-400"></i>主办：平台运营中心</p>
+        </div>
+        <div class="mt-4 flex items-center gap-2">
+          <span class="text-[11px] bg-purple-50 text-purple-600 px-2 py-0.5 rounded">项目路演</span>
+          <span class="text-[11px] bg-emerald-50 text-emerald-600 px-2 py-0.5 rounded">新能源</span>
+        </div>
+        <button class="mt-4 w-full bg-gray-100 text-gray-500 text-sm py-2 rounded-xl font-medium cursor-not-allowed">查看回放</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 分页 -->
+  <div class="flex justify-center items-center gap-2 mt-10">
+    <button class="w-9 h-9 rounded-lg bg-white border border-gray-200 text-gray-400 hover:text-primary-600"><i class="fa-solid fa-chevron-left text-xs"></i></button>
+    <button class="w-9 h-9 rounded-lg bg-primary-600 text-white text-sm">1</button>
+    <button class="w-9 h-9 rounded-lg bg-white border border-gray-200 text-gray-600 text-sm hover:text-primary-600">2</button>
+    <button class="w-9 h-9 rounded-lg bg-white border border-gray-200 text-gray-600 text-sm hover:text-primary-600">3</button>
+    <button class="w-9 h-9 rounded-lg bg-white border border-gray-200 text-gray-600 text-sm hover:text-primary-600">4</button>
+    <button class="w-9 h-9 rounded-lg bg-white border border-gray-200 text-gray-400 hover:text-primary-600"><i class="fa-solid fa-chevron-right text-xs"></i></button>
+  </div>
+</main>
+
+<!-- 页脚 -->
+<footer class="bg-slate-900 text-slate-400 mt-16">
+  <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-4 gap-8">
+    <div>
+      <div class="flex items-center gap-2.5 mb-3"><div class="w-8 h-8 rounded-lg hero-gradient flex items-center justify-center text-white"><i class="fa-solid fa-atom"></i></div><span class="text-white font-bold">科技成果转化平台</span></div>
+      <p class="text-xs leading-relaxed">连接高校科研力量与产业需求，让每一项科技成果实现其产业价值。</p>
+    </div>
+    <div>
+      <p class="text-white text-sm font-semibold mb-3">快速导航</p>
+      <ul class="space-y-2 text-xs">
+        <li><a href="achievements.html" class="hover:text-white">科技成果大厅</a></li>
+        <li><a href="demands.html" class="hover:text-white">技术需求大厅</a></li>
+        <li>
+</li>
+        <li><a href="services.html" class="hover:text-white">服务大厅</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-white text-sm font-semibold mb-3">平台服务</p>
+      <ul class="space-y-2 text-xs">
+        <li><a href="services.html" class="hover:text-white">成果评价</a></li>
+        <li><a href="services.html" class="hover:text-white">专利与法务</a></li>
+        <li><a href="services.html" class="hover:text-white">融资对接</a></li>
+        <li><a href="messages.html" class="hover:text-white">洽谈消息</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-white text-sm font-semibold mb-3">联系我们</p>
+      <ul class="space-y-2 text-xs">
+        <li><i class="fa-solid fa-phone mr-2"></i>400-888-0000</li>
+        <li><i class="fa-regular fa-envelope mr-2"></i>service@kechuanghui.cn</li>
+        <li><i class="fa-solid fa-location-dot mr-2"></i>西安市高新区科创大厦</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-slate-800 py-4 text-center text-xs">© 2026 科技成果转化平台 ｜ 陕ICP备00000000号</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>用户与机构管理 · 科技成果转化平台管理端</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/custom.css">
+<link rel="stylesheet" href="../assets/css/admin.css">
+<script>tailwind.config={theme:{extend:{colors:{primary:{50:'#EFF6FF',100:'#DBEAFE',500:'#3B82F6',600:'#2563EB',700:'#1D4ED8'}},fontFamily:{sans:['PingFang SC','Microsoft YaHei','system-ui','sans-serif']}}}}</script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+<header class="bg-white border-b border-gray-200 h-14 flex items-center px-6 sticky top-0 z-40">
+  <a href="../index.html" class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg bg-red-600 flex items-center justify-center text-white"><i class="fa-solid fa-shield-halved text-sm"></i></div><span class="font-bold">科技成果转化平台 · 管理端</span></a>
+  <div class="ml-auto flex items-center gap-5 text-sm"><a href="../home.html" class="text-gray-500 hover:text-primary-600"><i class="fa-solid fa-external-link mr-1"></i>访问前台</a><div class="flex items-center gap-2"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80" class="w-8 h-8 rounded-full object-cover" alt=""><span class="text-gray-700">超级管理员</span></div></div>
+</header>
+
+<div class="flex">
+  <aside class="sidebar bg-white border-r border-gray-200 shrink-0 py-4">
+    <p class="text-[11px] text-gray-400 px-5 pt-2 pb-1.5 font-semibold uppercase">运营管理</p>
+    <a href="dashboard.html" class="menu-item flex items-center gap-3 px-5 py-2.5 text-sm text-gray-600"><i class="fa-solid fa-chart-line w-4"></i>数据概览</a>
+    <a href="users.html" class="menu-item active flex items-center gap-3 px-5 py-2.5 text-sm"><i class="fa-solid fa-users-rectangle w-4"></i>用户与机构</a>
+    <a href="achievements.html" class="menu-item flex items-center gap-3 px-5 py-2.5 text-sm text-gray-600"><i class="fa-solid fa-flask-vial w-4"></i>成果审核</a>
+    <a href="demands.html" class="menu-item flex items-center gap-3 px-5 py-2.5 text-sm text-gray-600"><i class="fa-solid fa-clipboard-list w-4"></i>需求审核</a>
+    <a href="services.html" class="menu-item flex items-center gap-3 px-5 py-2.5 text-sm text-gray-600"><i class="fa-solid fa-briefcase w-4"></i>服务内容</a>
+    <a href="projects.html" class="menu-item flex items-center gap-3 px-5 py-2.5 text-sm text-gray-600"><i class="fa-solid fa-diagram-project w-4"></i>转化项目</a>
+    <p class="text-[11px] text-gray-400 px-5 pt-4 pb-1.5 font-semibold uppercase">系统</p>
+    <a href="settings.html" class="menu-item flex items-center gap-3 px-5 py-2.5 text-sm text-gray-600"><i class="fa-solid fa-gears w-4"></i>系统设置</a>
+    <a href="login.html" class="menu-item flex items-center gap-3 px-5 py-2.5 text-sm text-gray-600"><i class="fa-solid fa-right-from-bracket w-4"></i>退出登录</a>
+  </aside>
+
+  <main class="flex-1 p-6 overflow-y-auto">
+    <div class="flex items-center justify-between mb-5">
+      <div><h1 class="text-xl font-bold">用户与机构管理</h1><p class="text-sm text-gray-400 mt-1">对应前台「登录注册·角色选择」· 院校/企业/经理人认证审核</p></div>
+      <button class="text-sm bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700"><i class="fa-solid fa-download mr-1 text-xs"></i>导出名单</button>
+    </div>
+
+    <!-- Tab -->
+    <div class="flex gap-1 bg-white rounded-xl p-1 mb-4 w-fit">
+      <button class="text-sm font-medium bg-red-600 text-white px-4 py-2 rounded-lg">待审核 <span class="text-[11px] bg-white/20 px-1.5 rounded-full">6</span></button>
+      <button class="text-sm text-gray-500 px-4 py-2 rounded-lg hover:bg-gray-50">已通过</button>
+      <button class="text-sm text-gray-500 px-4 py-2 rounded-lg hover:bg-gray-50">已拒绝</button>
+      <button class="text-sm text-gray-500 px-4 py-2 rounded-lg hover:bg-gray-50">全部用户</button>
+    </div>
+
+    <!-- 表格 -->
+    <div class="bg-white rounded-2xl overflow-hidden">
+      <table class="w-full text-sm">
+        <thead class="bg-gray-50 text-gray-500 text-xs">
+          <tr><th class="text-left px-5 py-3 font-medium">机构/用户名称</th><th class="text-left px-5 py-3 font-medium">类型</th><th class="text-left px-5 py-3 font-medium">联系人</th><th class="text-left px-5 py-3 font-medium">提交时间</th><th class="text-left px-5 py-3 font-medium">认证材料</th><th class="text-left px-5 py-3 font-medium">状态</th><th class="text-right px-5 py-3 font-medium">操作</th></tr>
+        </thead>
+        <tbody class="divide-y divide-gray-50">
+          <tr class="tr-hover"><td class="px-5 py-4"><div class="flex items-center gap-3"><img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=60&q=80" class="w-8 h-8 rounded-lg object-cover" alt=""><span class="font-medium">西北工业大学</span></div></td><td class="px-5 py-4"><span class="text-xs bg-primary-50 text-primary-600 px-2 py-1 rounded">高校院所</span></td><td class="px-5 py-4 text-gray-600">张老师 · 029-8849xxxx</td><td class="px-5 py-4 text-gray-400">09-16 14:30</td><td class="px-5 py-4"><a href="#" class="text-primary-600 hover:underline">营业执照.pdf</a></td><td class="px-5 py-4"><span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">待审核</span></td><td class="px-5 py-4 text-right"><button class="text-xs bg-emerald-50 text-emerald-600 px-3 py-1.5 rounded-lg hover:bg-emerald-100">通过</button><button class="text-xs bg-red-50 text-red-500 px-3 py-1.5 rounded-lg ml-2 hover:bg-red-100">拒绝</button></td></tr>
+          <tr class="tr-hover"><td class="px-5 py-4"><div class="flex items-center gap-3"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=60&q=80" class="w-8 h-8 rounded-lg object-cover" alt=""><span class="font-medium">中航工业某研究院</span></div></td><td class="px-5 py-4"><span class="text-xs bg-cyan-50 text-cyan-600 px-2 py-1 rounded">企业</span></td><td class="px-5 py-4 text-gray-600">王经理 · 029-8xxx</td><td class="px-5 py-4 text-gray-400">09-16 11:20</td><td class="px-5 py-4"><a href="#" class="text-primary-600 hover:underline">事业单位法人.pdf</a></td><td class="px-5 py-4"><span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">待审核</span></td><td class="px-5 py-4 text-right"><button class="text-xs bg-emerald-50 text-emerald-600 px-3 py-1.5 rounded-lg hover:bg-emerald-100">通过</button><button class="text-xs bg-red-50 text-red-500 px-3 py-1.5 rounded-lg ml-2 hover:bg-red-100">拒绝</button></td></tr>
+          <tr class="tr-hover"><td class="px-5 py-4"><div class="flex items-center gap-3"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=60&q=80" class="w-8 h-8 rounded-lg object-cover" alt=""><span class="font-medium">李明</span></div></td><td class="px-5 py-4"><span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">技术经理人</span></td><td class="px-5 py-4 text-gray-600">李明 · 138xxxx</td><td class="px-5 py-4 text-gray-400">09-15 16:45</td><td class="px-5 py-4"><a href="#" class="text-primary-600 hover:underline">经理人资格证.pdf</a></td><td class="px-5 py-4"><span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">待审核</span></td><td class="px-5 py-4 text-right"><button class="text-xs bg-emerald-50 text-emerald-600 px-3 py-1.5 rounded-lg hover:bg-emerald-100">通过</button><button class="text-xs bg-red-50 text-red-500 px-3 py-1.5 rounded-lg ml-2 hover:bg-red-100">拒绝</button></td></tr>
+          <tr class="tr-hover"><td class="px-5 py-4"><div class="flex items-center gap-3"><img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=60&q=80" class="w-8 h-8 rounded-lg object-cover" alt=""><span class="font-medium">稳健医疗</span></div></td><td class="px-5 py-4"><span class="text-xs bg-cyan-50 text-cyan-600 px-2 py-1 rounded">企业</span></td><td class="px-5 py-4 text-gray-600">刘总监 · 0755-8xxx</td><td class="px-5 py-4 text-gray-400">09-14 09:12</td><td class="px-5 py-4"><a href="#" class="text-primary-600 hover:underline">营业执照.pdf</a></td><td class="px-5 py-4"><span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">待审核</span></td><td class="px-5 py-4 text-right"><button class="text-xs bg-emerald-50 text-emerald-600 px-3 py-1.5 rounded-lg hover:bg-emerald-100">通过</button><button class="text-xs bg-red-50 text-red-500 px-3 py-1.5 rounded-lg ml-2 hover:bg-red-100">拒绝</button></td></tr>
+          <tr class="tr-hover"><td class="px-5 py-4"><div class="flex items-center gap-3"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&q=80" class="w-8 h-8 rounded-lg object-cover" alt=""><span class="font-medium">张卫东</span></div></td><td class="px-5 py-4"><span class="text-xs bg-primary-50 text-primary-600 px-2 py-1 rounded">高校院所</span></td><td class="px-5 py-4 text-gray-600">张教授 · 029-8849xxxx</td><td class="px-5 py-4 text-gray-400">09-13 10:30</td><td class="px-5 py-4"><a href="#" class="text-primary-600 hover:underline">工作证.jpg</a></td><td class="px-5 py-4"><span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">待审核</span></td><td class="px-5 py-4 text-right"><button class="text-xs bg-emerald-50 text-emerald-600 px-3 py-1.5 rounded-lg hover:bg-emerald-100">通过</button><button class="text-xs bg-red-50 text-red-500 px-3 py-1.5 rounded-lg ml-2 hover:bg-red-100">拒绝</button></td></tr>
+          <tr class="tr-hover"><td class="px-5 py-4"><div class="flex items-center gap-3"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=60&q=80" class="w-8 h-8 rounded-lg object-cover" alt=""><span class="font-medium">华润微电子</span></div></td><td class="px-5 py-4"><span class="text-xs bg-cyan-50 text-cyan-600 px-2 py-1 rounded">企业</span></td><td class="px-5 py-4 text-gray-600">赵总 · 0510-8xxx</td><td class="px-5 py-4 text-gray-400">09-12 15:00</td><td class="px-5 py-4"><a href="#" class="text-primary-600 hover:underline">营业执照.pdf</a></td><td class="px-5 py-4"><span class="text-xs bg-amber-50 text-amber-600 px-2 py-1 rounded">待审核</span></td><td class="px-5 py-4 text-right"><button class="text-xs bg-emerald-50 text-emerald-600 px-3 py-1.5 rounded-lg hover:bg-emerald-100">通过</button><button class="text-xs bg-red-50 text-red-500 px-3 py-1.5 rounded-lg ml-2 hover:bg-red-100">拒绝</button></td></tr>
+        </tbody>
+      </table>
+      <div class="flex items-center justify-between px-5 py-3 border-t border-gray-50 text-xs text-gray-400"><span>共 6 条待审核记录</span><div class="flex gap-2"><button class="px-3 py-1.5 border border-gray-200 rounded">上一页</button><button class="px-3 py-1.5 bg-red-600 text-white rounded">1</button><button class="px-3 py-1.5 border border-gray-200 rounded">下一页</button></div></div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>科技成果大厅 · 科技成果转化平台</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/custom.css">
+<script>tailwind.config={theme:{extend:{colors:{primary:{50:'#EFF6FF',100:'#DBEAFE',500:'#3B82F6',600:'#2563EB',700:'#1D4ED8'}},fontFamily:{sans:['PingFang SC','Microsoft YaHei','system-ui','sans-serif']}}}}</script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+<header class="glass sticky top-0 z-40 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center gap-10">
+    <a href="home.html" class="flex items-center gap-2.5 shrink-0"><div class="w-9 h-9 rounded-xl hero-gradient flex items-center justify-center text-white"><i class="fa-solid fa-atom"></i></div><span class="text-lg font-bold">科技成果转化平台</span></a>
+    <nav class="flex items-center gap-8 text-sm">
+      <a href="home.html" class="text-gray-600 hover:text-primary-600">首页</a>
+      <a href="achievements.html" class="font-semibold text-primary-600">科技成果</a>
+      <a href="demands.html" class="text-gray-600 hover:text-primary-600">技术需求</a>
+      <a href="services.html" class="text-gray-600 hover:text-primary-600">服务大厅</a>
+    </nav>
+    <div class="ml-auto flex items-center gap-5">
+      <a href="messages.html" class="relative text-gray-600 hover:text-primary-600"><i class="fa-regular fa-bell text-lg"></i><span class="absolute -top-0.5 -right-1 w-2 h-2 bg-red-500 rounded-full"></span></a>
+      <a href="publish.html" class="bg-primary-600 hover:bg-primary-700 text-white text-sm px-4 py-2 rounded-full font-medium transition"><i class="fa-solid fa-plus mr-1 text-xs"></i>发布</a>
+      <a href="profile.html" class="flex items-center gap-2"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80" class="w-8 h-8 rounded-full object-cover" alt=""><span class="text-sm text-gray-700 hidden lg:block">陈工</span></a>
+    </div>
+  </div>
+</header>
+
+<section class="bg-white border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 py-8 flex items-center justify-between">
+    <div>
+      <div class="text-xs text-gray-400 mb-2"><a href="home.html" class="hover:text-primary-600">首页</a> <i class="fa-solid fa-chevron-right text-[9px]"></i> 科技成果</div>
+      <h1 class="text-2xl font-bold">科技成果大厅</h1>
+      <p class="text-sm text-gray-400 mt-1">共 12,846 项认证成果 · 每日更新</p>
+    </div>
+    <div class="flex items-center gap-2 bg-gray-100 rounded-full px-4 py-2.5 w-96">
+      <i class="fa-solid fa-magnifying-glass text-gray-400 text-sm"></i>
+      <input type="text" placeholder="搜索技术关键词 / 高校 / 领域" class="bg-transparent text-sm outline-none w-full placeholder-gray-400">
+      <button class="text-xs font-medium text-primary-600 shrink-0">搜索</button>
+    </div>
+  </div>
+</section>
+
+<main class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-12 gap-6">
+  <aside class="col-span-3 space-y-4">
+    <div class="bg-white rounded-2xl p-5">
+      <p class="text-sm font-bold mb-3">技术领域</p>
+      <ul class="space-y-2.5 text-sm">
+        <li class="flex items-center justify-between text-primary-600 font-medium cursor-pointer">全部领域 <span class="text-xs bg-gray-100 rounded-full px-2">12846</span></li>
+        <li class="flex items-center justify-between text-gray-600 hover:text-primary-600 cursor-pointer">人工智能 <span class="text-xs text-gray-400">2841</span></li>
+        <li class="flex items-center justify-between text-gray-600 hover:text-primary-600 cursor-pointer">生物医药 <span class="text-xs text-gray-400">1965</span></li>
+        <li class="flex items-center justify-between text-gray-600 hover:text-primary-600 cursor-pointer">新材料 <span class="text-xs text-gray-400">2107</span></li>
+        <li class="flex items-center justify-between text-gray-600 hover:text-primary-600 cursor-pointer">新能源 <span class="text-xs text-gray-400">1532</span></li>
+        <li class="flex items-center justify-between text-gray-600 hover:text-primary-600 cursor-pointer">智能制造 <span class="text-xs text-gray-400">2453</span></li>
+        <li class="flex items-center justify-between text-gray-600 hover:text-primary-600 cursor-pointer">现代农业 <span class="text-xs text-gray-400">1948</span></li>
+      </ul>
+    </div>
+    <div class="bg-white rounded-2xl p-5">
+      <p class="text-sm font-bold mb-3">研发阶段</p>
+      <div class="flex flex-wrap gap-2">
+        <button class="text-xs bg-primary-600 text-white px-3 py-1.5 rounded-full">全部</button>
+        <button class="text-xs bg-gray-100 text-gray-600 px-3 py-1.5 rounded-full hover:bg-gray-200">正在研发</button>
+        <button class="text-xs bg-gray-100 text-gray-600 px-3 py-1.5 rounded-full hover:bg-gray-200">通过小试</button>
+        <button class="text-xs bg-gray-100 text-gray-600 px-3 py-1.5 rounded-full hover:bg-gray-200">通过中试</button>
+        <button class="text-xs bg-gray-100 text-gray-600 px-3 py-1.5 rounded-full hover:bg-gray-200">可规模生产</button>
+      </div>
+    </div>
+    <div class="bg-white rounded-2xl p-5">
+      <p class="text-sm font-bold mb-3">转化方式</p>
+      <ul class="space-y-2.5 text-sm text-gray-600">
+        <li class="flex items-center gap-2 cursor-pointer hover:text-primary-600"><input type="checkbox" class="accent-primary-600"> 技术转让</li>
+        <li class="flex items-center gap-2 cursor-pointer hover:text-primary-600"><input type="checkbox" class="accent-primary-600"> 许可使用</li>
+        <li class="flex items-center gap-2 cursor-pointer hover:text-primary-600"><input type="checkbox" class="accent-primary-600"> 作价入股</li>
+        <li class="flex items-center gap-2 cursor-pointer hover:text-primary-600"><input type="checkbox" class="accent-primary-600"> 合作开发</li>
+      </ul>
+    </div>
+    <div class="bg-white rounded-2xl p-5">
+      <p class="text-sm font-bold mb-3">所在地区</p>
+      <button class="w-full bg-gray-50 rounded-xl px-3 py-2.5 text-sm text-gray-500 flex items-center justify-between hover:bg-gray-100">陕西省 <i class="fa-solid fa-chevron-down text-xs text-gray-300"></i></button>
+    </div>
+  </aside>
+
+  <section class="col-span-9">
+    <div class="bg-white rounded-2xl px-5 py-3 flex items-center gap-6 text-sm mb-4">
+      <button class="font-semibold text-primary-600">综合排序</button>
+      <button class="text-gray-500 hover:text-primary-600">成熟度 <i class="fa-solid fa-sort text-[10px]"></i></button>
+      <button class="text-gray-500 hover:text-primary-600">发布时间 <i class="fa-solid fa-sort text-[10px]"></i></button>
+      <button class="text-gray-500 hover:text-primary-600">浏览量 <i class="fa-solid fa-sort text-[10px]"></i></button>
+      <span class="ml-auto text-xs text-gray-400">勾选 2-4 项可横向对比</span>
+    </div>
+
+    <div class="space-y-4" id="listContainer">
+
+      <div class="relative group">
+        <label class="absolute top-3 left-3 z-10 flex items-center gap-1.5 bg-white/95 px-2 py-1 rounded-lg border border-gray-200 cursor-pointer hover:border-primary-500 transition">
+          <input type="checkbox" class="compare-cb w-4 h-4 accent-primary-600" data-id="1" data-name="高强度钛合金激光3D打印" data-org="西北工业大学" data-trl="通过中试" data-price="面议" data-patent="专利12项" data-field="新材料" data-views="2,341">
+          <span class="text-[11px] text-gray-500">对比</span>
+        </label>
+        <a href="achievement-detail.html" class="flex gap-5 bg-white rounded-2xl p-5 hover-lift block">
+          <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=300&q=80" class="w-44 h-32 rounded-xl object-cover" alt="">
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start gap-3">
+              <h3 class="text-base font-semibold leading-snug flex-1">高强度钛合金激光3D打印关键技术及成套装备</h3>
+              <span class="shrink-0 text-sm font-bold text-orange-500">面议</span>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mt-2 line-clamp-2">突破激光沉积增材制造组织调控、变形控制与在线监测三大关键难题，构件强度提升18%，制造成本降低35%，已在两家主机厂完成工程化验证。</p>
+            <div class="flex items-center gap-2 mt-auto pt-3">
+              <span class="text-xs text-gray-500"><i class="fa-solid fa-building-columns mr-1 text-gray-400"></i>西北工业大学</span>
+              <span class="text-[10px] bg-orange-50 text-orange-500 px-1.5 py-0.5 rounded inline-flex items-center gap-0.5"><i class="fa-solid fa-handshake-angle text-[8px]"></i>委托中·李明</span>
+              <span class="text-xs text-gray-300">|</span>
+              <span class="text-[11px] bg-primary-50 text-primary-600 px-2 py-0.5 rounded">新材料</span>
+              <span class="text-[11px] bg-emerald-50 text-emerald-600 px-2 py-0.5 rounded">通过中试</span>
+              <span class="text-[11px] bg-gray-50 text-gray-500 px-2 py-0.5 rounded">专利12项</span>
+              <span class="text-xs text-gray-400 ml-auto"><i class="fa-regular fa-clock mr-1"></i>2026-09-10</span>
+              <span class="text-xs text-gray-400"><i class="fa-regular fa-eye mr-1"></i>2,341</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="relative group">
+        <label class="absolute top-3 left-3 z-10 flex items-center gap-1.5 bg-white/95 px-2 py-1 rounded-lg border border-gray-200 cursor-pointer hover:border-primary-500 transition">
+          <input type="checkbox" class="compare-cb w-4 h-4 accent-primary-600" data-id="2" data-name="肿瘤早期筛查纳米酶" data-org="浙江大学" data-trl="通过小试" data-price="¥800万" data-patent="专利8项" data-field="生物医药" data-views="1,872">
+          <span class="text-[11px] text-gray-500">对比</span>
+        </label>
+        <a href="achievement-detail.html" class="flex gap-5 bg-white rounded-2xl p-5 hover-lift block">
+          <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=300&q=80" class="w-44 h-32 rounded-xl object-cover" alt="">
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start gap-3">
+              <h3 class="text-base font-semibold leading-snug flex-1">肿瘤早期筛查纳米酶检测试剂盒及配套设备</h3>
+              <span class="shrink-0 text-sm font-bold text-orange-500">¥800万</span>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mt-2 line-clamp-2">基于纳米酶催化信号放大技术，实现肿瘤标志物 10 分钟快速检测，灵敏度较传统 ELISA 提升 12 倍，已取得三类医疗器械注册检验报告。</p>
+            <div class="flex items-center gap-2 mt-auto pt-3">
+              <span class="text-xs text-gray-500"><i class="fa-solid fa-building-columns mr-1 text-gray-400"></i>浙江大学</span>
+              <span class="text-xs text-gray-300">|</span>
+              <span class="text-[11px] bg-pink-50 text-pink-600 px-2 py-0.5 rounded">生物医药</span>
+              <span class="text-[11px] bg-emerald-50 text-emerald-600 px-2 py-0.5 rounded">通过小试</span>
+              <span class="text-[11px] bg-gray-50 text-gray-500 px-2 py-0.5 rounded">专利8项</span>
+              <span class="text-xs text-gray-400 ml-auto"><i class="fa-regular fa-clock mr-1"></i>2026-09-08</span>
+              <span class="text-xs text-gray-400"><i class="fa-regular fa-eye mr-1"></i>1,872</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="relative group">
+        <label class="absolute top-3 left-3 z-10 flex items-center gap-1.5 bg-white/95 px-2 py-1 rounded-lg border border-gray-200 cursor-pointer hover:border-primary-500 transition">
+          <input type="checkbox" class="compare-cb w-4 h-4 accent-primary-600" data-id="3" data-name="工业质检多模态视觉V3.0" data-org="上海交通大学" data-trl="可规模生产" data-price="¥1200万" data-patent="软著5项" data-field="人工智能" data-views="3,105">
+          <span class="text-[11px] text-gray-500">对比</span>
+        </label>
+        <a href="achievement-detail.html" class="flex gap-5 bg-white rounded-2xl p-5 hover-lift block">
+          <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=300&q=80" class="w-44 h-32 rounded-xl object-cover" alt="">
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start gap-3">
+              <h3 class="text-base font-semibold leading-snug flex-1">工业质检多模态视觉大模型系统 V3.0</h3>
+              <span class="shrink-0 text-sm font-bold text-orange-500">¥1200万</span>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mt-2 line-clamp-2">融合视觉与光谱多模态数据，覆盖 3C、光伏、汽车零部件等 200+ 缺陷类型，误检率低于 0.3%，已在 3 家头部制造企业产线部署。</p>
+            <div class="flex items-center gap-2 mt-auto pt-3">
+              <span class="text-xs text-gray-500"><i class="fa-solid fa-building-columns mr-1 text-gray-400"></i>上海交通大学</span>
+              <span class="text-[10px] bg-orange-50 text-orange-500 px-1.5 py-0.5 rounded inline-flex items-center gap-0.5"><i class="fa-solid fa-handshake-angle text-[8px]"></i>代理人·李达</span>
+              <span class="text-xs text-gray-300">|</span>
+              <span class="text-[11px] bg-violet-50 text-violet-600 px-2 py-0.5 rounded">人工智能</span>
+              <span class="text-[11px] bg-emerald-50 text-emerald-600 px-2 py-0.5 rounded">可规模生产</span>
+              <span class="text-[11px] bg-gray-50 text-gray-500 px-2 py-0.5 rounded">软著5项</span>
+              <span class="text-xs text-gray-400 ml-auto"><i class="fa-regular fa-clock mr-1"></i>2026-09-02</span>
+              <span class="text-xs text-gray-400"><i class="fa-regular fa-eye mr-1"></i>3,105</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="relative group">
+        <label class="absolute top-3 left-3 z-10 flex items-center gap-1.5 bg-white/95 px-2 py-1 rounded-lg border border-gray-200 cursor-pointer hover:border-primary-500 transition">
+          <input type="checkbox" class="compare-cb w-4 h-4 accent-primary-600" data-id="4" data-name="钙钛矿叠层太阳能电池" data-org="清华大学" data-trl="通过小试" data-price="面议" data-patent="专利15项" data-field="新能源" data-views="986">
+          <span class="text-[11px] text-gray-500">对比</span>
+        </label>
+        <a href="achievement-detail.html" class="flex gap-5 bg-white rounded-2xl p-5 hover-lift block">
+          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=300&q=80" class="w-44 h-32 rounded-xl object-cover" alt="">
+          <div class="flex-1 min-w-0 flex flex-col">
+            <div class="flex items-start gap-3">
+              <h3 class="text-base font-semibold leading-snug flex-1">钙钛矿叠层太阳能电池量产制备工艺</h3>
+              <span class="shrink-0 text-sm font-bold text-orange-500">面议</span>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mt-2 line-clamp-2">光电转换效率达 28.4%，突破大面积均匀涂布与封装稳定性难题，中试线连续运行 1000 小时性能衰减低于 3%。</p>
+            <div class="flex items-center gap-2 mt-auto pt-3">
+              <span class="text-xs text-gray-500"><i class="fa-solid fa-building-columns mr-1 text-gray-400"></i>清华大学</span>
+              <span class="text-xs text-gray-300">|</span>
+              <span class="text-[11px] bg-sky-50 text-sky-600 px-2 py-0.5 rounded">新能源</span>
+              <span class="text-[11px] bg-amber-50 text-amber-600 px-2 py-0.5 rounded">通过小试</span>
+              <span class="text-[11px] bg-gray-50 text-gray-500 px-2 py-0.5 rounded">专利15项</span>
+              <span class="text-xs text-gray-400 ml-auto"><i class="fa-regular fa-clock mr-1"></i>2026-08-28</span>
+              <span class="text-xs text-gray-400"><i class="fa-regular fa-eye mr-1"></i>986</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+    <div class="flex items-center justify-center gap-2 mt-8 text-sm">
+      <button class="w-9 h-9 rounded-lg bg-white border border-gray-200 text-gray-400"><i class="fa-solid fa-chevron-left text-xs"></i></button>
+      <button class="w-9 h-9 rounded-lg bg-primary-600 text-white font-medium">1</button>
+      <button class="w-9 h-9 rounded-lg bg-white border border-gray-200 text-gray-600 hover:border-primary-500">2</button>
+      <button class="w-9 h-9 rounded-lg bg-white border border-gray-200 text-gray-600 hover:border-primary-500">3</button>
+      <span class="text-gray-400 px-1">…</span>
+      <button class="w-9 h-9 rounded-lg bg-white border border-gray-200 text-gray-600 hover:border-primary-500">99</button>
+      <button class="w-9 h-9 rounded-lg bg-white border border-gray-200 text-gray-400"><i class="fa-solid fa-chevron-right text-xs"></i></button>
+    </div>
+  </section>
+</main>
+
+<!-- 底部对比栏 -->
+<div id="compareBar" class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-40 hidden">
+  <div class="max-w-7xl mx-auto px-6 h-14 flex items-center gap-4">
+    <span class="text-sm text-gray-500">已选 <span id="compareCount" class="text-primary-600 font-semibold">0</span> 项</span>
+    <div id="compareTags" class="flex items-center gap-2 flex-1 overflow-hidden"></div>
+    <button onclick="openCompare()" class="bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold px-5 py-2 rounded-full">开始对比</button>
+    <button onclick="clearCompare()" class="text-gray-400 hover:text-gray-600 text-xs">清空</button>
+  </div>
+</div>
+
+<!-- 对比弹窗 -->
+<div id="compareModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40 backdrop-blur-sm">
+  <div class="bg-white rounded-2xl w-[900px] max-h-[80vh] flex flex-col shadow-2xl">
+    <div class="flex items-center justify-between p-5 border-b border-gray-100">
+      <h3 class="text-base font-bold">成果横向对比</h3>
+      <button onclick="closeCompare()" class="w-7 h-7 rounded-full hover:bg-gray-100 flex items-center justify-center text-gray-400"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="flex-1 overflow-auto p-5">
+      <table class="w-full text-sm border-collapse" id="compareTable">
+        <thead>
+          <tr>
+            <th class="text-left py-2 px-3 bg-gray-50 font-semibold text-gray-700 w-28">对比项</th>
+            <!-- 动态插入 -->
+          </tr>
+        </thead>
+        <tbody>
+          <!-- 动态插入 -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+const maxCompare = 4;
+function updateCompareBar() {
+  const cbs = document.querySelectorAll('.compare-cb:checked');
+  const bar = document.getElementById('compareBar');
+  const count = document.getElementById('compareCount');
+  const tags = document.getElementById('compareTags');
+  count.textContent = cbs.length;
+  tags.innerHTML = '';
+  cbs.forEach(cb => {
+    const tag = document.createElement('span');
+    tag.className = 'text-xs bg-primary-50 text-primary-700 px-2.5 py-1 rounded-full';
+    tag.textContent = cb.dataset.name.length > 14 ? cb.dataset.name.slice(0,14)+'…' : cb.dataset.name;
+    tags.appendChild(tag);
+  });
+  if (cbs.length >= 2 && cbs.length <= maxCompare) {
+    bar.classList.remove('hidden');
+  } else {
+    bar.classList.add('hidden');
+  }
+  // 限制最多4个
+  document.querySelectorAll('.compare-cb').forEach(cb => {
+    if (!cb.checked && cbs.length >= maxCompare) {
+      cb.disabled = true;
+      cb.parentElement.style.opacity = '0.4';
+    } else {
+      cb.disabled = false;
+      cb.parentElement.style.opacity = '1';
+    }
+  });
+}
+function clearCompare() {
+  document.querySelectorAll('.compare-cb:checked').forEach(cb => cb.checked = false);
+  updateCompareBar();
+}
+function openCompare() {
+  const cbs = document.querySelectorAll('.compare-cb:checked');
+  if (cbs.length < 2) return;
+  const headers = ['技术领域','成果持有方','研发阶段','参考价格','知识产权','浏览量'];
+  const cols = ['field','org','trl','price','patent','views'];
+  const theadRow = document.querySelector('#compareTable thead tr');
+  const tbody = document.querySelector('#compareTable tbody');
+  // 清空
+  theadRow.innerHTML = '<th class="text-left py-2 px-3 bg-gray-50 font-semibold text-gray-700 w-28">对比项</th>';
+  tbody.innerHTML = '';
+  // 成果名表头
+  cbs.forEach(cb => {
+    const th = document.createElement('th');
+    th.className = 'text-left py-2 px-3 bg-gray-50 font-semibold text-primary-600';
+    th.textContent = cb.dataset.name;
+    theadRow.appendChild(th);
+  });
+  // 数据行
+  headers.forEach((h, i) => {
+    const tr = document.createElement('tr');
+    tr.className = i % 2 === 0 ? 'bg-white' : 'bg-gray-50/50';
+    const label = document.createElement('td');
+    label.className = 'py-2.5 px-3 text-gray-500 text-xs font-medium';
+    label.textContent = h;
+    tr.appendChild(label);
+    cbs.forEach(cb => {
+      const td = document.createElement('td');
+      td.className = 'py-2.5 px-3 text-gray-800';
+      td.textContent = cb.dataset[cols[i]];
+      tr.appendChild(td);
+    });
+    tbody.appendChild(tr);
+  });
+  // 查看详情行
+  const tr = document.createElement('tr');
+  const label = document.createElement('td');
+  label.className = 'py-2.5 px-3 text-gray-500 text-xs font-medium';
+  label.textContent = '操作';
+  tr.appendChild(label);
+  cbs.forEach(cb => {
+    const td = document.createElement('td');
+    td.className = 'py-2.5 px-3';
+    td.innerHTML = '<a href="achievement-detail.html" target="_blank" class="text-primary-600 text-xs hover:underline">查看详情 →</a>';
+    tr.appendChild(td);
+  });
+  tbody.appendChild(tr);
+
+  const m = document.getElementById('compareModal');
+  m.classList.remove('hidden');
+  m.classList.add('flex');
+}
+function closeCompare() {
+  const m = document.getElementById('compareModal');
+  m.classList.add('hidden');
+  m.classList.remove('flex');
+}
+document.querySelectorAll('.compare-cb').forEach(cb => cb.addEventListener('change', updateCompareBar));
+</script>
+
+<footer class="bg-slate-900 text-slate-400 mt-20">
+  <div class="max-w-7xl mx-auto px-6 py-10 flex items-center justify-between">
+    <div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg hero-gradient flex items-center justify-center text-white"><i class="fa-solid fa-atom"></i></div><span class="text-white font-bold">科技成果转化平台</span><span class="text-xs ml-2">让每一项科技成果实现其产业价值</span></div>
+    <div class="text-xs">© 2026 科技成果转化平台 · 科技成果转化平台 ｜ 陕ICP备00000000号</div>
+  </div>
+</footer>
+
+</body>
+</html>

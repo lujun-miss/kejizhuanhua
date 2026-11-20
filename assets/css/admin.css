@@ -1,0 +1,7 @@
+/* 管理端侧边栏 */
+.sidebar { width: 220px; min-height: calc(100vh - 56px); }
+.menu-item { transition: all .15s; }
+.menu-item:hover { background: rgba(239,68,68,.08); }
+.menu-item.active { background: rgba(239,68,68,.1); color: #DC2626; border-left: 3px solid #DC2626; }
+/* 表格行悬浮 */
+.tr-hover:hover { background: #F9FAFB; }

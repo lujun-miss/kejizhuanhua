@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>技术经理人 · 科技成果转化平台</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/custom.css">
+<script>tailwind.config={theme:{extend:{colors:{primary:{50:'#EFF6FF',100:'#DBEAFE',500:'#3B82F6',600:'#2563EB',700:'#1D4ED8'}},fontFamily:{sans:['PingFang SC','Microsoft YaHei','system-ui','sans-serif']}}}}</script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+<header class="glass sticky top-0 z-40 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center gap-10">
+    <a href="home.html" class="flex items-center gap-2.5 shrink-0"><div class="w-9 h-9 rounded-xl hero-gradient flex items-center justify-center text-white"><i class="fa-solid fa-atom"></i></div><span class="text-lg font-bold">科技成果转化平台</span></a>
+    <nav class="flex items-center gap-8 text-sm">
+      <a href="home.html" class="text-gray-600 hover:text-primary-600">首页</a>
+      <a href="achievements.html" class="text-gray-600 hover:text-primary-600">科技成果</a>
+      <a href="demands.html" class="text-gray-600 hover:text-primary-600">技术需求</a>
+      <a href="services.html" class="font-semibold text-primary-600">服务大厅</a>
+    </nav>
+    <div class="ml-auto flex items-center gap-5">
+      <a href="messages.html" class="relative text-gray-600 hover:text-primary-600"><i class="fa-regular fa-bell text-lg"></i><span class="absolute -top-0.5 -right-1 w-2 h-2 bg-red-500 rounded-full"></span></a>
+      <a href="publish.html" class="bg-primary-600 hover:bg-primary-700 text-white text-sm px-4 py-2 rounded-full font-medium transition"><i class="fa-solid fa-plus mr-1 text-xs"></i>发布</a>
+      <a href="profile.html" class="flex items-center gap-2"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80" class="w-8 h-8 rounded-full object-cover" alt=""><span class="text-sm text-gray-700 hidden lg:block">陈工</span></a>
+    </div>
+  </div>
+</header>
+<section class="bg-white border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 py-8">
+    <div class="text-xs text-gray-400 mb-2"><a href="home.html" class="hover:text-primary-600">首页</a> <i class="fa-solid fa-chevron-right text-[9px]"></i> <a href="services.html" class="hover:text-primary-600">服务大厅</a> <i class="fa-solid fa-chevron-right text-[9px]"></i> 技术经理人</div>
+    <div class="flex items-center gap-4">
+      <div class="w-14 h-14 rounded-2xl bg-violet-50 text-violet-600 flex items-center justify-center text-2xl"><i class="fa-solid fa-user-tie"></i></div>
+      <div><h1 class="text-2xl font-bold">技术经理人</h1><p class="text-sm text-gray-400 mt-1">认证技术经理人全程撮合，从需求理解到合同签约，陪伴成果转化每一步</p></div>
+    </div>
+  </div>
+</section>
+<main class="max-w-7xl mx-auto px-6 py-8 space-y-6">
+  <div class="bg-white rounded-2xl p-5">
+    <p class="text-sm text-gray-600 leading-relaxed">技术经理人是成果转化的专业撮合者，帮企业梳理技术需求、在高校成果库中筛选匹配方案、协调双方谈判与签约。<b>经理人不是必须的</b>，双方可自行对接；需要时可委托经理人全程服务，转化成功后收取成交额 2%-5% 服务费。</p>
+  </div>
+  <div>
+    <h2 class="text-lg font-bold mb-4">认证技术经理人</h2>
+    <div class="space-y-4">
+      <div class="bg-white rounded-2xl p-5">
+        <div class="flex items-start gap-4">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&q=80" class="w-12 h-12 rounded-full object-cover" alt="">
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 flex-wrap"><p class="text-base font-semibold">李明</p><span class="text-[11px] bg-amber-50 text-amber-600 border border-amber-200 px-1.5 rounded">高级</span><span class="text-[11px] text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">平台认证</span></div>
+            <p class="text-xs text-gray-400 mt-1">新材料领域 · 促成 23 项 · 响应率 98%</p>
+            <div class="flex items-center gap-4 mt-3 text-xs text-gray-500">
+              <span><i class="fa-solid fa-percent text-orange-500 mr-1"></i>服务费 2%-4%</span>
+              <span><i class="fa-regular fa-clock text-violet-500 mr-1"></i>平均响应 2 小时</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 mt-4 pt-4 border-t border-gray-50">
+          <button onclick="toggleContact(this)" class="bg-violet-500 hover:bg-violet-600 text-white text-xs font-semibold px-5 py-2 rounded-lg transition">委托</button>
+          <a href="messages.html" class="text-xs text-violet-600 hover:underline"><i class="fa-regular fa-comment-dots mr-1"></i>在线沟通</a>
+        </div>
+        <div class="contact-box hidden mt-4 p-4 bg-gray-50 rounded-xl">
+          <p class="text-xs font-semibold text-gray-500 mb-2">经理人联系方式</p>
+          <div class="grid grid-cols-2 gap-3 text-sm">
+            <p><i class="fa-solid fa-user text-violet-500 mr-1.5"></i>李明</p>
+            <p><i class="fa-solid fa-phone text-violet-500 mr-1.5"></i>138-0000-1234</p>
+            <p><i class="fa-solid fa-envelope text-violet-500 mr-1.5"></i>liming@techbridge.cn</p>
+            <p><i class="fa-solid fa-briefcase text-violet-500 mr-1.5"></i>西安科技创新服务中心</p>
+          </div>
+          <p class="text-[11px] text-gray-400 mt-3"><i class="fa-solid fa-info-circle mr-1"></i>委托后经理人将在 2 小时内与您联系，转化成功后收取服务费</p>
+        </div>
+        <!-- TA的代理/发布 折叠区 -->
+        <div class="mt-4 pt-4 border-t border-gray-50">
+          <div class="flex items-center gap-4 text-xs">
+            <button onclick="toggleMgrList('lm-agent')" class="text-violet-600 font-semibold hover:underline">TA的代理 (4)</button>
+            <button onclick="toggleMgrList('lm-self')" class="text-gray-500 hover:text-violet-600 hover:underline">TA的发布 (5)</button>
+          </div>
+          <div id="lm-agent" class="mt-3 space-y-2">
+            <!-- 待确认的新委托 -->
+            <div class="p-3 rounded-lg bg-amber-50 border border-amber-200 flex items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=100&q=80" class="w-12 h-12 rounded-lg object-cover" alt="">
+              <div class="flex-1 min-w-0">
+                <p class="text-xs font-semibold text-gray-800 line-clamp-1">车规级传感器封装可靠性测试方法</p>
+                <p class="text-[11px] text-gray-400 mt-0.5">委托方：华中科技大学 · 智能制造 · TRL 7</p>
+              </div>
+              <div class="flex flex-col items-end gap-1">
+                <span class="text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded">待确认</span>
+                <div class="flex gap-1">
+                  <button class="text-[10px] bg-emerald-500 text-white px-2 py-1 rounded hover:bg-emerald-600">接受</button>
+                  <button class="text-[10px] bg-gray-100 text-gray-500 px-2 py-1 rounded hover:bg-gray-200">拒绝</button>
+                </div>
+              </div>
+            </div>
+            <div class="p-3 rounded-lg bg-orange-50/50 border border-orange-100 flex items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=100&q=80" class="w-12 h-12 rounded-lg object-cover" alt="">
+              <div class="flex-1 min-w-0">
+                <p class="text-xs font-semibold text-gray-800 line-clamp-1">高强度钛合金激光3D打印关键技术</p>
+                <p class="text-[11px] text-gray-400 mt-0.5">委托方：西北工业大学 · 新材料 · 通过中试</p>
+              </div>
+              <a href="achievement-detail.html" class="text-[11px] text-violet-600">查看 →</a>
+            </div>
+            <div class="p-3 rounded-lg bg-orange-50/50 border border-orange-100 flex items-center gap-3">
+              <div class="w-12 h-12 rounded-lg bg-cyan-100 flex items-center justify-center text-cyan-500"><i class="fa-solid fa-bullseye text-lg"></i></div>
+              <div class="flex-1 min-w-0">
+                <p class="text-xs font-semibold text-gray-800 line-clamp-1">耐高温特种密封材料国产替代</p>
+                <p class="text-[11px] text-gray-400 mt-0.5">委托方：中航工业某研究院 · 需求 · 对接中</p>
+              </div>
+              <a href="demand-detail.html" class="text-[11px] text-violet-600">查看 →</a>
+            </div>
+            <div class="p-3 rounded-lg bg-orange-50/50 border border-orange-100 flex items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=100&q=80" class="w-12 h-12 rounded-lg object-cover" alt="">
+              <div class="flex-1 min-w-0">
+                <p class="text-xs font-semibold text-gray-800 line-clamp-1">航空发动机耐高温涂层密封技术</p>
+                <p class="text-[11px] text-gray-400 mt-0.5">委托方：西北工业大学 · 新材料 · 已成交</p>
+              </div>
+              <a href="achievement-detail.html" class="text-[11px] text-violet-600">查看 →</a>
+            </div>
+          </div>
+          <div id="lm-self" class="hidden mt-3">
+            <p class="text-xs text-gray-400">暂无本人发布内容</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl p-5">
+        <div class="flex items-start gap-4">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&q=80" class="w-12 h-12 rounded-full object-cover" alt="">
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 flex-wrap"><p class="text-base font-semibold">王雪</p><span class="text-[11px] bg-amber-50 text-amber-600 border border-amber-200 px-1.5 rounded">资深</span><span class="text-[11px] text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">平台认证</span></div>
+            <p class="text-xs text-gray-400 mt-1">生物医药领域 · 促成 18 项 · 响应率 96%</p>
+            <div class="flex items-center gap-4 mt-3 text-xs text-gray-500">
+              <span><i class="fa-solid fa-percent text-orange-500 mr-1"></i>服务费 3%-5%</span>
+              <span><i class="fa-regular fa-clock text-violet-500 mr-1"></i>平均响应 3 小时</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 mt-4 pt-4 border-t border-gray-50">
+          <button onclick="toggleContact(this)" class="bg-violet-500 hover:bg-violet-600 text-white text-xs font-semibold px-5 py-2 rounded-lg transition">委托</button>
+          <a href="messages.html" class="text-xs text-violet-600 hover:underline"><i class="fa-regular fa-comment-dots mr-1"></i>在线沟通</a>
+        </div>
+        <div class="contact-box hidden mt-4 p-4 bg-gray-50 rounded-xl">
+          <p class="text-xs font-semibold text-gray-500 mb-2">经理人联系方式</p>
+          <div class="grid grid-cols-2 gap-3 text-sm">
+            <p><i class="fa-solid fa-user text-violet-500 mr-1.5"></i>王雪</p>
+            <p><i class="fa-solid fa-phone text-violet-500 mr-1.5"></i>139-0000-5678</p>
+            <p><i class="fa-solid fa-envelope text-violet-500 mr-1.5"></i>wangxue@techbridge.cn</p>
+            <p><i class="fa-solid fa-briefcase text-violet-500 mr-1.5"></i>陕西医药产业技术研究院</p>
+          </div>
+          <p class="text-[11px] text-gray-400 mt-3"><i class="fa-solid fa-info-circle mr-1"></i>委托后经理人将在 3 小时内与您联系，转化成功后收取服务费</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl p-5">
+        <div class="flex items-start gap-4">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80" class="w-12 h-12 rounded-full object-cover" alt="">
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 flex-wrap"><p class="text-base font-semibold">赵启航</p><span class="text-[11px] bg-amber-50 text-amber-600 border border-amber-200 px-1.5 rounded">高级</span><span class="text-[11px] text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">平台认证</span></div>
+            <p class="text-xs text-gray-400 mt-1">高端装备领域 · 促成 15 项 · 响应率 95%</p>
+            <div class="flex items-center gap-4 mt-3 text-xs text-gray-500">
+              <span><i class="fa-solid fa-percent text-orange-500 mr-1"></i>服务费 2%-4%</span>
+              <span><i class="fa-regular fa-clock text-violet-500 mr-1"></i>平均响应 4 小时</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 mt-4 pt-4 border-t border-gray-50">
+          <button onclick="toggleContact(this)" class="bg-violet-500 hover:bg-violet-600 text-white text-xs font-semibold px-5 py-2 rounded-lg transition">委托</button>
+          <a href="messages.html" class="text-xs text-violet-600 hover:underline"><i class="fa-regular fa-comment-dots mr-1"></i>在线沟通</a>
+        </div>
+        <div class="contact-box hidden mt-4 p-4 bg-gray-50 rounded-xl">
+          <p class="text-xs font-semibold text-gray-500 mb-2">经理人联系方式</p>
+          <div class="grid grid-cols-2 gap-3 text-sm">
+            <p><i class="fa-solid fa-user text-violet-500 mr-1.5"></i>赵启航</p>
+            <p><i class="fa-solid fa-phone text-violet-500 mr-1.5"></i>137-0000-9012</p>
+            <p><i class="fa-solid fa-envelope text-violet-500 mr-1.5"></i>zhaoqh@techbridge.cn</p>
+            <p><i class="fa-solid fa-briefcase text-violet-500 mr-1.5"></i>陕西省先进制造创新中心</p>
+          </div>
+          <p class="text-[11px] text-gray-400 mt-3"><i class="fa-solid fa-info-circle mr-1"></i>委托后经理人将在 4 小时内与您联系，转化成功后收取服务费</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script>
+function toggleContact(btn) {
+  const box = btn.closest('.bg-white').querySelector('.contact-box');
+  const isHidden = box.classList.contains('hidden');
+  document.querySelectorAll('.contact-box').forEach(b => b.classList.add('hidden'));
+  document.querySelectorAll('button').forEach(b => { if(b.textContent==='委托'){ b.textContent='委托'; b.classList.remove('bg-gray-400'); b.classList.add('bg-violet-500'); } });
+  if (isHidden) {
+    box.classList.remove('hidden');
+    btn.textContent = '收起联系方式';
+    btn.classList.remove('bg-violet-500');
+    btn.classList.add('bg-gray-400');
+  }
+}
+function toggleMgrList(id) {
+  ['lm-agent','lm-self','wx-agent','wx-self','zqh-agent','zqh-self'].forEach(s => {
+    const el = document.getElementById(s);
+    if (!el) return;
+    if (s === id) el.classList.remove('hidden');
+    else {
+      // 只收起同经理人的两个tab
+      if (s.split('-')[0] === id.split('-')[0]) el.classList.add('hidden');
+    }
+  });
+}
+</script>
+<footer class="bg-slate-900 text-slate-400 mt-8">
+  <div class="max-w-7xl mx-auto px-6 py-10 flex items-center justify-between">
+    <div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg hero-gradient flex items-center justify-center text-white"><i class="fa-solid fa-atom"></i></div><span class="text-white font-bold">科技成果转化平台</span><span class="text-xs ml-2">让每一项科技成果实现其产业价值</span></div>
+    <div class="text-xs">© 2026 科技成果转化平台 ｜ 陕ICP备00000000号</div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>融资对接 · 科技成果转化平台</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/custom.css">
+<script>tailwind.config={theme:{extend:{colors:{primary:{50:'#EFF6FF',100:'#DBEAFE',500:'#3B82F6',600:'#2563EB',700:'#1D4ED8'}},fontFamily:{sans:['PingFang SC','Microsoft YaHei','system-ui','sans-serif']}}}}</script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+<header class="glass sticky top-0 z-40 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center gap-10">
+    <a href="home.html" class="flex items-center gap-2.5 shrink-0"><div class="w-9 h-9 rounded-xl hero-gradient flex items-center justify-center text-white"><i class="fa-solid fa-atom"></i></div><span class="text-lg font-bold">科技成果转化平台</span></a>
+    <nav class="flex items-center gap-8 text-sm">
+      <a href="home.html" class="text-gray-600 hover:text-primary-600">首页</a>
+      <a href="achievements.html" class="text-gray-600 hover:text-primary-600">科技成果</a>
+      <a href="demands.html" class="text-gray-600 hover:text-primary-600">技术需求</a>
+      <a href="services.html" class="font-semibold text-primary-600">服务大厅</a>
+    </nav>
+    <div class="ml-auto flex items-center gap-5">
+      <a href="messages.html" class="relative text-gray-600 hover:text-primary-600"><i class="fa-regular fa-bell text-lg"></i><span class="absolute -top-0.5 -right-1 w-2 h-2 bg-red-500 rounded-full"></span></a>
+      <a href="publish.html" class="bg-primary-600 hover:bg-primary-700 text-white text-sm px-4 py-2 rounded-full font-medium transition"><i class="fa-solid fa-plus mr-1 text-xs"></i>发布</a>
+      <a href="profile.html" class="flex items-center gap-2"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80" class="w-8 h-8 rounded-full object-cover" alt=""><span class="text-sm text-gray-700 hidden lg:block">陈工</span></a>
+    </div>
+  </div>
+</header>
+<section class="bg-white border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 py-8">
+    <div class="text-xs text-gray-400 mb-2"><a href="home.html" class="hover:text-primary-600">首页</a> <i class="fa-solid fa-chevron-right text-[9px]"></i> <a href="services.html" class="hover:text-primary-600">服务大厅</a> <i class="fa-solid fa-chevron-right text-[9px]"></i> 融资对接</div>
+    <div class="flex items-center gap-4">
+      <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+      <div><h1 class="text-2xl font-bold">融资对接</h1><p class="text-sm text-gray-400 mt-1">对接创投机构与科技银行，提供 BP 打磨、路演安排、投贷联动一站式融资服务</p></div>
+    </div>
+  </div>
+</section>
+<main class="max-w-7xl mx-auto px-6 py-8 space-y-6">
+  <div class="bg-white rounded-2xl p-5">
+    <p class="text-sm text-gray-600 leading-relaxed">平台对接 200+ 创投机构与科技银行，提供<b>股权融资、科技贷款、BP 打磨、路演安排</b>一站式服务。流程：项目评估 → BP 打磨 → 精准匹配 → 路演对接。融资成功后按成交额收取 2%-5% 服务费，不成功不收费。</p>
+  </div>
+  <div>
+    <h2 class="text-lg font-bold mb-4">合作投资机构 / 银行</h2>
+    <div class="space-y-4">
+      <div class="bg-white rounded-2xl p-5">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0"><i class="fa-solid fa-building-columns"></i></div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 flex-wrap"><p class="text-base font-semibold">红杉资本中国基金</p><span class="text-[11px] text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">平台认证</span></div>
+            <p class="text-xs text-gray-400 mt-1">硬科技 · 早期投资 · 单项目投资 500万-5000万</p>
+            <div class="flex items-center gap-4 mt-3 text-xs text-gray-500">
+              <span><i class="fa-solid fa-percent text-orange-500 mr-1"></i>服务费 3%</span>
+              <span><i class="fa-regular fa-clock text-emerald-500 mr-1"></i>1 个月内对接</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 mt-4 pt-4 border-t border-gray-50">
+          <button onclick="toggleContact(this)" class="bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-semibold px-5 py-2 rounded-lg transition">提交融资需求</button>
+          <a href="messages.html" class="text-xs text-emerald-600 hover:underline"><i class="fa-regular fa-comment-dots mr-1"></i>在线咨询</a>
+        </div>
+        <div class="contact-box hidden mt-4 p-4 bg-gray-50 rounded-xl">
+          <p class="text-xs font-semibold text-gray-500 mb-2">机构联系方式</p>
+          <div class="grid grid-cols-2 gap-3 text-sm">
+            <p><i class="fa-solid fa-user text-emerald-500 mr-1.5"></i>联系人：投资经理 王浩</p>
+            <p><i class="fa-solid fa-phone text-emerald-500 mr-1.5"></i>010-6666-1234</p>
+            <p><i class="fa-solid fa-envelope text-emerald-500 mr-1.5"></i>bp@sequoiacap.com</p>
+            <p><i class="fa-solid fa-location-dot text-emerald-500 mr-1.5"></i>北京市朝阳区华贸中心</p>
+          </div>
+          <p class="text-[11px] text-gray-400 mt-3"><i class="fa-solid fa-info-circle mr-1"></i>提交 BP 后机构将在 5 个工作日内反馈是否跟进，平台不收取任何费用</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl p-5">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0"><i class="fa-solid fa-building-columns"></i></div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 flex-wrap"><p class="text-base font-semibold">招商银行 科技金融部</p><span class="text-[11px] text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">平台认证</span></div>
+            <p class="text-xs text-gray-400 mt-1">知识产权质押贷 · 信用贷 · 单户最高 3000 万</p>
+            <div class="flex items-center gap-4 mt-3 text-xs text-gray-500">
+              <span><i class="fa-solid fa-percent text-orange-500 mr-1"></i>利率 4.5% 起</span>
+              <span><i class="fa-regular fa-clock text-emerald-500 mr-1"></i>15 个工作日放款</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 mt-4 pt-4 border-t border-gray-50">
+          <button onclick="toggleContact(this)" class="bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-semibold px-5 py-2 rounded-lg transition">提交贷款申请</button>
+          <a href="messages.html" class="text-xs text-emerald-600 hover:underline"><i class="fa-regular fa-comment-dots mr-1"></i>在线咨询</a>
+        </div>
+        <div class="contact-box hidden mt-4 p-4 bg-gray-50 rounded-xl">
+          <p class="text-xs font-semibold text-gray-500 mb-2">机构联系方式</p>
+          <div class="grid grid-cols-2 gap-3 text-sm">
+            <p><i class="fa-solid fa-user text-emerald-500 mr-1.5"></i>联系人：客户经理 赵倩</p>
+            <p><i class="fa-solid fa-phone text-emerald-500 mr-1.5"></i>029-8888-2222</p>
+            <p><i class="fa-solid fa-envelope text-emerald-500 mr-1.5"></i>zhao@cmbchina.com</p>
+            <p><i class="fa-solid fa-location-dot text-emerald-500 mr-1.5"></i>西安市高新区科技路</p>
+          </div>
+          <p class="text-[11px] text-gray-400 mt-3"><i class="fa-solid fa-info-circle mr-1"></i>提交申请后客户经理将在 3 个工作日内与您联系，平台不收取任何费用</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script>
+function toggleContact(btn) {
+  const box = btn.closest('.bg-white').querySelector('.contact-box');
+  const isHidden = box.classList.contains('hidden');
+  document.querySelectorAll('.contact-box').forEach(b => b.classList.add('hidden'));
+  document.querySelectorAll('button').forEach(b => { if(b.textContent.includes('提交')){ b.textContent=b.dataset.orig||b.textContent; b.classList.remove('bg-gray-400'); b.classList.add('bg-emerald-500'); } });
+  if (isHidden) {
+    box.classList.remove('hidden');
+    btn.dataset.orig = btn.textContent;
+    btn.textContent = '收起联系方式';
+    btn.classList.remove('bg-emerald-500');
+    btn.classList.add('bg-gray-400');
+  }
+}
+</script>
+<footer class="bg-slate-900 text-slate-400 mt-8">
+  <div class="max-w-7xl mx-auto px-6 py-10 flex items-center justify-between">
+    <div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg hero-gradient flex items-center justify-center text-white"><i class="fa-solid fa-atom"></i></div><span class="text-white font-bold">科技成果转化平台</span><span class="text-xs ml-2">让每一项科技成果实现其产业价值</span></div>
+    <div class="text-xs">© 2026 科技成果转化平台 ｜ 陕ICP备00000000号</div>
+  </div>
+</footer>
+</body>
+</html>

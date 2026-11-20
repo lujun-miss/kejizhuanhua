@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>登录注册 · 科技成果转化平台</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/custom.css">
+<script>tailwind.config={theme:{extend:{colors:{primary:{50:'#EFF6FF',100:'#DBEAFE',500:'#3B82F6',600:'#2563EB',700:'#1D4ED8'}},fontFamily:{sans:['PingFang SC','Microsoft YaHei','system-ui','sans-serif']}}}}</script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+<div class="min-h-screen grid grid-cols-2">
+  <!-- 左侧品牌区 -->
+  <section class="hero-gradient text-white relative overflow-hidden flex flex-col justify-between p-14">
+    <i class="fa-solid fa-atom absolute -right-16 -top-16 text-[280px] text-white/5 rotate-12"></i>
+    <i class="fa-solid fa-flask absolute right-40 bottom-24 text-8xl text-white/10"></i>
+    <div class="flex items-center gap-2.5 relative"><div class="w-10 h-10 rounded-xl bg-white/15 border border-white/25 flex items-center justify-center text-lg"><i class="fa-solid fa-atom"></i></div><span class="text-xl font-bold">科技成果转化平台</span></div>
+    <div class="relative">
+      <h1 class="text-4xl font-bold leading-snug">让每一项科技成果<br>找到它的产业土壤</h1>
+      <p class="text-white/80 mt-4">高校科研成果 × 企业技术需求 · 智能撮合一站式转化</p>
+      <div class="grid grid-cols-3 gap-6 mt-10">
+        <div><p class="text-2xl font-bold">12,846</p><p class="text-xs text-white/70 mt-1">入库科技成果</p></div>
+        <div><p class="text-2xl font-bold">3,572</p><p class="text-xs text-white/70 mt-1">企业技术需求</p></div>
+        <div><p class="text-2xl font-bold">¥18.6亿</p><p class="text-xs text-white/70 mt-1">累计成交额</p></div>
+      </div>
+    </div>
+    <p class="text-xs text-white/60 relative">© 2026 科技成果转化平台 · 科技成果转化平台</p>
+  </section>
+
+  <!-- 右侧表单区 -->
+  <section class="flex items-center justify-center bg-white">
+    <div class="w-[420px] py-14">
+      <h2 class="text-2xl font-bold">欢迎回来</h2>
+      <p class="text-sm text-gray-400 mt-2">未注册的手机号验证后将自动创建账号</p>
+
+      <!-- 登录方式 -->
+      <div class="flex gap-8 mt-8 border-b border-gray-100">
+        <button class="text-base font-bold text-gray-900 border-b-2 border-primary-600 pb-3">验证码登录</button>
+        <button class="text-base text-gray-400 pb-3 border-b-2 border-transparent hover:text-gray-600">账号登录</button>
+      </div>
+
+      <div class="mt-6 space-y-4">
+        <div class="flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3.5 border border-gray-100 focus-within:ring-2 focus-within:ring-primary-500">
+          <i class="fa-solid fa-mobile-screen text-gray-400 text-sm w-4"></i>
+          <input type="tel" placeholder="请输入手机号" class="flex-1 bg-transparent text-sm outline-none placeholder-gray-400">
+        </div>
+        <div class="flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3.5 border border-gray-100 focus-within:ring-2 focus-within:ring-primary-500">
+          <i class="fa-solid fa-shield-halved text-gray-400 text-sm w-4"></i>
+          <input type="text" placeholder="请输入验证码" class="flex-1 bg-transparent text-sm outline-none placeholder-gray-400">
+          <button class="text-xs text-primary-600 font-medium shrink-0">获取验证码</button>
+        </div>
+        <a href="home.html" class="block text-center hero-gradient text-white text-sm font-semibold rounded-full py-3.5 shadow-lg shadow-blue-200">登录 / 注册</a>
+        <p class="flex items-start gap-2 text-xs text-gray-400 leading-relaxed">
+          <input type="checkbox" checked class="accent-primary-600 mt-0.5">
+          <span>我已阅读并同意 <a href="#" class="text-primary-600">《用户服务协议》</a> 与 <a href="#" class="text-primary-600">《隐私政策》</a></span>
+        </p>
+      </div>
+
+      <!-- 角色选择 -->
+      <div class="mt-10">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="flex-1 h-px bg-gray-100"></div>
+          <p class="text-xs text-gray-400">选择你的身份，获得精准推荐</p>
+          <div class="flex-1 h-px bg-gray-100"></div>
+        </div>
+        <div class="grid grid-cols-3 gap-3">
+          <button class="border-2 border-primary-600 bg-primary-50 rounded-2xl py-5 flex flex-col items-center gap-1.5">
+            <i class="fa-solid fa-building-columns text-primary-600 text-xl"></i><span class="text-sm font-semibold text-primary-700">高校 / 科研</span><span class="text-[11px] text-gray-400">发布成果</span>
+          </button>
+          <button class="border-2 border-gray-100 rounded-2xl py-5 flex flex-col items-center gap-1.5 hover:border-gray-300">
+            <i class="fa-solid fa-industry text-gray-400 text-xl"></i><span class="text-sm font-semibold text-gray-600">企业</span><span class="text-[11px] text-gray-400">发布需求</span>
+          </button>
+          <button class="border-2 border-gray-100 rounded-2xl py-5 flex flex-col items-center gap-1.5 hover:border-gray-300">
+            <i class="fa-solid fa-user-tie text-gray-400 text-xl"></i><span class="text-sm font-semibold text-gray-600">技术经理人</span><span class="text-[11px] text-gray-400">撮合服务</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</body>
+</html>

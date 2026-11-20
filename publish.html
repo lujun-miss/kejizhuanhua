@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>发布中心 · 科技成果转化平台</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/custom.css">
+<script>tailwind.config={theme:{extend:{colors:{primary:{50:'#EFF6FF',100:'#DBEAFE',500:'#3B82F6',600:'#2563EB',700:'#1D4ED8'}},fontFamily:{sans:['PingFang SC','Microsoft YaHei','system-ui','sans-serif']}}}}</script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+<!-- 顶部导航 -->
+<header class="glass sticky top-0 z-40 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center gap-10">
+    <a href="home.html" class="flex items-center gap-2.5 shrink-0"><div class="w-9 h-9 rounded-xl hero-gradient flex items-center justify-center text-white"><i class="fa-solid fa-atom"></i></div><span class="text-lg font-bold">科技成果转化平台</span></a>
+    <nav class="flex items-center gap-8 text-sm">
+      <a href="home.html" class="text-gray-600 hover:text-primary-600">首页</a>
+      <a href="achievements.html" class="text-gray-600 hover:text-primary-600">科技成果</a>
+      <a href="demands.html" class="text-gray-600 hover:text-primary-600">技术需求</a>
+      <a href="services.html" class="text-gray-600 hover:text-primary-600">服务大厅</a>
+    </nav>
+    <div class="ml-auto flex items-center gap-5">
+      <a href="messages.html" class="relative text-gray-600 hover:text-primary-600"><i class="fa-regular fa-bell text-lg"></i><span class="absolute -top-0.5 -right-1 w-2 h-2 bg-red-500 rounded-full"></span></a>
+      <a href="publish.html" class="bg-primary-600 hover:bg-primary-700 text-white text-sm px-4 py-2 rounded-full font-medium transition"><i class="fa-solid fa-plus mr-1 text-xs"></i>发布</a>
+      <a href="profile.html" class="flex items-center gap-2"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80" class="w-8 h-8 rounded-full object-cover" alt=""><span class="text-sm text-gray-700 hidden lg:block">陈工</span></a>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-6 py-10">
+  <h1 class="text-2xl font-bold">发布中心</h1>
+  <p class="text-sm text-gray-400 mt-1.5">发布前将进行产权核验与敏感信息审查，仅意向方可查看联系方式</p>
+
+  <!-- 双Tab -->
+  <div class="mt-6 grid grid-cols-2 gap-1 bg-gray-100 rounded-full p-1">
+    <button id="tab-achievement" class="text-sm font-semibold bg-white text-primary-600 rounded-full py-2.5 shadow-sm transition" onclick="switchTab('achievement')"><i class="fa-solid fa-flask mr-1.5 text-xs"></i>发布科技成果</button>
+    <button id="tab-demand" class="text-sm text-gray-500 rounded-full py-2.5 hover:text-gray-800 transition" onclick="switchTab('demand')"><i class="fa-solid fa-bullseye mr-1.5 text-xs"></i>发布科技需求</button>
+  </div>
+
+  <!-- 成果发布表单 -->
+  <form id="form-achievement" class="mt-6 space-y-5">
+    <!-- 发布身份 -->
+    <div class="bg-white rounded-2xl p-6 border-2 border-dashed border-primary-200">
+      <div class="flex items-center gap-2 mb-4">
+        <i class="fa-solid fa-user-check text-primary-600"></i>
+        <h2 class="text-sm font-bold text-gray-900">发布身份</h2>
+      </div>
+      <div class="flex gap-3">
+        <label class="flex-1 cursor-pointer">
+          <input type="radio" name="pub-type" value="self" checked class="peer hidden">
+          <div class="rounded-xl border-2 border-gray-100 peer-checked:border-primary-500 peer-checked:bg-primary-50/50 px-4 py-4 transition">
+            <p class="text-sm font-semibold text-gray-800 flex items-center gap-2"><i class="fa-solid fa-user text-primary-500"></i>本人发布</p>
+            <p class="text-xs text-gray-400 mt-1">成果归本机构所有，由本人/团队运营</p>
+          </div>
+        </label>
+        <label class="flex-1 cursor-pointer">
+          <input type="radio" name="pub-type" value="agent" class="peer hidden">
+          <div class="rounded-xl border-2 border-gray-100 peer-checked:border-orange-400 peer-checked:bg-orange-50 px-4 py-4 transition">
+            <p class="text-sm font-semibold text-gray-800 flex items-center gap-2"><i class="fa-solid fa-handshake-angle text-orange-500"></i>代他人发布</p>
+            <p class="text-xs text-gray-400 mt-1">受委托方授权，以代理人身份挂牌</p>
+          </div>
+        </label>
+      </div>
+      <!-- 代理信息区（默认隐藏） -->
+      <div id="agent-info-ach" class="hidden mt-4 space-y-4 pt-4 border-t border-gray-100">
+        <div class="bg-orange-50/60 text-xs text-orange-600 rounded-lg px-3 py-2 flex items-start gap-2"><i class="fa-solid fa-circle-info mt-0.5"></i><span>代发布需上传委托方出具的代理授权书，平台审核通过后方可挂牌。成果展示时发布方为委托方，您显示为"代理人"。</span></div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="text-sm font-medium text-gray-700">委托方名称 <span class="text-red-500">*</span></label>
+            <input type="text" placeholder="如：西安交通大学材料学院" class="mt-2 w-full bg-gray-50 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-400">
+          </div>
+          <div>
+            <label class="text-sm font-medium text-gray-700">委托方联系人 <span class="text-red-500">*</span></label>
+            <input type="text" placeholder="请输入委托方联系人" class="mt-2 w-full bg-gray-50 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-400">
+          </div>
+        </div>
+        <div>
+          <label class="text-sm font-medium text-gray-700">代理授权书 <span class="text-red-500">*</span> <span class="text-gray-400 text-xs font-normal">（委托方盖章PDF）</span></label>
+          <div class="mt-2 flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3 border border-dashed border-gray-200 cursor-pointer hover:border-orange-300">
+            <i class="fa-solid fa-file-arrow-up text-orange-400"></i>
+            <span class="text-xs text-gray-400">点击上传 PDF 格式授权书，需包含委托事项、有效期、双方盖章</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 基本信息 -->
+    <div class="bg-white rounded-2xl p-6">
+      <h2 class="text-sm font-bold text-gray-900 mb-5 pb-3 border-b border-gray-50">基本信息</h2>
+      <div class="space-y-5">
+        <div>
+          <label class="text-sm font-medium text-gray-700">成果名称 <span class="text-red-500">*</span></label>
+          <input type="text" placeholder="请输入成果名称，30字以内" class="mt-2 w-full bg-gray-50 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-400">
+        </div>
+        <div>
+          <label class="text-sm font-medium text-gray-700">所属领域 <span class="text-red-500">*</span></label>
+          <div class="mt-2 flex flex-wrap gap-2">
+            <button type="button" class="text-xs bg-primary-600 text-white px-4 py-2 rounded-full">人工智能</button>
+            <button type="button" class="text-xs bg-gray-50 text-gray-600 px-4 py-2 rounded-full border border-gray-100 hover:border-primary-300">生物医药</button>
+            <button type="button" class="text-xs bg-gray-50 text-gray-600 px-4 py-2 rounded-full border border-gray-100 hover:border-primary-300">新材料</button>
+            <button type="button" class="text-xs bg-gray-50 text-gray-600 px-4 py-2 rounded-full border border-gray-100 hover:border-primary-300">新能源</button>
+            <button type="button" class="text-xs bg-gray-50 text-gray-600 px-4 py-2 rounded-full border border-gray-100 hover:border-primary-300">智能制造</button>
+            <button type="button" class="text-xs bg-gray-50 text-gray-600 px-4 py-2 rounded-full border border-gray-100 hover:border-primary-300">现代农业</button>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="text-sm font-medium text-gray-700">研发阶段 <span class="text-gray-400 text-xs font-normal">（对应 TRL 等级）</span> <span class="text-red-500">*</span></label>
+            <button type="button" class="mt-2 w-full bg-gray-50 rounded-xl px-4 py-3 text-sm text-left text-gray-500 flex items-center justify-between hover:bg-gray-100">通过小试 · TRL 4-6 级 <i class="fa-solid fa-chevron-down text-gray-300 text-xs"></i></button>
+          </div>
+          <div>
+            <label class="text-sm font-medium text-gray-700">转化方式 <span class="text-red-500">*</span></label>
+            <button type="button" class="mt-2 w-full bg-gray-50 rounded-xl px-4 py-3 text-sm text-left text-gray-500 flex items-center justify-between hover:bg-gray-100">技术转让、许可使用 <i class="fa-solid fa-chevron-down text-gray-300 text-xs"></i></button>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="text-sm font-medium text-gray-700">项目负责人 <span class="text-red-500">*</span></label>
+            <input type="text" placeholder="如：张卫东 教授" class="mt-2 w-full bg-gray-50 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-400">
+          </div>
+          <div>
+            <label class="text-sm font-medium text-gray-700">所在地 <span class="text-gray-400 text-xs font-normal">（自动填充当前机构所在地）</span></label>
+            <input type="text" placeholder="陕西省西安市" class="mt-2 w-full bg-gray-50 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-400" readonly>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 详细介绍 -->
+    <div class="bg-white rounded-2xl p-6">
+      <h2 class="text-sm font-bold text-gray-900 mb-5 pb-3 border-b border-gray-50">详细介绍</h2>
+      <div class="space-y-5">
+        <div>
+          <label class="text-sm font-medium text-gray-700">成果简介 <span class="text-red-500">*</span></label>
+          <div class="mt-2 relative">
+            <textarea rows="5" placeholder="请描述技术亮点、应用场景、性能指标、产业化基础等" class="w-full bg-gray-50 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-400 resize-none"></textarea>
+            <span class="absolute bottom-3 right-4 text-xs text-gray-300">0/500</span>
+          </div>
+        </div>
+        <div>
+          <label class="text-sm font-medium text-gray-700">应用场景 <span class="text-gray-400 text-xs font-normal">（选填，帮助企业快速理解技术适用领域）</span></label>
+          <input type="text" placeholder="如：航空航天·结构件制造、医疗器械·定制假体、汽车制造·轻量化构件" class="mt-2 w-full bg-gray-50 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-400">
+        </div>
+        <div>
+          <label class="text-sm font-medium text-gray-700">成果图片</label>
+          <div class="mt-2 flex gap-3">
+            <div class="w-24 h-24 rounded-xl bg-gray-50 border border-dashed border-gray-200 flex items-center justify-center"><i class="fa-solid fa-image text-gray-300 text-xl"></i></div>
+            <div class="w-24 h-24 rounded-xl bg-gray-50 border border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-300 hover:border-primary-300 hover:text-primary-400 cursor-pointer"><i class="fa-solid fa-plus"></i><span class="text-xs mt-1.5">上传图片</span></div>
+          </div>
+        </div>
+        <div>
+          <label class="text-sm font-medium text-gray-700">附件材料（专利证书、检测报告等）</label>
+          <div class="mt-2 flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-4 border border-dashed border-gray-200"><i class="fa-solid fa-paperclip text-gray-300"></i><span class="text-sm text-gray-400">点击上传 PDF / Word / ZIP，单份不超过 20MB</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 交易信息 -->
+    <div class="bg-white rounded-2xl p-6">
+      <h2 class="text-sm font-bold text-gray-900 mb-5 pb-3 border-b border-gray-50">交易信息</h2>
+      <div class="space-y-5">
+        <div>
+          <label class="text-sm font-medium text-gray-700">意向价格</label>
+          <div class="mt-2 flex items-center gap-3">
+            <input type="text" placeholder="请输入金额" class="flex-1 bg-gray-50 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-400">
+            <label class="flex items-center gap-2 text-sm text-gray-600 bg-gray-50 rounded-xl px-4 py-3"><input type="checkbox" class="accent-primary-600"> 面议</label>
+          </div>
+        </div>
+        <div>
+          <label class="text-sm font-medium text-gray-700">联系人及方式 <span class="text-red-500">*</span></label>
+          <div class="mt-2 grid grid-cols-2 gap-4">
+            <input type="text" placeholder="联系人姓名" class="bg-gray-50 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-400">
+            <input type="tel" placeholder="联系电话" class="bg-gray-50 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-400">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-3 pb-4">
+      <p class="flex items-center gap-2 text-xs text-gray-400 flex-1"><i class="fa-solid fa-shield-halved text-primary-400"></i>平台对您的联系方式严格保密，仅向通过认证的意向方展示</p>
+      <button type="button" class="text-sm text-gray-500 px-6 py-3">存草稿</button>
+      <a href="home.html" class="hero-gradient text-white text-sm font-semibold rounded-full px-10 py-3 shadow-lg shadow-blue-200">提交审核</a>
+    </div>
+  </form>
+
+  <!-- 需求发布表单 -->
+  <form id="form-demand" class="mt-6 space-y-5 hidden">
+    <!-- 发布身份 -->
+    <div class="bg-white rounded-2xl p-6 border-2 border-dashed border-primary-200">
+      <div class="flex items-center gap-2 mb-4">
+        <i class="fa-solid fa-user-check text-primary-600"></i>
+        <h2 class="text-sm font-bold text-gray-900">发布身份</h2>
+      </div>
+      <div class="flex gap-3">
+        <label class="flex-1 cursor-pointer">
+          <input type="radio" name="pub-type-d" value="self" checked class="peer hidden">
+          <div class="rounded-xl border-2 border-gray-100 peer-checked:border-primary-500 peer-checked:bg-primary-50/50 px-4 py-4 transition">
+            <p class="text-sm font-semibold text-gray-800 flex items-center gap-2"><i class="fa-solid fa-user text-primary-500"></i>本人发布</p>
+            <p class="text-xs text-gray-400 mt-1">需求为本机构技术需求，由本人/团队运营</p>
+          </div>
+        </label>
+        <label class="flex-1 cursor-pointer">
+          <input type="radio" name="pub-type-d" value="agent" class="peer hidden">
+          <div class="rounded-xl border-2 border-gray-100 peer-checked:border-orange-400 peer-checked:bg-orange-50 px-4 py-4 transition">
+            <p class="text-sm font-semibold text-gray-800 flex items-center gap-2"><i class="fa-solid fa-handshake-angle text-orange-500"></i>代他人发布</p>
+            <p class="text-xs text-gray-400 mt-1">受企业/机构委托，以代理人身份挂牌需求</p>
+          </div>
+        </label>
+      </div>
+      <div id="agent-info-dem" class="hidden mt-4 space-y-4 pt-4 border-t border-gray-100">
+        <div class="bg-orange-50/60 text-xs text-orange-600 rounded-lg px-3 py-2 flex items-start gap-2"><i class="fa-solid fa-circle-info mt-0.5"></i><span>代发布需上传委托方出具的代理授权书，平台审核通过后方可挂牌。需求展示时发布方为委托企业，您显示为"代理人"。</span></div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="text-sm font-medium text-gray-700">委托方名称 <span class="text-red-500">*</span></label>
+            <input type="text" placeholder="如：中航工业某研究院" class="mt-2 w-full bg-gray-50 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-400">
+          </div>
+          <div>
+            <label class="text-sm font-medium text-gray-700">委托方联系人 <span class="text-red-500">*</span></label>
+            <input type="text" placeholder="请输入委托方联系人" class="mt-2 w-full bg-gray-50 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-400">
+          </div>
+        </div>
+        <div>
+          <label class="text-sm font-medium text-gray-700">代理授权书 <span class="text-red-500">*</span> <span class="text-gray-400 text-xs font-normal">（委托方盖章PDF）</span></label>
+          <div class="mt-2 flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3 border border-dashed border-gray-200 cursor-pointer hover:border-orange-300">
+            <i class="fa-solid fa-file-arrow-up text-orange-400"></i>
+            <span class="text-xs text-gray-400">点击上传 PDF 格式授权书，需包含委托事项、有效期、双方盖章</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 基本信息 -->
+    <div class="bg-white rounded-2xl p-6">
+      <h2 class="text-sm font-bold text-gray-900 mb-5 pb-3 border-b border-gray-50">基本信息</h2>
+      <div class="space-y-5">
+        <div>
+          <label class="text-sm font-medium text-gray-700">需求标题 <span class="text-red-500">*</span></label>
+          <input type="text" placeholder="简要描述您的技术需求，如：耐高温密封材料国产替代方案" class="mt-2 w-full bg-gray-50 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-400">
+        </div>
+        <div>
+          <label class="text-sm font-medium text-gray-700">所属行业 <span class="text-red-500">*</span></label>
+          <div class="mt-2 flex flex-wrap gap-2">
+            <button type="button" class="text-xs bg-cyan-600 text-white px-4 py-2 rounded-full">新材料</button>
+            <button type="button" class="text-xs bg-gray-50 text-gray-600 px-4 py-2 rounded-full border border-gray-100 hover:border-cyan-300">人工智能</button>
+            <button type="button" class="text-xs bg-gray-50 text-gray-600 px-4 py-2 rounded-full border border-gray-100 hover:border-cyan-300">生物医药</button>
+            <button type="button" class="text-xs bg-gray-50 text-gray-600 px-4 py-2 rounded-full border border-gray-100 hover:border-cyan-300">新能源</button>
+            <button type="button" class="text-xs bg-gray-50 text-gray-600 px-4 py-2 rounded-full border border-gray-100 hover:border-cyan-300">智能制造</button>
+            <button type="button" class="text-xs bg-gray-50 text-gray-600 px-4 py-2 rounded-full border border-gray-100 hover:border-cyan-300">现代农业</button>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="text-sm font-medium text-gray-700">所属行业 <span class="text-red-500">*</span></label>
+            <button type="button" class="mt-2 w-full bg-gray-50 rounded-xl px-4 py-3 text-sm text-left text-gray-500 flex items-center justify-between hover:bg-gray-100">航空航天 <i class="fa-solid fa-chevron-down text-gray-300 text-xs"></i></button>
+          </div>
+          <div>
+            <label class="text-sm font-medium text-gray-700">合作方式 <span class="text-red-500">*</span></label>
+            <button type="button" class="mt-2 w-full bg-gray-50 rounded-xl px-4 py-3 text-sm text-left text-gray-500 flex items-center justify-between hover:bg-gray-100">联合攻关、技术委托 <i class="fa-solid fa-chevron-down text-gray-300 text-xs"></i></button>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="text-sm font-medium text-gray-700">期望解决时间 <span class="text-red-500">*</span></label>
+            <button type="button" class="mt-2 w-full bg-gray-50 rounded-xl px-4 py-3 text-sm text-left text-gray-500 flex items-center justify-between hover:bg-gray-100">1 年内 <i class="fa-solid fa-chevron-down text-gray-300 text-xs"></i></button>
+          </div>
+          <div>
+            <label class="text-sm font-medium text-gray-700">交付周期 <span class="text-gray-400 text-xs font-normal">（完成验证的截止日期）</span></label>
+            <button type="button" class="mt-2 w-full bg-gray-50 rounded-xl px-4 py-3 text-sm text-left text-gray-500 flex items-center justify-between hover:bg-gray-100">2027 年 6 月前 <i class="fa-solid fa-chevron-down text-gray-300 text-xs"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 需求详情 -->
+    <div class="bg-white rounded-2xl p-6">
+      <h2 class="text-sm font-bold text-gray-900 mb-5 pb-3 border-b border-gray-50">需求详情</h2>
+      <div class="space-y-5">
+        <div>
+          <label class="text-sm font-medium text-gray-700">需求描述 <span class="text-red-500">*</span></label>
+          <div class="mt-2 relative">
+            <textarea rows="5" placeholder="请详细描述技术背景、待解决的问题、预期达到的技术指标、应用场景等" class="w-full bg-gray-50 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-400 resize-none"></textarea>
+            <span class="absolute bottom-3 right-4 text-xs text-gray-300">0/800</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="text-sm font-medium text-gray-700">技术指标要求</label>
+            <input type="text" placeholder="如：耐温 ≥ 300℃" class="mt-2 w-full bg-gray-50 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-400">
+          </div>
+          <div>
+            <label class="text-sm font-medium text-gray-700">要求研发阶段 <span class="text-gray-400 text-xs font-normal">（对应 TRL 等级）</span></label>
+            <button type="button" class="mt-2 w-full bg-gray-50 rounded-xl px-4 py-3 text-sm text-left text-gray-500 flex items-center justify-between hover:bg-gray-100">通过中试及以上 · TRL 7+ <i class="fa-solid fa-chevron-down text-gray-300 text-xs"></i></button>
+          </div>
+        </div>
+        <div>
+          <label class="text-sm font-medium text-gray-700">预期目标</label>
+          <textarea rows="2" placeholder="如：实现国产化替代、性能超过进口同类产品" class="mt-2 w-full bg-gray-50 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-400 resize-none"></textarea>
+        </div>
+        <div>
+          <label class="text-sm font-medium text-gray-700">知识产权归属</label>
+          <button type="button" class="mt-2 w-full bg-gray-50 rounded-xl px-4 py-3 text-sm text-left text-gray-500 flex items-center justify-between hover:bg-gray-100">共同申报专利，成果双方共享 <i class="fa-solid fa-chevron-down text-gray-300 text-xs"></i></button>
+        </div>
+        <div>
+          <label class="text-sm font-medium text-gray-700">附件材料（参考资料、图纸等）</label>
+          <div class="mt-2 flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-4 border border-dashed border-gray-200"><i class="fa-solid fa-paperclip text-gray-300"></i><span class="text-sm text-gray-400">点击上传 PDF / Word / ZIP，单份不超过 20MB</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 交易信息 -->
+    <div class="bg-white rounded-2xl p-6">
+      <h2 class="text-sm font-bold text-gray-900 mb-5 pb-3 border-b border-gray-50">预算与联系</h2>
+      <div class="space-y-5">
+        <div>
+          <label class="text-sm font-medium text-gray-700">意向预算</label>
+          <div class="mt-2 flex items-center gap-3">
+            <input type="text" placeholder="请输入预算金额" class="flex-1 bg-gray-50 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-400">
+            <span class="text-sm text-gray-400">万元</span>
+            <label class="flex items-center gap-2 text-sm text-gray-600 bg-gray-50 rounded-xl px-4 py-3"><input type="checkbox" class="accent-cyan-600"> 面议</label>
+          </div>
+        </div>
+        <div>
+          <label class="text-sm font-medium text-gray-700">联系人及方式 <span class="text-red-500">*</span></label>
+          <div class="mt-2 grid grid-cols-2 gap-4">
+            <input type="text" placeholder="联系人姓名" class="bg-gray-50 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-400">
+            <input type="tel" placeholder="联系电话" class="bg-gray-50 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary-500 placeholder-gray-400">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-3 pb-4">
+      <p class="flex items-center gap-2 text-xs text-gray-400 flex-1"><i class="fa-solid fa-shield-halved text-cyan-400"></i>平台对您的联系方式严格保密，仅向通过认证的成果方展示</p>
+      <button type="button" class="text-sm text-gray-500 px-6 py-3">存草稿</button>
+      <a href="home.html" class="bg-gradient-to-r from-cyan-500 to-primary-600 text-white text-sm font-semibold rounded-full px-10 py-3 shadow-lg shadow-cyan-200">提交审核</a>
+    </div>
+  </form>
+</main>
+
+<script>
+function switchTab(tab) {
+  const tabA = document.getElementById('tab-achievement');
+  const tabB = document.getElementById('tab-demand');
+  const formA = document.getElementById('form-achievement');
+  const formB = document.getElementById('form-demand');
+  if (tab === 'achievement') {
+    tabA.className = 'text-sm font-semibold bg-white text-primary-600 rounded-full py-2.5 shadow-sm transition';
+    tabB.className = 'text-sm text-gray-500 rounded-full py-2.5 hover:text-gray-800 transition';
+    formA.classList.remove('hidden');
+    formB.classList.add('hidden');
+  } else {
+    tabB.className = 'text-sm font-semibold bg-white text-cyan-600 rounded-full py-2.5 shadow-sm transition';
+    tabA.className = 'text-sm text-gray-500 rounded-full py-2.5 hover:text-gray-800 transition';
+    formB.classList.remove('hidden');
+    formA.classList.add('hidden');
+  }
+}
+// 代理发布切换
+document.querySelectorAll('input[name="pub-type"]').forEach(r => {
+  r.addEventListener('change', e => {
+    document.getElementById('agent-info-ach').classList.toggle('hidden', e.target.value !== 'agent');
+  });
+});
+document.querySelectorAll('input[name="pub-type-d"]').forEach(r => {
+  r.addEventListener('change', e => {
+    document.getElementById('agent-info-dem').classList.toggle('hidden', e.target.value !== 'agent');
+  });
+});
+</script>
+
+<!-- 页脚 -->
+<footer class="bg-slate-900 text-slate-400 mt-8">
+  <div class="max-w-7xl mx-auto px-6 py-10 flex items-center justify-between">
+    <div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg hero-gradient flex items-center justify-center text-white"><i class="fa-solid fa-atom"></i></div><span class="text-white font-bold">科技成果转化平台</span><span class="text-xs ml-2">让每一项科技成果实现其产业价值</span></div>
+    <div class="text-xs">© 2026 科技成果转化平台 ｜ 陕ICP备00000000号</div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>成果评价 · 科技成果转化平台</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/custom.css">
+<script>tailwind.config={theme:{extend:{colors:{primary:{50:'#EFF6FF',100:'#DBEAFE',500:'#3B82F6',600:'#2563EB',700:'#1D4ED8'}},fontFamily:{sans:['PingFang SC','Microsoft YaHei','system-ui','sans-serif']}}}}</script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+<header class="glass sticky top-0 z-40 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center gap-10">
+    <a href="home.html" class="flex items-center gap-2.5 shrink-0"><div class="w-9 h-9 rounded-xl hero-gradient flex items-center justify-center text-white"><i class="fa-solid fa-atom"></i></div><span class="text-lg font-bold">科技成果转化平台</span></a>
+    <nav class="flex items-center gap-8 text-sm">
+      <a href="home.html" class="text-gray-600 hover:text-primary-600">首页</a>
+      <a href="achievements.html" class="text-gray-600 hover:text-primary-600">科技成果</a>
+      <a href="demands.html" class="text-gray-600 hover:text-primary-600">技术需求</a>
+      <a href="services.html" class="font-semibold text-primary-600">服务大厅</a>
+    </nav>
+    <div class="ml-auto flex items-center gap-5">
+      <a href="messages.html" class="relative text-gray-600 hover:text-primary-600"><i class="fa-regular fa-bell text-lg"></i><span class="absolute -top-0.5 -right-1 w-2 h-2 bg-red-500 rounded-full"></span></a>
+      <a href="publish.html" class="bg-primary-600 hover:bg-primary-700 text-white text-sm px-4 py-2 rounded-full font-medium transition"><i class="fa-solid fa-plus mr-1 text-xs"></i>发布</a>
+      <a href="profile.html" class="flex items-center gap-2"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80" class="w-8 h-8 rounded-full object-cover" alt=""><span class="text-sm text-gray-700 hidden lg:block">陈工</span></a>
+    </div>
+  </div>
+</header>
+
+<section class="bg-white border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 py-8">
+    <div class="text-xs text-gray-400 mb-2"><a href="home.html" class="hover:text-primary-600">首页</a> <i class="fa-solid fa-chevron-right text-[9px]"></i> <a href="services.html" class="hover:text-primary-600">服务大厅</a> <i class="fa-solid fa-chevron-right text-[9px]"></i> 成果评价</div>
+    <div class="flex items-center gap-4">
+      <div class="w-14 h-14 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-2xl"><i class="fa-solid fa-gauge-high"></i></div>
+      <div><h1 class="text-2xl font-bold">成果评价</h1><p class="text-sm text-gray-400 mt-1">权威第三方机构对科技成果的技术价值、市场价值进行评估，出具可用于定价、报奖、申报的评价报告</p></div>
+    </div>
+  </div>
+</section>
+
+<main class="max-w-7xl mx-auto px-6 py-8 space-y-6">
+  <!-- 服务说明（简短文字） -->
+  <div class="bg-white rounded-2xl p-5">
+    <p class="text-sm text-gray-600 leading-relaxed">由平台认证的第三方评价机构，对科技成果的<b>创新性、技术成熟度、市场前景</b>进行综合评估，出具带备案编号的正式评价报告，可用于成果<b>定价、报奖、政府项目申报</b>。流程：提交申请 → 匹配机构 → 专家评审 → 出具报告（通常 7-15 个工作日）。</p>
+  </div>
+  <!-- 合作机构列表 -->
+  <div>
+    <h2 class="text-lg font-bold mb-4">合作评价机构</h2>
+    <div class="space-y-4">
+      <!-- 机构1 -->
+      <div class="bg-white rounded-2xl p-5">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center shrink-0"><i class="fa-solid fa-building-columns"></i></div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 flex-wrap"><p class="text-base font-semibold">陕西省科技成果评价中心</p><span class="text-[11px] text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">平台认证</span><span class="text-[11px] text-gray-400">省级资质</span></div>
+            <p class="text-xs text-gray-400 mt-1">已评价 2,300+ 项 · 擅长新材料、高端装备领域</p>
+            <div class="flex items-center gap-4 mt-3 text-xs text-gray-500">
+              <span><i class="fa-solid fa-yen-sign text-orange-500 mr-1"></i>¥8,000 - ¥15,000</span>
+              <span><i class="fa-regular fa-clock text-primary-500 mr-1"></i>7-10 个工作日</span>
+              <span><i class="fa-solid fa-users text-primary-500 mr-1"></i>3-5 名专家</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 mt-4 pt-4 border-t border-gray-50">
+          <button onclick="toggleContact(this)" class="bg-primary-600 hover:bg-primary-700 text-white text-xs font-semibold px-5 py-2 rounded-lg transition">立即申请</button>
+          <a href="messages.html" class="text-xs text-primary-600 hover:underline"><i class="fa-regular fa-comment-dots mr-1"></i>在线咨询</a>
+        </div>
+        <!-- 联系方式（点击立即申请后展开） -->
+        <div class="contact-box hidden mt-4 p-4 bg-gray-50 rounded-xl">
+          <p class="text-xs font-semibold text-gray-500 mb-2">机构联系方式</p>
+          <div class="grid grid-cols-2 gap-3 text-sm">
+            <p><i class="fa-solid fa-user text-primary-500 mr-1.5"></i>联系人：王主任</p>
+            <p><i class="fa-solid fa-phone text-primary-500 mr-1.5"></i>029-8888-6666</p>
+            <p><i class="fa-solid fa-envelope text-primary-500 mr-1.5"></i>eval@snste.gov.cn</p>
+            <p><i class="fa-solid fa-location-dot text-primary-500 mr-1.5"></i>西安市雁塔区科技路</p>
+          </div>
+          <p class="text-[11px] text-gray-400 mt-3"><i class="fa-solid fa-info-circle mr-1"></i>申请后机构将在 1 个工作日内与您联系，平台不收取任何费用</p>
+        </div>
+      </div>
+      <!-- 机构2 -->
+      <div class="bg-white rounded-2xl p-5">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center shrink-0"><i class="fa-solid fa-building-columns"></i></div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 flex-wrap"><p class="text-base font-semibold">中国科学院科技战略咨询研究院</p><span class="text-[11px] text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">平台认证</span><span class="text-[11px] text-gray-400">国家级资质</span></div>
+            <p class="text-xs text-gray-400 mt-1">已评价 5,100+ 项 · 擅长生物医药、信息技术领域</p>
+            <div class="flex items-center gap-4 mt-3 text-xs text-gray-500">
+              <span><i class="fa-solid fa-yen-sign text-orange-500 mr-1"></i>¥12,000 - ¥25,000</span>
+              <span><i class="fa-regular fa-clock text-primary-500 mr-1"></i>10-15 个工作日</span>
+              <span><i class="fa-solid fa-users text-primary-500 mr-1"></i>5 名以上专家</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 mt-4 pt-4 border-t border-gray-50">
+          <button onclick="toggleContact(this)" class="bg-primary-600 hover:bg-primary-700 text-white text-xs font-semibold px-5 py-2 rounded-lg transition">立即申请</button>
+          <a href="messages.html" class="text-xs text-primary-600 hover:underline"><i class="fa-regular fa-comment-dots mr-1"></i>在线咨询</a>
+        </div>
+        <div class="contact-box hidden mt-4 p-4 bg-gray-50 rounded-xl">
+          <p class="text-xs font-semibold text-gray-500 mb-2">机构联系方式</p>
+          <div class="grid grid-cols-2 gap-3 text-sm">
+            <p><i class="fa-solid fa-user text-primary-500 mr-1.5"></i>联系人：李研究员</p>
+            <p><i class="fa-solid fa-phone text-primary-500 mr-1.5"></i>010-6666-8888</p>
+            <p><i class="fa-solid fa-envelope text-primary-500 mr-1.5"></i>eval@casis.cn</p>
+            <p><i class="fa-solid fa-location-dot text-primary-500 mr-1.5"></i>北京市海淀区中关村</p>
+          </div>
+          <p class="text-[11px] text-gray-400 mt-3"><i class="fa-solid fa-info-circle mr-1"></i>申请后机构将在 1 个工作日内与您联系，平台不收取任何费用</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script>
+function toggleContact(btn) {
+  const box = btn.closest('.bg-white').querySelector('.contact-box');
+  const isHidden = box.classList.contains('hidden');
+  // 收起其他已展开的
+  document.querySelectorAll('.contact-box').forEach(b => b.classList.add('hidden'));
+  document.querySelectorAll('button').forEach(b => { if(b.textContent.includes('立即申请')){ b.textContent='立即申请'; b.classList.remove('bg-gray-400'); b.classList.add('bg-primary-600'); } });
+  if (isHidden) {
+    box.classList.remove('hidden');
+    btn.textContent = '收起联系方式';
+    btn.classList.remove('bg-primary-600');
+    btn.classList.add('bg-gray-400');
+  }
+}
+</script>
+
+<footer class="bg-slate-900 text-slate-400 mt-8">
+  <div class="max-w-7xl mx-auto px-6 py-10 flex items-center justify-between">
+    <div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg hero-gradient flex items-center justify-center text-white"><i class="fa-solid fa-atom"></i></div><span class="text-white font-bold">科技成果转化平台</span><span class="text-xs ml-2">让每一项科技成果实现其产业价值</span></div>
+    <div class="text-xs">© 2026 科技成果转化平台 ｜ 陕ICP备00000000号</div>
+  </div>
+</footer>
+</body>
+</html>

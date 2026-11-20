@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>成果详情 · 科技成果转化平台</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/custom.css">
+<script>tailwind.config={theme:{extend:{colors:{primary:{50:'#EFF6FF',100:'#DBEAFE',500:'#3B82F6',600:'#2563EB',700:'#1D4ED8'}},fontFamily:{sans:['PingFang SC','Microsoft YaHei','system-ui','sans-serif']}}}}</script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+<!-- 顶部导航 -->
+<header class="glass sticky top-0 z-40 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center gap-10">
+    <a href="home.html" class="flex items-center gap-2.5 shrink-0"><div class="w-9 h-9 rounded-xl hero-gradient flex items-center justify-center text-white"><i class="fa-solid fa-atom"></i></div><span class="text-lg font-bold">科技成果转化平台</span></a>
+    <nav class="flex items-center gap-8 text-sm">
+      <a href="home.html" class="text-gray-600 hover:text-primary-600">首页</a>
+      <a href="achievements.html" class="font-semibold text-primary-600">科技成果</a>
+      <a href="demands.html" class="text-gray-600 hover:text-primary-600">技术需求</a>
+      <a href="services.html" class="text-gray-600 hover:text-primary-600">服务大厅</a>
+</nav>
+    <div class="ml-auto flex items-center gap-5">
+      <a href="messages.html" class="relative text-gray-600 hover:text-primary-600"><i class="fa-regular fa-bell text-lg"></i><span class="absolute -top-0.5 -right-1 w-2 h-2 bg-red-500 rounded-full"></span></a>
+      <a href="publish.html" class="bg-primary-600 hover:bg-primary-700 text-white text-sm px-4 py-2 rounded-full font-medium transition"><i class="fa-solid fa-plus mr-1 text-xs"></i>发布</a>
+      <a href="profile.html" class="flex items-center gap-2"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80" class="w-8 h-8 rounded-full object-cover" alt=""><span class="text-sm text-gray-700 hidden lg:block">陈工</span></a>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-6">
+  <!-- 面包屑 -->
+  <div class="text-xs text-gray-400 mb-4"><a href="home.html" class="hover:text-primary-600">首页</a> <i class="fa-solid fa-chevron-right text-[9px]"></i> <a href="achievements.html" class="hover:text-primary-600">科技成果</a> <i class="fa-solid fa-chevron-right text-[9px]"></i> <span class="text-gray-600">成果详情</span></div>
+
+  <div class="grid grid-cols-12 gap-6">
+    <!-- 左侧主内容 -->
+    <div class="col-span-9 space-y-5">
+      <!-- 标题区 -->
+      <div class="bg-white rounded-2xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1000&q=80" class="w-full h-64 object-cover" alt="成果头图">
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs bg-primary-600 text-white px-2.5 py-1 rounded">新材料</span>
+            <span class="text-xs bg-emerald-500 text-white px-2.5 py-1 rounded">通过中试 · TRL 8级</span>
+            <span class="text-xs bg-amber-50 text-amber-600 border border-amber-200 px-2.5 py-1 rounded">省部级一等奖</span>
+          </div>
+          <h1 class="text-2xl font-bold leading-snug">高强度钛合金激光3D打印关键技术及成套装备</h1>
+          <div class="flex items-center gap-5 mt-4 text-xs text-gray-400">
+            <span><i class="fa-regular fa-eye mr-1"></i>2,341 次浏览</span>
+            <span><i class="fa-regular fa-clock mr-1"></i>2026-09-10 发布</span>
+            <span class="ml-auto flex gap-3">
+              <button class="text-gray-500 hover:text-primary-600"><i class="fa-regular fa-star mr-1"></i>收藏</button>
+              <button class="text-gray-500 hover:text-primary-600"><i class="fa-solid fa-share-nodes mr-1"></i>分享</button>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 结构化信息表 -->
+      <div class="bg-white rounded-2xl p-6">
+        <div class="grid grid-cols-2 gap-x-10 gap-y-3 text-sm">
+          <div class="flex gap-3"><span class="text-gray-400 w-20 shrink-0">技术领域</span><span class="text-gray-800">新材料、增材制造</span></div>
+          <div class="flex gap-3"><span class="text-gray-400 w-20 shrink-0">应用领域</span><span class="text-gray-800">航空航天、海洋工程、医疗器械、汽车制造</span></div>
+          <div class="flex gap-3"><span class="text-gray-400 w-20 shrink-0">成熟度</span><span class="text-gray-800">通过中试 · TRL 8 级</span></div>
+          <div class="flex gap-3"><span class="text-gray-400 w-20 shrink-0">转化方式</span><span class="text-gray-800">技术转让、许可使用、作价入股</span></div>
+          <div class="flex gap-3"><span class="text-gray-400 w-20 shrink-0">成果持有方</span><a href="university.html" class="text-primary-600 hover:underline">西北工业大学 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a></div>
+          <div class="flex gap-3"><span class="text-gray-400 w-20 shrink-0">所在地</span><span class="text-gray-800">陕西省西安市</span></div>
+          <div class="flex gap-3"><span class="text-gray-400 w-20 shrink-0">参考价格</span><span class="text-orange-500 font-semibold">面议</span></div>
+          <div class="flex gap-3"><span class="text-gray-400 w-20 shrink-0">项目负责人</span><span class="text-gray-800">张卫东 教授</span></div>
+        </div>
+      </div>
+
+      <!-- Tab 切换区 -->
+      <div class="bg-white rounded-2xl overflow-hidden">
+        <div class="border-b border-gray-100 px-6">
+          <div class="flex gap-1">
+            <button onclick="switchTab('intro')" id="tab-intro" class="px-5 py-3.5 text-sm font-semibold text-primary-600 border-b-2 border-primary-600">成果介绍</button>
+            <button onclick="switchTab('report')" id="tab-report" class="px-5 py-3.5 text-sm text-gray-500 border-b-2 border-transparent hover:text-gray-700">评价报告</button>
+            <button onclick="switchTab('promo')" id="tab-promo" class="px-5 py-3.5 text-sm text-gray-500 border-b-2 border-transparent hover:text-gray-700">推介书</button>
+          </div>
+        </div>
+
+        <!-- Tab1: 成果介绍 -->
+        <div id="panel-intro" class="p-6 space-y-6">
+          <div>
+            <h2 class="text-base font-bold mb-4">成果简介</h2>
+            <p class="text-sm text-gray-600 leading-relaxed">针对航空航天、深海装备等领域对复杂钛合金构件的制造需求，突破了激光沉积增材制造过程中的组织调控、变形控制与在线监测三大关键难题，形成自主知识产权的成套工艺与装备体系，构件强度提升 18%，制造成本降低 35%，已在两家主机厂完成工程化验证。</p>
+            <div class="grid grid-cols-3 gap-4 mt-5">
+              <div class="bg-gray-50 rounded-xl py-4 text-center"><p class="text-primary-600 font-bold text-xl">+18%</p><p class="text-xs text-gray-500 mt-1">构件强度提升</p></div>
+              <div class="bg-gray-50 rounded-xl py-4 text-center"><p class="text-primary-600 font-bold text-xl">-35%</p><p class="text-xs text-gray-500 mt-1">制造成本降低</p></div>
+              <div class="bg-gray-50 rounded-xl py-4 text-center"><p class="text-primary-600 font-bold text-xl">12项</p><p class="text-xs text-gray-500 mt-1">发明专利</p></div>
+            </div>
+          </div>
+
+          <!-- 应用场景 -->
+          <div>
+            <h2 class="text-base font-bold mb-3">应用场景</h2>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs bg-primary-50 text-primary-600 px-3 py-1.5 rounded-lg border border-primary-100"><i class="fa-solid fa-plane mr-1 text-[10px]"></i>航空航天 · 结构件制造</span>
+              <span class="text-xs bg-primary-50 text-primary-600 px-3 py-1.5 rounded-lg border border-primary-100"><i class="fa-solid fa-ship mr-1 text-[10px]"></i>海洋工程 · 深海装备</span>
+              <span class="text-xs bg-primary-50 text-primary-600 px-3 py-1.5 rounded-lg border border-primary-100"><i class="fa-solid fa-stethoscope mr-1 text-[10px]"></i>医疗器械 · 定制假体</span>
+              <span class="text-xs bg-primary-50 text-primary-600 px-3 py-1.5 rounded-lg border border-primary-100"><i class="fa-solid fa-industry mr-1 text-[10px]"></i>汽车制造 · 轻量化构件</span>
+              <span class="text-xs bg-primary-50 text-primary-600 px-3 py-1.5 rounded-lg border border-primary-100"><i class="fa-solid fa-gear mr-1 text-[10px]"></i>能源动力 · 涡轮叶片</span>
+            </div>
+          </div>
+
+          <!-- 专利信息 -->
+          <div>
+            <h2 class="text-base font-bold mb-3">专利信息</h2>
+            <table class="w-full text-sm border border-gray-100 rounded-lg overflow-hidden">
+              <tr class="bg-gray-50"><td class="px-4 py-2.5 text-gray-500 w-24">专利名称</td><td class="px-4 py-2.5 font-medium">高强度钛合金激光3D打印关键技术相关专利</td></tr>
+              <tr><td class="px-4 py-2.5 text-gray-500">专利号</td><td class="px-4 py-2.5">CN202410100014</td></tr>
+              <tr class="bg-gray-50"><td class="px-4 py-2.5 text-gray-500">类型</td><td class="px-4 py-2.5">实用新型</td></tr>
+              <tr><td class="px-4 py-2.5 text-gray-500">申请人</td><td class="px-4 py-2.5">西北工业大学</td></tr>
+              <tr class="bg-gray-50"><td class="px-4 py-2.5 text-gray-500">授权日期</td><td class="px-4 py-2.5">2025-06-15</td></tr>
+            </table>
+          </div>
+
+          <!-- TRL 成熟度 -->
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <h2 class="text-base font-bold">技术成熟度（TRL）</h2>
+              <span class="text-xs text-gray-400">国际通行 TRL 1-9 分级</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <div class="flex-1 h-2 rounded-full bg-primary-600"></div><div class="flex-1 h-2 rounded-full bg-primary-600"></div>
+              <div class="flex-1 h-2 rounded-full bg-primary-600"></div><div class="flex-1 h-2 rounded-full bg-primary-600"></div>
+              <div class="flex-1 h-2 rounded-full bg-primary-600"></div><div class="flex-1 h-2 rounded-full bg-primary-600"></div>
+              <div class="flex-1 h-2 rounded-full bg-primary-600"></div><div class="flex-1 h-2 rounded-full bg-primary-600"></div>
+              <div class="flex-1 h-2 rounded-full bg-gray-200"></div>
+            </div>
+            <div class="flex justify-between mt-2 text-xs"><span class="text-gray-400">1 原理发现</span><span class="text-primary-600 font-semibold">当前 TRL 8 · 系统完成并通过实际环境验证</span><span class="text-gray-400">9 成熟应用</span></div>
+          </div>
+
+          <!-- 团队 -->
+          <div>
+            <h2 class="text-base font-bold mb-3">成果团队</h2>
+            <div class="flex items-center gap-4">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&q=80" class="w-14 h-14 rounded-full object-cover" alt="负责人">
+              <div class="flex-1">
+                <div class="flex items-center gap-2"><p class="text-sm font-semibold">张卫东 教授</p><span class="text-[11px] bg-amber-50 text-amber-600 border border-amber-200 px-1.5 rounded">博导</span></div>
+                <p class="text-xs text-gray-500 mt-1">材料学院 · 增材制造研究中心主任 · 团队 18 人</p>
+              </div>
+              <button class="text-sm bg-primary-50 text-primary-600 px-4 py-2 rounded-full hover:bg-primary-100"><i class="fa-regular fa-comment-dots mr-1"></i>留言</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab2: 评价报告 -->
+        <div id="panel-report" class="p-6 hidden">
+          <div class="flex items-center justify-between mb-5">
+            <div class="flex items-center gap-2"><i class="fa-solid fa-chart-line text-primary-500"></i><h2 class="text-base font-bold">项目评价报告</h2></div>
+            <button class="bg-primary-600 hover:bg-primary-700 text-white text-xs font-semibold px-4 py-2 rounded-lg"><i class="fa-solid fa-download mr-1"></i>在线查看</button>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-6">
+            <div class="text-center pb-5 border-b border-gray-200">
+              <h3 class="text-lg font-bold">项目评价报告</h3>
+              <p class="text-sm text-primary-600 mt-1">高强度钛合金激光3D打印关键技术</p>
+              <div class="flex items-center justify-center gap-6 mt-3 text-xs text-gray-500">
+                <span><i class="fa-solid fa-building-columns mr-1"></i>申报单位：西北工业大学</span>
+                <span><i class="fa-regular fa-calendar mr-1"></i>评价日期：2026-08-20</span>
+              </div>
+            </div>
+            <div class="mt-5 space-y-4 text-sm">
+              <div>
+                <p class="font-semibold text-gray-800 mb-2"><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i>综合评价</p>
+                <p class="text-gray-600 leading-relaxed pl-5">高强度钛合金激光3D打印技术在航空航天、深海装备领域具备较高的技术成熟度与推广价值。经多维度评估，技术方案合理，工程化落地条件较为成熟，建议优先纳入产业转化服务序列。</p>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800 mb-2"><i class="fa-solid fa-microscope text-primary-500 mr-1.5"></i>技术价值</p>
+                <p class="text-gray-600 leading-relaxed pl-5">技术方案针对航空航天领域钛合金构件制造的关键工艺难题，在组织调控与变形控制方面形成可识别的技术特征，已授权发明专利 12 项，知识产权体系完备。</p>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800 mb-2"><i class="fa-solid fa-chart-pie text-primary-500 mr-1.5"></i>市场价值</p>
+                <p class="text-gray-600 leading-relaxed pl-5">结合应用领域与目标市场判断，项目具备明确的下游应用场景，可在航空航天、海洋工程、医疗器械等产业方向形成商业化机会。</p>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800 mb-2"><i class="fa-solid fa-lightbulb text-amber-500 mr-1.5"></i>转化建议</p>
+                <p class="text-gray-600 leading-relaxed pl-5">建议优先对接主机厂与增材制造服务商，匹配重点企业开展技术对接，启动转化专项推进。</p>
+              </div>
+            </div>
+            <div class="mt-6 text-center text-[11px] text-gray-400">……点击「在线查看」阅读完整报告（不含等级与分数展示）</div>
+          </div>
+          <!-- 报告元信息 -->
+          <div class="flex items-center gap-6 mt-5 text-xs text-gray-400">
+            <span><i class="fa-solid fa-building-columns mr-1"></i>出具机构：陕西省科技成果评价中心</span>
+            <span><i class="fa-solid fa-file-lines mr-1"></i>备案编号：SN-2026-TEC-0086</span>
+          </div>
+        </div>
+
+        <!-- Tab3: 推介书 -->
+        <div id="panel-promo" class="p-6 hidden">
+          <div class="flex items-center justify-between mb-5">
+            <div class="flex items-center gap-2"><i class="fa-solid fa-bookmark text-primary-500"></i><h2 class="text-base font-bold">项目推介书</h2></div>
+            <button class="bg-primary-600 hover:bg-primary-700 text-white text-xs font-semibold px-4 py-2 rounded-lg"><i class="fa-solid fa-download mr-1"></i>在线查看</button>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-6">
+            <div class="text-center pb-5 border-b border-gray-200">
+              <h3 class="text-lg font-bold">项目推介书</h3>
+              <p class="text-sm text-primary-600 mt-1">高强度钛合金激光3D打印关键技术</p>
+              <div class="flex items-center justify-center gap-6 mt-3 text-xs text-gray-500">
+                <span><i class="fa-solid fa-building-columns mr-1"></i>申报单位：西北工业大学</span>
+                <span><i class="fa-solid fa-handshake mr-1"></i>转化方式：技术许可、技术入股</span>
+              </div>
+            </div>
+            <div class="mt-5 space-y-4 text-sm">
+              <div>
+                <p class="font-semibold text-gray-800 mb-2"><i class="fa-solid fa-book-open text-primary-500 mr-1.5"></i>项目简介</p>
+                <p class="text-gray-600 leading-relaxed pl-5">面向航空航天、深海装备等领域的高强度钛合金构件增材制造关键技术，已完成主机厂工程化验证，强度提升 18%、成本降低 35%。</p>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800 mb-2"><i class="fa-solid fa-star text-amber-500 mr-1.5"></i>核心优势</p>
+                <ol class="text-gray-600 leading-relaxed pl-5 space-y-1 list-decimal list-inside">
+                  <li>突破激光沉积过程中的组织调控与变形控制两大行业瓶颈；</li>
+                  <li>12 项发明专利形成完整知识产权保护体系；</li>
+                  <li>已完成两家主机厂工程化验证，具备产业化基础。</li>
+                </ol>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800 mb-2"><i class="fa-solid fa-briefcase text-emerald-500 mr-1.5"></i>合作方式</p>
+                <p class="text-gray-600 leading-relaxed pl-5">欢迎通过技术许可、技术入股等方式开展合作洽谈。</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-6 mt-5 text-xs text-gray-400">
+            <span><i class="fa-solid fa-user-tie mr-1"></i>整理机构：平台技术经理人</span>
+            <span><i class="fa-regular fa-calendar mr-1"></i>整理日期：2026-08-25</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 平台服务保障 -->
+      <div class="bg-white rounded-2xl p-6">
+        <h2 class="text-base font-bold mb-4">平台服务保障</h2>
+        <div class="grid grid-cols-4 gap-4">
+          <div class="flex items-center gap-3"><i class="fa-solid fa-file-shield text-primary-500 text-xl"></i><div><p class="text-sm font-medium">产权核验</p><p class="text-[11px] text-gray-400">权属清晰可交易</p></div></div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-user-tie text-primary-500 text-xl"></i><div><p class="text-sm font-medium">经理人撮合</p><p class="text-[11px] text-gray-400">全程专业陪伴</p></div></div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-scale-balanced text-primary-500 text-xl"></i><div><p class="text-sm font-medium">合同存证</p><p class="text-[11px] text-gray-400">电子签约备案</p></div></div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-money-check-dollar text-primary-500 text-xl"></i><div><p class="text-sm font-medium">资金监管</p><p class="text-[11px] text-gray-400">交易资金保障</p></div></div>
+        </div>
+      </div>
+
+<script>
+function switchTab(name) {
+  ['intro','report','promo'].forEach(n => {
+    const tab = document.getElementById('tab-' + n);
+    const panel = document.getElementById('panel-' + n);
+    if (n === name) {
+      tab.className = 'px-5 py-3.5 text-sm font-semibold text-primary-600 border-b-2 border-primary-600';
+      panel.classList.remove('hidden');
+    } else {
+      tab.className = 'px-5 py-3.5 text-sm text-gray-500 border-b-2 border-transparent hover:text-gray-700';
+      panel.classList.add('hidden');
+    }
+  });
+}
+</script>
+    </div>
+
+    <!-- 右侧对接栏 -->
+    <aside class="col-span-3 space-y-4">
+      <!-- 交易卡 -->
+      <div class="bg-white rounded-2xl p-5 card-glow">
+        <p class="text-xs text-gray-400">参考价格</p>
+        <p class="text-2xl font-bold text-orange-500 mt-1">面议</p>
+        <p class="text-xs text-gray-500 mt-2">转化方式：转让 / 许可 / 作价入股</p>
+        <a href="messages.html" class="block text-center hero-gradient text-white text-sm font-semibold rounded-full py-3 mt-5"><i class="fa-solid fa-comments mr-1"></i>预约洽谈</a>
+        <button class="w-full text-center bg-primary-50 text-primary-700 text-sm font-medium rounded-full py-3 mt-2.5 hover:bg-primary-100">免费咨询</button>
+      </div>
+      <!-- 发布方卡 -->
+      <a href="university.html" class="block bg-white rounded-2xl p-5 hover:bg-gray-50 transition group">
+        <p class="text-xs text-gray-400 mb-3">成果持有方</p>
+        <div class="flex items-center gap-3">
+          <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=100&q=80" class="w-10 h-10 rounded-lg object-cover" alt="">
+          <div><p class="text-sm font-semibold group-hover:text-primary-600">西北工业大学</p><p class="text-[11px] text-gray-400 mt-0.5">已认证 · 高校院所</p></div>
+          <i class="fa-solid fa-chevron-right text-gray-300 text-xs ml-auto"></i>
+        </div>
+        <div class="grid grid-cols-2 gap-2 mt-4 text-center">
+          <div class="bg-gray-50 rounded-lg py-2"><p class="text-sm font-bold text-gray-800">86</p><p class="text-[10px] text-gray-400">在库成果</p></div>
+          <div class="bg-gray-50 rounded-lg py-2"><p class="text-sm font-bold text-gray-800">31</p><p class="text-[10px] text-gray-400">成功转化</p></div>
+        </div>
+      </a>
+      <!-- 匹配需求 -->
+      <div class="bg-white rounded-2xl p-5">
+        <p class="text-xs text-gray-400 mb-3">高契合需求 <span class="text-primary-600">2</span></p>
+        <a href="demand-detail.html" class="block bg-cyan-50 border border-cyan-100 rounded-xl p-3 hover:bg-cyan-100/60">
+          <p class="text-xs font-semibold text-gray-800 leading-snug line-clamp-2">耐高温特种密封材料国产替代方案</p>
+          <div class="flex items-center justify-between mt-2"><span class="text-[11px] text-gray-400">中航工业某研究院</span><span class="text-[11px] font-bold text-primary-600">92%</span></div>
+        </a>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<!-- 页脚 -->
+<footer class="bg-slate-900 text-slate-400 mt-8">
+  <div class="max-w-7xl mx-auto px-6 py-10 flex items-center justify-between">
+    <div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg hero-gradient flex items-center justify-center text-white"><i class="fa-solid fa-atom"></i></div><span class="text-white font-bold">科技成果转化平台</span><span class="text-xs ml-2">让每一项科技成果实现其产业价值</span></div>
+    <div class="text-xs">© 2026 科技成果转化平台 · 科技成果转化平台 ｜ 陕ICP备00000000号</div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>账号设置 · 科技成果转化平台</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/custom.css">
+<script>tailwind.config={theme:{extend:{colors:{primary:{50:'#EFF6FF',100:'#DBEAFE',500:'#3B82F6',600:'#2563EB',700:'#1D4ED8'}},fontFamily:{sans:['PingFang SC','Microsoft YaHei','system-ui','sans-serif']}}}}</script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+<!-- 顶部导航 -->
+<header class="glass sticky top-0 z-40 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center gap-10">
+    <a href="home.html" class="flex items-center gap-2.5 shrink-0"><div class="w-9 h-9 rounded-xl hero-gradient flex items-center justify-center text-white"><i class="fa-solid fa-atom"></i></div><span class="text-lg font-bold">科技成果转化平台</span></a>
+    <nav class="flex items-center gap-8 text-sm">
+      <a href="home.html" class="text-gray-600 hover:text-primary-600">首页</a>
+      <a href="achievements.html" class="text-gray-600 hover:text-primary-600">科技成果</a>
+      <a href="demands.html" class="text-gray-600 hover:text-primary-600">技术需求</a>
+      <a href="services.html" class="text-gray-600 hover:text-primary-600">服务大厅</a>
+    </nav>
+    <div class="ml-auto flex items-center gap-5">
+      <a href="messages.html" class="relative text-gray-600 hover:text-primary-600"><i class="fa-regular fa-bell text-lg"></i><span class="absolute -top-0.5 -right-1 w-2 h-2 bg-red-500 rounded-full"></span></a>
+      <a href="publish.html" class="bg-primary-600 hover:bg-primary-700 text-white text-sm px-4 py-2 rounded-full font-medium transition"><i class="fa-solid fa-plus mr-1 text-xs"></i>发布</a>
+      <a href="profile.html" class="flex items-center gap-2"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80" class="w-8 h-8 rounded-full object-cover" alt=""><span class="text-sm text-gray-700 hidden lg:block">陈工</span></a>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-12 gap-6">
+  <!-- 左侧菜单 -->
+  <aside class="col-span-3 space-y-4">
+    <!-- 用户卡 -->
+    <div class="bg-white rounded-2xl p-5 text-center">
+      <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&q=80" class="w-16 h-16 rounded-full object-cover mx-auto" alt="头像">
+      <p class="font-bold mt-3">陈工</p>
+      <p class="text-xs text-gray-400 mt-1">中科智能装备有限公司 · 研发总监</p>
+      <span class="inline-flex items-center gap-1 text-[11px] bg-emerald-50 text-emerald-600 border border-emerald-100 px-2 py-0.5 rounded-full mt-2.5"><i class="fa-solid fa-circle-check text-[9px]"></i>已认证 · 企业用户</span>
+    </div>
+    <!-- 菜单 -->
+    <nav class="bg-white rounded-2xl p-2 text-sm">
+      <p class="text-xs text-gray-400 px-3 pt-2 pb-1.5">转化管理</p>
+      <a href="profile.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-gray-600 hover:bg-gray-50"><i class="fa-solid fa-flask w-4"></i>我的成果<span class="ml-auto text-xs bg-gray-100 px-1.5 rounded-full">3</span></a>
+      <a href="my-demands.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-gray-600 hover:bg-gray-50"><i class="fa-solid fa-bullseye w-4"></i>我的需求<span class="ml-auto text-xs bg-gray-100 px-1.5 rounded-full">2</span></a>
+      <a href="projects.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-gray-600 hover:bg-gray-50"><i class="fa-solid fa-diagram-project w-4"></i>转化项目<span class="ml-auto text-xs bg-orange-50 text-orange-500 px-1.5 rounded-full">5</span></a>
+      <a href="contracts.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-gray-600 hover:bg-gray-50"><i class="fa-solid fa-file-signature w-4"></i>我的合同</a>
+      <p class="text-xs text-gray-400 px-3 pt-3 pb-1.5">其他</p>
+      <a href="profile.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-gray-600 hover:bg-gray-50"><i class="fa-regular fa-star w-4"></i>我的收藏<span class="ml-auto text-xs bg-gray-100 px-1.5 rounded-full">18</span></a>
+      <a href="service-orders.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-gray-600 hover:bg-gray-50"><i class="fa-solid fa-briefcase w-4"></i>服务订单<span class="ml-auto text-xs bg-red-50 text-red-500 px-1.5 rounded-full">1</span></a>
+      <a href="certification.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-gray-600 hover:bg-gray-50"><i class="fa-solid fa-building-columns w-4"></i>认证信息</a>
+      <a href="settings.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-primary-50 text-primary-600 font-medium"><i class="fa-solid fa-gear w-4"></i>账号设置</a>
+    </nav>
+  </aside>
+
+  <!-- 右侧内容 -->
+  <section class="col-span-9 space-y-5">
+    <!-- 标题 -->
+    <h1 class="text-xl font-bold">账号设置</h1>
+
+    <!-- Tab 切换 -->
+    <div class="bg-white rounded-2xl px-5 py-2.5 flex items-center gap-6 text-sm">
+      <button onclick="switchTab('basic')" id="tab-basic" class="font-semibold text-primary-600 border-b-2 border-primary-600 pb-2 -mb-2.5">基本信息</button>
+      <button onclick="switchTab('security')" id="tab-security" class="text-gray-500 hover:text-primary-600 pb-2 -mb-2.5">安全设置</button>
+    </div>
+
+    <!-- 基本信息 Tab -->
+    <div id="panel-basic" class="bg-white rounded-2xl p-6">
+      <h2 class="text-base font-bold mb-5"><span class="w-1 h-4 bg-primary-600 inline-block rounded mr-2"></span>基本信息</h2>
+      <div class="space-y-5">
+        <!-- 头像 -->
+        <div class="flex items-center gap-5">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&q=80" class="w-20 h-20 rounded-full object-cover" alt="头像">
+          <div>
+            <button class="text-xs bg-primary-50 text-primary-600 px-4 py-2 rounded-lg hover:bg-primary-100"><i class="fa-solid fa-camera mr-1.5"></i>更换头像</button>
+            <p class="text-[11px] text-gray-400 mt-2">支持 JPG/PNG 格式，文件 ≤2MB</p>
+          </div>
+        </div>
+
+        <!-- 表单 -->
+        <div class="grid grid-cols-2 gap-x-6 gap-y-5">
+          <div>
+            <label class="text-xs text-gray-500">姓名</label>
+            <input type="text" value="陈工" class="mt-1 w-full bg-gray-50 border border-gray-100 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-primary-300 focus:bg-white">
+          </div>
+          <div>
+            <label class="text-xs text-gray-500">职位</label>
+            <input type="text" value="研发总监" class="mt-1 w-full bg-gray-50 border border-gray-100 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-primary-300 focus:bg-white">
+          </div>
+          <div>
+            <label class="text-xs text-gray-500">手机号</label>
+            <input type="text" value="138****8866" class="mt-1 w-full bg-gray-50 border border-gray-100 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-primary-300 focus:bg-white">
+          </div>
+          <div>
+            <label class="text-xs text-gray-500">邮箱</label>
+            <input type="text" value="chen@zkintelligent.com" class="mt-1 w-full bg-gray-50 border border-gray-100 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-primary-300 focus:bg-white">
+          </div>
+          <div class="col-span-2">
+            <label class="text-xs text-gray-500">所属机构</label>
+            <input type="text" value="中科智能装备有限公司" class="mt-1 w-full bg-gray-50 border border-gray-100 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-primary-300 focus:bg-white">
+          </div>
+          <div class="col-span-2">
+            <label class="text-xs text-gray-500">个人简介</label>
+            <textarea rows="3" class="mt-1 w-full bg-gray-50 border border-gray-100 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-primary-300 focus:bg-white resize-none">专注于高端装备制造与新材料工艺研发，长期负责公司技术战略与产学研合作。</textarea>
+          </div>
+        </div>
+
+        <div class="flex justify-end pt-2">
+          <button class="text-sm bg-primary-600 text-white px-6 py-2.5 rounded-full hover:bg-primary-700 font-medium">保存修改</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 安全设置 Tab -->
+    <div id="panel-security" class="bg-white rounded-2xl p-6 hidden">
+      <h2 class="text-base font-bold mb-5"><span class="w-1 h-4 bg-primary-600 inline-block rounded mr-2"></span>修改密码</h2>
+      <div class="grid grid-cols-2 gap-x-6 gap-y-5 max-w-2xl">
+        <div class="col-span-2">
+          <label class="text-xs text-gray-500">旧密码</label>
+          <input type="password" placeholder="请输入当前密码" class="mt-1 w-full bg-gray-50 border border-gray-100 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-primary-300 focus:bg-white">
+        </div>
+        <div>
+          <label class="text-xs text-gray-500">新密码</label>
+          <input type="password" placeholder="8-20位，含字母与数字" class="mt-1 w-full bg-gray-50 border border-gray-100 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-primary-300 focus:bg-white">
+        </div>
+        <div>
+          <label class="text-xs text-gray-500">确认新密码</label>
+          <input type="password" placeholder="请再次输入新密码" class="mt-1 w-full bg-gray-50 border border-gray-100 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-primary-300 focus:bg-white">
+        </div>
+      </div>
+      <div class="mt-5">
+        <button class="text-sm bg-primary-600 text-white px-6 py-2.5 rounded-full hover:bg-primary-700 font-medium">更新密码</button>
+      </div>
+
+      <!-- 绑定方式 -->
+      <h2 class="text-base font-bold mt-8 mb-5 pt-6 border-t border-gray-50"><span class="w-1 h-4 bg-primary-600 inline-block rounded mr-2"></span>绑定方式</h2>
+      <div class="space-y-3">
+        <div class="flex items-center justify-between p-4 bg-gray-50/60 rounded-xl">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-white border border-gray-100 flex items-center justify-center text-primary-600"><i class="fa-solid fa-mobile-screen"></i></div>
+            <div>
+              <p class="text-sm font-medium text-gray-900">绑定手机</p>
+              <p class="text-[11px] text-gray-400 mt-0.5">已绑定：138****8866</p>
+            </div>
+          </div>
+          <button class="text-xs bg-white text-primary-600 border border-primary-200 px-3 py-1.5 rounded-lg hover:bg-primary-50">更换</button>
+        </div>
+        <div class="flex items-center justify-between p-4 bg-gray-50/60 rounded-xl">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-white border border-gray-100 flex items-center justify-center text-primary-600"><i class="fa-regular fa-envelope"></i></div>
+            <div>
+              <p class="text-sm font-medium text-gray-900">绑定邮箱</p>
+              <p class="text-[11px] text-gray-400 mt-0.5">已绑定：chen@zkintelligent.com</p>
+            </div>
+          </div>
+          <button class="text-xs bg-white text-primary-600 border border-primary-200 px-3 py-1.5 rounded-lg hover:bg-primary-50">更换</button>
+        </div>
+      </div>
+
+      <!-- 消息通知 -->
+      <h2 class="text-base font-bold mt-8 mb-5 pt-6 border-t border-gray-50"><span class="w-1 h-4 bg-primary-600 inline-block rounded mr-2"></span>消息通知</h2>
+      <div class="space-y-3">
+        <div class="flex items-center justify-between p-4 bg-gray-50/60 rounded-xl">
+          <div>
+            <p class="text-sm font-medium text-gray-900">匹配通知</p>
+            <p class="text-[11px] text-gray-400 mt-0.5">有新的成果/需求匹配时通知我</p>
+          </div>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" checked class="sr-only peer">
+            <div class="w-10 h-5 bg-gray-200 rounded-full peer-checked:bg-primary-600 transition"></div>
+            <div class="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full transition peer-checked:translate-x-5"></div>
+          </label>
+        </div>
+        <div class="flex items-center justify-between p-4 bg-gray-50/60 rounded-xl">
+          <div>
+            <p class="text-sm font-medium text-gray-900">合同进度</p>
+            <p class="text-[11px] text-gray-400 mt-0.5">合同状态变更时通知我</p>
+          </div>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" checked class="sr-only peer">
+            <div class="w-10 h-5 bg-gray-200 rounded-full peer-checked:bg-primary-600 transition"></div>
+            <div class="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full transition peer-checked:translate-x-5"></div>
+          </label>
+        </div>
+        <div class="flex items-center justify-between p-4 bg-gray-50/60 rounded-xl">
+          <div>
+            <p class="text-sm font-medium text-gray-900">平台公告</p>
+            <p class="text-[11px] text-gray-400 mt-0.5">接收平台重要公告与政策通知</p>
+          </div>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" class="sr-only peer">
+            <div class="w-10 h-5 bg-gray-200 rounded-full peer-checked:bg-primary-600 transition"></div>
+            <div class="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full transition peer-checked:translate-x-5"></div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- 页脚 -->
+<footer class="bg-slate-900 text-slate-400 mt-8">
+  <div class="max-w-7xl mx-auto px-6 py-10 flex items-center justify-between">
+    <div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg hero-gradient flex items-center justify-center text-white"><i class="fa-solid fa-atom"></i></div><span class="text-white font-bold">科技成果转化平台</span><span class="text-xs ml-2">让每一项科技成果实现其产业价值</span></div>
+    <div class="text-xs">© 2026 科技成果转化平台 · 科技成果转化平台 ｜ 陕ICP备00000000号</div>
+  </div>
+</footer>
+
+<script>
+function switchTab(name){
+  const basic = document.getElementById('panel-basic');
+  const sec = document.getElementById('panel-security');
+  const tb = document.getElementById('tab-basic');
+  const ts = document.getElementById('tab-security');
+  if(name==='basic'){
+    basic.classList.remove('hidden'); sec.classList.add('hidden');
+    tb.classList.add('font-semibold','text-primary-600','border-b-2','border-primary-600');
+    tb.classList.remove('text-gray-500');
+    ts.classList.remove('font-semibold','text-primary-600','border-b-2','border-primary-600');
+    ts.classList.add('text-gray-500');
+  }else{
+    sec.classList.remove('hidden'); basic.classList.add('hidden');
+    ts.classList.add('font-semibold','text-primary-600','border-b-2','border-primary-600');
+    ts.classList.remove('text-gray-500');
+    tb.classList.remove('font-semibold','text-primary-600','border-b-2','border-primary-600');
+    tb.classList.add('text-gray-500');
+  }
+}
+</script>
+
+</body>
+</html>

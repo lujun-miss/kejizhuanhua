@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>西北工业大学 · 高校主页 · 科技成果转化平台</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/custom.css">
+<script>tailwind.config={theme:{extend:{colors:{primary:{50:'#EFF6FF',100:'#DBEAFE',500:'#3B82F6',600:'#2563EB',700:'#1D4ED8'}},fontFamily:{sans:['PingFang SC','Microsoft YaHei','system-ui','sans-serif']}}}}</script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+<header class="glass sticky top-0 z-40 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center gap-10">
+    <a href="home.html" class="flex items-center gap-2.5 shrink-0"><div class="w-9 h-9 rounded-xl hero-gradient flex items-center justify-center text-white"><i class="fa-solid fa-atom"></i></div><span class="text-lg font-bold">科技成果转化平台</span></a>
+    <nav class="flex items-center gap-8 text-sm">
+      <a href="home.html" class="text-gray-600 hover:text-primary-600">首页</a>
+      <a href="achievements.html" class="font-semibold text-primary-600">科技成果</a>
+      <a href="demands.html" class="text-gray-600 hover:text-primary-600">技术需求</a>
+      <a href="services.html" class="text-gray-600 hover:text-primary-600">服务大厅</a>
+    </nav>
+    <div class="ml-auto flex items-center gap-5">
+      <a href="messages.html" class="relative text-gray-600 hover:text-primary-600"><i class="fa-regular fa-bell text-lg"></i></a>
+      <a href="publish.html" class="bg-primary-600 hover:bg-primary-700 text-white text-sm px-4 py-2 rounded-full font-medium transition"><i class="fa-solid fa-plus mr-1 text-xs"></i>发布</a>
+      <a href="profile.html" class="flex items-center gap-2"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80" class="w-8 h-8 rounded-full object-cover" alt=""></a>
+    </div>
+  </div>
+</header>
+
+<!-- 机构头部 -->
+<div class="bg-gray-50 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between text-xs">
+    <div class="text-gray-400">
+      <a href="home.html" class="hover:text-primary-600">首页</a>
+      <i class="fa-solid fa-chevron-right text-[9px] mx-1.5"></i>
+      <a href="achievements.html" class="hover:text-primary-600">科技成果</a>
+      <i class="fa-solid fa-chevron-right text-[9px] mx-1.5"></i>
+      <span class="text-gray-600">西北工业大学</span>
+    </div>
+    <a href="javascript:history.back()" class="text-primary-600 hover:underline inline-flex items-center gap-1"><i class="fa-solid fa-angle-left"></i>返回上一页</a>
+  </div>
+</div>
+<section class="hero-gradient">
+  <div class="max-w-7xl mx-auto px-6 py-10 flex items-center gap-6">
+    <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=200&q=80" class="w-24 h-24 rounded-2xl object-cover ring-4 ring-white/30" alt="">
+    <div class="text-white">
+      <div class="flex items-center gap-3">
+        <h1 class="text-2xl font-bold">西北工业大学</h1>
+        <span class="text-xs bg-emerald-400/90 text-white px-2 py-1 rounded-full flex items-center gap-1"><i class="fa-solid fa-circle-check text-[10px]"></i>已认证高校</span>
+      </div>
+      <p class="text-sm text-white/80 mt-2 flex flex-wrap gap-x-5 gap-y-1">
+        <span><i class="fa-solid fa-location-dot w-4"></i>陕西省西安市</span>
+        <span><i class="fa-solid fa-graduation-cap w-4"></i>985 / 211 / 双一流</span>
+        <span><i class="fa-solid fa-globe w-4"></i>www.nwpu.edu.cn</span>
+        <span><i class="fa-solid fa-user-tie w-4"></i>技术转移中心</span>
+      </p>
+      <div class="flex gap-3 mt-4">
+        <a href="messages.html" class="bg-white text-primary-700 text-sm font-semibold px-5 py-2 rounded-full hover:bg-gray-100"><i class="fa-regular fa-paper-plane mr-1"></i>在线联系</a>
+        <a href="achievements.html" class="bg-white/15 text-white text-sm px-5 py-2 rounded-full hover:bg-white/25">查看全部成果</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-12 gap-6">
+  <div class="col-span-9 space-y-6">
+    <!-- 机构简介 -->
+    <div class="bg-white rounded-2xl p-6">
+      <h2 class="text-base font-bold mb-3">机构简介</h2>
+      <p class="text-sm text-gray-600 leading-7">西北工业大学是一所以发展航空、航天、航海等领域人才培养和科学研究为特色的多科性、研究型、开放式大学。学校材料科学、工程学等 8 个学科进入 ESI 前 1%，建有凝固技术等多个国家重点实验室，年均承担国家级科研项目千余项，在高端装备制造、新材料等领域形成了一批可转化的重大科技成果。</p>
+      <div class="flex flex-wrap gap-2 mt-4">
+        <span class="text-xs bg-primary-50 text-primary-600 px-3 py-1 rounded-full">新材料</span>
+        <span class="text-xs bg-primary-50 text-primary-600 px-3 py-1 rounded-full">航空航天</span>
+        <span class="text-xs bg-primary-50 text-primary-600 px-3 py-1 rounded-full">智能制造</span>
+        <span class="text-xs bg-primary-50 text-primary-600 px-3 py-1 rounded-full">增材制造</span>
+      </div>
+    </div>
+
+    <!-- 成果列表 -->
+    <div class="bg-white rounded-2xl p-6">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-base font-bold">在库科技成果 <span class="text-sm font-normal text-gray-400">（86 项）</span></h2>
+        <div class="flex gap-2 text-xs">
+          <button class="bg-primary-600 text-white px-3 py-1.5 rounded-full">全部</button>
+          <button class="bg-gray-100 text-gray-600 px-3 py-1.5 rounded-full">新材料</button>
+          <button class="bg-gray-100 text-gray-600 px-3 py-1.5 rounded-full">智能制造</button>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <a href="achievement-detail.html" class="flex gap-4 p-3 rounded-xl hover:bg-gray-50 transition">
+          <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=200&q=80" class="w-36 h-24 rounded-lg object-cover" alt="">
+          <div class="flex-1">
+            <p class="text-sm font-semibold">高强度钛合金激光3D打印关键技术及成套装备</p>
+            <p class="text-xs text-gray-500 mt-1 line-clamp-2">突破激光沉积增材制造组织调控、变形控制与在线监测三大难题，构件强度提升18%。</p>
+            <div class="flex items-center gap-2 mt-2">
+              <span class="text-[11px] bg-primary-50 text-primary-600 px-2 py-0.5 rounded">新材料</span>
+              <span class="text-[11px] bg-emerald-50 text-emerald-600 px-2 py-0.5 rounded">通过中试</span>
+              <span class="text-xs text-gray-400 ml-auto">2026-09-10</span>
+            </div>
+          </div>
+          <span class="text-sm font-bold text-orange-500 self-center">面议</span>
+        </a>
+        <a href="achievement-detail.html" class="flex gap-4 p-3 rounded-xl hover:bg-gray-50 transition">
+          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=200&q=80" class="w-36 h-24 rounded-lg object-cover" alt="">
+          <div class="flex-1">
+            <p class="text-sm font-semibold">航空发动机耐高温涂层密封技术</p>
+            <p class="text-xs text-gray-500 mt-1 line-clamp-2">耐温 650℃ 以上，台架试验超 500 小时，已具备工程化应用条件。</p>
+            <div class="flex items-center gap-2 mt-2">
+              <span class="text-[11px] bg-primary-50 text-primary-600 px-2 py-0.5 rounded">新材料</span>
+              <span class="text-[11px] bg-emerald-50 text-emerald-600 px-2 py-0.5 rounded">可规模生产</span>
+              <span class="text-xs text-gray-400 ml-auto">2026-08-20</span>
+            </div>
+          </div>
+          <span class="text-sm font-bold text-orange-500 self-center">面议</span>
+        </a>
+        <a href="achievement-detail.html" class="flex gap-4 p-3 rounded-xl hover:bg-gray-50 transition">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=200&q=80" class="w-36 h-24 rounded-lg object-cover" alt="">
+          <div class="flex-1">
+            <p class="text-sm font-semibold">无人机集群协同控制与智能决策系统</p>
+            <p class="text-xs text-gray-500 mt-1 line-clamp-2">支持百架级无人机自组网协同，已在多个巡检场景完成示范应用。</p>
+            <div class="flex items-center gap-2 mt-2">
+              <span class="text-[11px] bg-violet-50 text-violet-600 px-2 py-0.5 rounded">人工智能</span>
+              <span class="text-[11px] bg-amber-50 text-amber-600 px-2 py-0.5 rounded">通过小试</span>
+              <span class="text-xs text-gray-400 ml-auto">2026-08-11</span>
+            </div>
+          </div>
+          <span class="text-sm font-bold text-orange-500 self-center">¥600万</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 右侧 -->
+  <aside class="col-span-3 space-y-4">
+    <div class="bg-white rounded-2xl p-5">
+      <p class="text-xs text-gray-400 mb-3">转化数据</p>
+      <div class="grid grid-cols-2 gap-2 text-center">
+        <div class="bg-gray-50 rounded-lg py-3"><p class="text-lg font-bold text-primary-600">86</p><p class="text-[10px] text-gray-400 mt-0.5">在库成果</p></div>
+        <div class="bg-gray-50 rounded-lg py-3"><p class="text-lg font-bold text-emerald-600">31</p><p class="text-[10px] text-gray-400 mt-0.5">成功转化</p></div>
+        <div class="bg-gray-50 rounded-lg py-3"><p class="text-lg font-bold text-gray-800">420+</p><p class="text-[10px] text-gray-400 mt-0.5">授权专利</p></div>
+        <div class="bg-gray-50 rounded-lg py-3"><p class="text-lg font-bold text-gray-800">58</p><p class="text-[10px] text-gray-400 mt-0.5">合作企业</p></div>
+      </div>
+    </div>
+    <div class="bg-white rounded-2xl p-5">
+      <p class="text-xs text-gray-400 mb-3">技术转移联系人</p>
+      <div class="flex items-center gap-3">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&q=80" class="w-10 h-10 rounded-full object-cover" alt="">
+        <div>
+          <p class="text-sm font-semibold">王老师</p>
+          <p class="text-[11px] text-gray-400">技术转移中心 · 副主任</p>
+        </div>
+      </div>
+      <a href="messages.html" class="block text-center bg-primary-50 text-primary-700 text-xs font-medium rounded-lg py-2 mt-3 hover:bg-primary-100">联系技术转移中心</a>
+    </div>
+    <div class="bg-white rounded-2xl p-5">
+      <p class="text-xs text-gray-400 mb-3">资质认证</p>
+      <ul class="space-y-2 text-xs text-gray-600">
+        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i>高校机构认证</li>
+        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i>国家技术转移示范机构</li>
+        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i>知识产权备案 420 件</li>
+      </ul>
+    </div>
+  </aside>
+</main>
+
+<footer class="bg-slate-900 text-slate-400 mt-8">
+  <div class="max-w-7xl mx-auto px-6 py-10 flex items-center justify-between">
+    <div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg hero-gradient flex items-center justify-center text-white"><i class="fa-solid fa-atom"></i></div><span class="text-white font-bold">科技成果转化平台</span></div>
+    <div class="text-xs">© 2026 科技成果转化平台 ｜ 陕ICP备00000000号</div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>科技成果转化平台 · 科技成果转化平台 - 原型导航</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/custom.css">
+<script>tailwind.config={theme:{extend:{colors:{primary:{50:'#EFF6FF',100:'#DBEAFE',500:'#3B82F6',600:'#2563EB',700:'#1D4ED8'}},fontFamily:{sans:['PingFang SC','Microsoft YaHei','system-ui','sans-serif']}}}}</script>
+</head>
+<body class="bg-slate-900 text-slate-100">
+<div class="max-w-6xl mx-auto px-8 py-12">
+  <!-- 头部 -->
+  <header class="mb-10">
+    <div class="flex items-center gap-4 mb-4">
+      <div class="w-14 h-14 rounded-2xl hero-gradient flex items-center justify-center shadow-lg shadow-blue-900/50">
+        <i class="fa-solid fa-atom text-2xl text-white"></i>
+      </div>
+      <div>
+        <h1 class="text-2xl font-bold">科技成果转化平台 · 科技成果转化平台</h1>
+        <p class="text-slate-400 text-sm mt-1">Web 网页平台 · 高校科研成果 × 企业技术需求 · 智能撮合一站式转化</p>
+      </div>
+    </div>
+    <p class="text-sm text-slate-400 leading-relaxed">
+      核心闭环：<span class="text-blue-400">发布</span> → <span class="text-blue-400">智能匹配</span> → <span class="text-blue-400">在线洽谈</span> → <span class="text-blue-400">成果评价</span> → <span class="text-blue-400">合同签约</span> → <span class="text-blue-400">交易存证</span> → <span class="text-blue-400">跟踪服务</span>
+      &nbsp;｜&nbsp; 点击卡片跳转对应页面（桌面端 1280px 栅格）
+    </p>
+  </header>
+
+  <!-- 主流程页面 -->
+  <h2 class="text-sm font-semibold text-slate-400 uppercase tracking-widest mb-4"><i class="fa-solid fa-diagram-project mr-2"></i>核心页面 · 主流程</h2>
+  <div class="grid grid-cols-4 gap-4 mb-10">
+    <a href="home.html" class="group rounded-2xl bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-blue-500 p-5 transition">
+      <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition"><i class="fa-solid fa-house"></i></div>
+      <p class="font-semibold">门户首页</p><p class="text-xs text-slate-400 mt-1">Hero搜索 / 供需专区 / 数据统计 / 政策资讯</p>
+    </a>
+    <a href="achievements.html" class="group rounded-2xl bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-blue-500 p-5 transition">
+      <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition"><i class="fa-solid fa-flask"></i></div>
+      <p class="font-semibold">科技成果大厅</p><p class="text-xs text-slate-400 mt-1">左侧多维筛选 / 排序 / 成果大卡片列表</p>
+    </a>
+    <a href="achievement-detail.html" class="group rounded-2xl bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-blue-500 p-5 transition">
+      <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition"><i class="fa-solid fa-file-lines"></i></div>
+      <p class="font-semibold">成果详情</p><p class="text-xs text-slate-400 mt-1">TRL成熟度 / 交易方式 / 右侧对接卡片</p>
+    </a>
+    <a href="demands.html" class="group rounded-2xl bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-cyan-500 p-5 transition">
+      <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center mb-3 group-hover:bg-cyan-500 group-hover:text-white transition"><i class="fa-solid fa-bullseye"></i></div>
+      <p class="font-semibold">技术需求大厅</p><p class="text-xs text-slate-400 mt-1">悬赏预算 / 行业筛选 / 需求列表</p>
+    </a>
+    <a href="demand-detail.html" class="group rounded-2xl bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-cyan-500 p-5 transition">
+      <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center mb-3 group-hover:bg-cyan-500 group-hover:text-white transition"><i class="fa-solid fa-file-signature"></i></div>
+      <p class="font-semibold">需求详情</p><p class="text-xs text-slate-400 mt-1">技术指标 / 企业信息 / 提交解决方案</p>
+    </a>
+    <a href="publish.html" class="group rounded-2xl bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-indigo-500 p-5 transition">
+      <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center mb-3 group-hover:bg-indigo-500 group-hover:text-white transition"><i class="fa-solid fa-circle-plus"></i></div>
+      <p class="font-semibold">发布中心</p><p class="text-xs text-slate-400 mt-1">双Tab：发布成果 / 发布需求表单</p>
+    </a>
+  </div>
+
+  <!-- 平台管理端 -->
+  <h2 class="text-sm font-semibold text-slate-400 uppercase tracking-widest mb-4"><i class="fa-solid fa-screwdriver-wrench mr-2"></i>平台管理端（后台）· 与前台一一对应</h2>
+  <div class="grid grid-cols-4 gap-4 mb-10">
+    <a href="admin/login.html" class="group rounded-2xl bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-red-500 p-5 transition">
+      <div class="w-10 h-10 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center mb-3 group-hover:bg-red-500 group-hover:text-white transition"><i class="fa-solid fa-shield-halved"></i></div>
+      <p class="font-semibold">管理员登录</p><p class="text-xs text-slate-400 mt-1">后台独立登录入口</p>
+    </a>
+    <a href="admin/dashboard.html" class="group rounded-2xl bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-red-500 p-5 transition">
+      <div class="w-10 h-10 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center mb-3 group-hover:bg-red-500 group-hover:text-white transition"><i class="fa-solid fa-chart-line"></i></div>
+      <p class="font-semibold">数据概览</p><p class="text-xs text-slate-400 mt-1">成果/需求/成交/用户 实时看板</p>
+    </a>
+    <a href="admin/users.html" class="group rounded-2xl bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-red-500 p-5 transition">
+      <div class="w-10 h-10 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center mb-3 group-hover:bg-red-500 group-hover:text-white transition"><i class="fa-solid fa-users-rectangle"></i></div>
+      <p class="font-semibold">用户与机构</p><p class="text-xs text-slate-400 mt-1">院校/企业/经理人 认证审核</p>
+    </a>
+    <a href="admin/achievements.html" class="group rounded-2xl bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-red-500 p-5 transition">
+      <div class="w-10 h-10 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center mb-3 group-hover:bg-red-500 group-hover:text-white transition"><i class="fa-solid fa-flask-vial"></i></div>
+      <p class="font-semibold">成果审核</p><p class="text-xs text-slate-400 mt-1">对应前台「科技成果大厅」</p>
+    </a>
+    <a href="admin/demands.html" class="group rounded-2xl bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-red-500 p-5 transition">
+      <div class="w-10 h-10 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center mb-3 group-hover:bg-red-500 group-hover:text-white transition"><i class="fa-solid fa-clipboard-list"></i></div>
+      <p class="font-semibold">需求审核</p><p class="text-xs text-slate-400 mt-1">对应前台「技术需求大厅」</p>
+    </a>
+    <a href="admin/services.html" class="group rounded-2xl bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-red-500 p-5 transition">
+      <div class="w-10 h-10 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center mb-3 group-hover:bg-red-500 group-hover:text-white transition"><i class="fa-solid fa-briefcase"></i></div>
+      <p class="font-semibold">服务内容管理</p><p class="text-xs text-slate-400 mt-1">对应前台「服务大厅」服务包/经理人/资讯</p>
+    </a>
+    <a href="admin/projects.html" class="group rounded-2xl bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-red-500 p-5 transition">
+      <div class="w-10 h-10 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center mb-3 group-hover:bg-red-500 group-hover:text-white transition"><i class="fa-solid fa-diagram-project"></i></div>
+      <p class="font-semibold">转化项目管理</p><p class="text-xs text-slate-400 mt-1">对应前台「个人中心·进行中的转化」</p>
+    </a>
+    <a href="admin/settings.html" class="group rounded-2xl bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-red-500 p-5 transition">
+      <div class="w-10 h-10 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center mb-3 group-hover:bg-red-500 group-hover:text-white transition"><i class="fa-solid fa-gears"></i></div>
+      <p class="font-semibold">系统设置</p><p class="text-xs text-slate-400 mt-1">角色权限/操作日志/参数配置</p>
+    </a>
+  </div>
+
+  <!-- 服务与用户中心 -->
+  <h2 class="text-sm font-semibold text-slate-400 uppercase tracking-widest mb-4"><i class="fa-solid fa-handshake mr-2"></i>服务 · 消息 · 用户中心</h2>
+  <div class="grid grid-cols-4 gap-4 mb-10">
+    <a href="services.html" class="group rounded-2xl bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-amber-500 p-5 transition">
+      <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center mb-3 group-hover:bg-amber-500 group-hover:text-white transition"><i class="fa-solid fa-briefcase"></i></div>
+      <p class="font-semibold">服务大厅</p><p class="text-xs text-slate-400 mt-1">成果评价 / 专利法务 / 融资对接 / 经理人</p>
+    </a>
+    <a href="messages.html" class="group rounded-2xl bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-emerald-500 p-5 transition">
+      <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-3 group-hover:bg-emerald-500 group-hover:text-white transition"><i class="fa-solid fa-comments"></i></div>
+      <p class="font-semibold">消息洽谈中心</p><p class="text-xs text-slate-400 mt-1">左会话列表 + 右聊天窗 一体化布局</p>
+    </a>
+    <a href="profile.html" class="group rounded-2xl bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-purple-500 p-5 transition">
+      <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center mb-3 group-hover:bg-purple-500 group-hover:text-white transition"><i class="fa-solid fa-user"></i></div>
+      <p class="font-semibold">个人中心</p><p class="text-xs text-slate-400 mt-1">左侧菜单 / 我的成果·需求 / 合同管理</p>
+    </a>
+    <a href="login.html" class="group rounded-2xl bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-purple-500 p-5 transition">
+      <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center mb-3 group-hover:bg-purple-500 group-hover:text-white transition"><i class="fa-solid fa-right-to-bracket"></i></div>
+      <p class="font-semibold">登录注册</p><p class="text-xs text-slate-400 mt-1">左右分栏 / 验证码登录 / 三类角色选择</p>
+    </a>
+  </div>
+
+  <footer class="text-xs text-slate-500 border-t border-slate-800 pt-6">
+    <p>设计说明：HTML + Tailwind CSS + FontAwesome ｜ 桌面端 Web 平台（1280px 主容器）｜ 结构语义化，可通过 html.to.design 插件导入 Figma 二次编辑 ｜ 图片来源 Unsplash</p>
+  </footer>
+</div>
+</body>
+</html>
